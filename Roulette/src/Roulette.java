@@ -5,13 +5,13 @@ public class Roulette {
 		// TODO Auto-generated method stub
 
 
-		int Blyat=0;
+		int Zahl=0;
 
-		int summe = Blyat + 5;
+		int summe = Zahl + 5;
 
 		
-		for(int i=0;i<Blyat;i++)
-			System.out.println(Blyat);
+		for(int i=0;i<Zahl;i++)
+			System.out.println(Zahl);
 		System.out.println("Endlich funzt das hier!");
 
 
