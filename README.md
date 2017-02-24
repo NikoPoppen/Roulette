@@ -1,7 +1,7 @@
 # Roulette
-Schulprojekt zur Erstellung eines Rouletteprogramms in Java
-Benutzung von GitHub Tutorial:
-**Denkt daran das ihr keinen neuen Branch erstellt!**
+Schulprojekt zur Erstellung eines Rouletteprogramms in Java  
+Benutzung von GitHub Tutorial:  
+**Denkt daran das ihr keinen neuen Branch erstellt!**  
 **Am Anfang von Video 2 wird gezeigt wie dritte auf den Branch zugreifen**
 - Hier wird das Pushen(Hochladen eines Quellcodes gezeigt)
 - Der Push Configure muss wie folgt gemacht werden:
