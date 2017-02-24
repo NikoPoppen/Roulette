@@ -8,7 +8,7 @@ Wie man GitHub zu Eclipse hinzufügt:
 
 Aufgabenliste:
 - Pflichtenheft
-- GUI des Lottoprogrammes
-- Algorhytmus des Lottoprogrammes
+- GUI des Rouletteprogrammes
+- Algorhytmus des Rouletteprogrammes
 
 Nach erfüllung der Aufgabe abhaken ✓ 
