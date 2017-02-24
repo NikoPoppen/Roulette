@@ -5,6 +5,7 @@ public class Roulette {
 		// TODO Auto-generated method stub
 
 		int Blyat=0;
+		Boi;
 	}
 
 }
