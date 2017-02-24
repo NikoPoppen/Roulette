@@ -1,6 +1,5 @@
 # Roulette
 Schulprojekt zur Erstellung eines Rouletteprogramms in Java
-
 Benutzung von GitHub Tutorial:
 - Hier wird das Pushen(Hochladen eines Quellcodes gezeigt)
 - Der Push Configure muss wie folgt gemacht werden:
