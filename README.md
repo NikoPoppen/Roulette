@@ -11,4 +11,4 @@ Aufgabenliste:
 - GUI des Rouletteprogrammes
 - Algorhytmus des Rouletteprogrammes
 
-Nach erfüllung der Aufgabe abhaken ✓ 
+Nach Erfüllung der Aufgabe abhaken ✓ 
