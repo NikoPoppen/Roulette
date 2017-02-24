@@ -11,4 +11,4 @@ Aufgabenliste:
 - GUI des Lottoprogrammes
 - Algorhytmus des Lottoprogrammes
 
-Nach erfüllüng der Aufgabe abhaken ✓ 
+Nach erfüllung der Aufgabe abhaken ✓ 
