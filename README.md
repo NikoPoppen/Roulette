@@ -1,3 +1,9 @@
 # Roulette
 Schulprojekt zur Erstellung eines Rouletteprogramms in Java
-- Sebastian ist ein Nacken
+
+Aufgabenliste:
+-Pflichtenheft
+-GUI des Lottoprogrammes
+-Algorhytmus des Lottoprogrammes
+
+Nach erfüllüng der Aufgabe abhaken ✓ 
