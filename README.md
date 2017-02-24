@@ -5,6 +5,7 @@ Benutzung von GitHub Tutorial:
 - Hier wird das Pushen(Hochladen eines Quellcodes gezeigt)
 - Der Push Configure muss wie folgt gemacht werden:
 - Source Ref= refs/heads/master || Destination Ref = refs/heads/MainQuellcode
+- 
 - Der Fetch Configure muss wie folgt gemacht werden:
 - Source Refs= refs/heads/MainQuellcode || Destination Ref(Muss manuell getippt werden) =refs/remotes/origin/MainQuellcode 
 - https://www.youtube.com/watch?v=r5C6yXNaSGo
