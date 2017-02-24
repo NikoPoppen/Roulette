@@ -6,12 +6,16 @@ public class Roulette {
 
 
 		int Blyat=0;
+<<<<<<< HEAD
 		int summe = Blyat + 5;
 
 		
 		for(int i=0;i<Blyat;i++)
 			System.out.println(Blyat);
 
+=======
+		Boi;
+>>>>>>> refs/remotes/origin/MainQuellcode
 	}
 
 }
