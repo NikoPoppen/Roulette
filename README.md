@@ -1,10 +1,10 @@
 # Roulette
 Schulprojekt zur Erstellung eines Rouletteprogramms in Java
 
-Wie man GitHub zu Eclipse hinzufügt:
- http://download.eclipse.org/egit/updates/
- - > Eclipse > Help > Install New Software > Add... > Obigen Link einfügen
- - > 3 Pakete werden angezeigt > 1. und 3. auswählen und istallieren
+Benutzung von GitHub Tutorial:
+- https://www.youtube.com/watch?v=r5C6yXNaSGo
+- Beinhaltet nur Das Hochladen der neuen Datei.
+- Wie der Pull geht ist grad noch unschlüssig weil Complex
 
 Aufgabenliste:
 - Pflichtenheft
