@@ -14,7 +14,7 @@ public class Roulette {
 			System.out.println(Blyat);
 
 =======
-		Boi;
+		
 >>>>>>> refs/remotes/origin/MainQuellcode
 	}
 
