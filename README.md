@@ -14,6 +14,8 @@ Source Refs= refs/heads/MainQuellcode ||  Destination Ref(Muss manuell getippt w
 - Hier wird gezeigt wie Konflikte entstehen und wie man Merged
 - https://www.youtube.com/watch?v=KfeqnernMmE
 
+**Eclipse Neon Portable**
+https://mega.nz/#!jkdkGIJI!zgOris5u-ykg_Asg_Ofhhuu2mTL4R8Z_Rk24qvQB7Nw
 
 Aufgabenliste:
 - Pflichtenheft
