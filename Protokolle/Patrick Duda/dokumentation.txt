@@ -1,0 +1,11 @@
+24.02.2017
+
+Start: 16:00Uhr	End:17:30
+-entwicklung des spielfelds (grafisch)
+
+Start: 18:30Uhr	End:19:15Uhr
+-spielfeld gui angepasst
+-speilfeld gui in java eingebunden
+-menu gui und spielfeld gui miteinadner verbunden
+-Gui für den wetteinsatz erstellt
+-bug fix (öffnen des einsatz fensters)
