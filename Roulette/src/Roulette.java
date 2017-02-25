@@ -14,6 +14,7 @@ public class Roulette {
 			System.out.println(Zahl);
 		System.out.println("Endlich funzt das hier!");
 		int Penis = 15;
+		MAdbad
 
 	}
 
