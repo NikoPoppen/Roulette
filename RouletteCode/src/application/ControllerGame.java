@@ -28,234 +28,234 @@ public class ControllerGame {
     }
 
     @FXML
-    void on11blackClick(ActionEvent event) {
-
+    void on11blackClick(ActionEvent event) throws IOException {
+    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
     }
 
     @FXML
-    void on12redClick(ActionEvent event) {
-
+    void on12redClick(ActionEvent event) throws IOException {
+    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
     }
 
     @FXML
-    void on13_24Click(ActionEvent event) {
-
+    void on13_24Click(ActionEvent event) throws IOException {
+    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
     }
 
     @FXML
-    void on13blackClick(ActionEvent event) {
-
+    void on13blackClick(ActionEvent event) throws IOException {
+    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
     }
 
     @FXML
-    void on14redClick(ActionEvent event) {
-
+    void on14redClick(ActionEvent event) throws IOException {
+    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
     }
 
     @FXML
-    void on15blackClick(ActionEvent event) {
-
+    void on15blackClick(ActionEvent event) throws IOException {
+    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
     }
 
     @FXML
-    void on16redClick(ActionEvent event) {
-
+    void on16redClick(ActionEvent event) throws IOException {
+    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
     }
 
     @FXML
-    void on17blackClick(ActionEvent event) {
-
+    void on17blackClick(ActionEvent event) throws IOException {
+    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
     }
 
     @FXML
-    void on18redClick(ActionEvent event) {
-
+    void on18redClick(ActionEvent event) throws IOException {
+    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
     }
 
     @FXML
-    void on19_36Click(ActionEvent event) {
-
+    void on19_36Click(ActionEvent event) throws IOException {
+    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
     }
 
     @FXML
-    void on19redClick(ActionEvent event) {
-
+    void on19redClick(ActionEvent event) throws IOException {
+    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
     }
 
     @FXML
-    void on1_12Click(ActionEvent event) {
-
+    void on1_12Click(ActionEvent event) throws IOException {
+    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
     }
 
     @FXML
-    void on1_18Click(ActionEvent event) {
-
+    void on1_18Click(ActionEvent event) throws IOException {
+    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
     }
 
     @FXML
-    void on1redClick(ActionEvent event) {
-
+    void on1redClick(ActionEvent event) throws IOException {
+    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
     }
 
     @FXML
-    void on1stClick(ActionEvent event) {
-
+    void on1stClick(ActionEvent event) throws IOException {
+    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
     }
 
     @FXML
-    void on20blackClick(ActionEvent event) {
-
+    void on20blackClick(ActionEvent event) throws IOException {
+    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
     }
 
     @FXML
-    void on21redClick(ActionEvent event) {
-
+    void on21redClick(ActionEvent event) throws IOException {
+    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
     }
 
     @FXML
-    void on22blackClick(ActionEvent event) {
-
+    void on22blackClick(ActionEvent event) throws IOException {
+    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
     }
 
     @FXML
-    void on23redClick(ActionEvent event) {
-
+    void on23redClick(ActionEvent event) throws IOException {
+    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
     }
 
     @FXML
-    void on24blackClick(ActionEvent event) {
-
+    void on24blackClick(ActionEvent event) throws IOException {
+    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
     }
 
     @FXML
-    void on25_36Click(ActionEvent event) {
-
+    void on25_36Click(ActionEvent event) throws IOException {
+    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
     }
 
     @FXML
-    void on25redClick(ActionEvent event) {
-
+    void on25redClick(ActionEvent event) throws IOException {
+    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
     }
 
     @FXML
-    void on26blackClick(ActionEvent event) {
-
+    void on26blackClick(ActionEvent event) throws IOException {
+    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
     }
 
     @FXML
-    void on27redClick(ActionEvent event) {
-
+    void on27redClick(ActionEvent event) throws IOException {
+    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
     }
 
     @FXML
-    void on28blackClick(ActionEvent event) {
-
+    void on28blackClick(ActionEvent event) throws IOException {
+    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
     }
 
     @FXML
-    void on29blackClick(ActionEvent event) {
-
+    void on29blackClick(ActionEvent event) throws IOException {
+    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
     }
 
     @FXML
-    void on2blackClick(ActionEvent event) {
-
+    void on2blackClick(ActionEvent event) throws IOException {
+    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
     }
 
     @FXML
-    void on2ndClick(ActionEvent event) {
-
+    void on2ndClick(ActionEvent event) throws IOException {
+    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
     }
 
     @FXML
-    void on30redClick(ActionEvent event) {
-
+    void on30redClick(ActionEvent event) throws IOException {
+    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
     }
 
     @FXML
-    void on31blackClick(ActionEvent event) {
-
+    void on31blackClick(ActionEvent event) throws IOException {
+    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
     }
 
     @FXML
-    void on32redClick(ActionEvent event) {
-
+    void on32redClick(ActionEvent event) throws IOException {
+    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
     }
 
     @FXML
-    void on33blackClick(ActionEvent event) {
-
+    void on33blackClick(ActionEvent event) throws IOException {
+    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
     }
 
     @FXML
-    void on34redClick(ActionEvent event) {
-
+    void on34redClick(ActionEvent event) throws IOException {
+    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
     }
 
     @FXML
-    void on35blackClick(ActionEvent event) {
-
+    void on35blackClick(ActionEvent event) throws IOException {
+    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
     }
 
     @FXML
-    void on36redClick(ActionEvent event) {
-
+    void on36redClick(ActionEvent event) throws IOException {
+    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
     }
 
     @FXML
-    void on3rdClick(ActionEvent event) {
-
+    void on3rdClick(ActionEvent event) throws IOException {
+    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
     }
 
     @FXML
-    void on3redClick(ActionEvent event) {
-
+    void on3redClick(ActionEvent event) throws IOException {
+    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
     }
 
     @FXML
-    void on4blackClick(ActionEvent event) {
-
+    void on4blackClick(ActionEvent event) throws IOException {
+    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
     }
 
     @FXML
-    void on5redClick(ActionEvent event) {
-
+    void on5redClick(ActionEvent event) throws IOException {
+    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
     }
 
     @FXML
-    void on6blackClick(ActionEvent event) {
-
+    void on6blackClick(ActionEvent event) throws IOException {
+    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
     }
 
     @FXML
-    void on7redClick(ActionEvent event) {
-
+    void on7redClick(ActionEvent event) throws IOException {
+    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
     }
 
     @FXML
-    void on8blackClick(ActionEvent event) {
-
+    void on8blackClick(ActionEvent event) throws IOException {
+    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
     }
 
     @FXML
-    void on9redClick(ActionEvent event) {
-
+    void on9redClick(ActionEvent event) throws IOException {
+    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
     }
 
     @FXML
-    void onGeradeClick(ActionEvent event) {
-
+    void onGeradeClick(ActionEvent event) throws IOException {
+    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
     }
 
     @FXML
     void onHauptmenuClick(ActionEvent event) throws IOException {
     	AnchorPane ControllerGameAnchorPane = FXMLLoader.load(ControllerGame.class.getResource("menu.fxml"));	//"menu.fxml" datei laden (befehle die das GUI erstellen)
     	Stage stage = new Stage();	//new stage erstellen
-    	stage.setScene(new Scene(ControllerGameAnchorPane));	//"ControllernAnchorPane" zur Scene hinzuf√ºgen
+    	stage.setScene(new Scene(ControllerGameAnchorPane));	//"ControllernAnchorPane" zur Scene hinzuf¸gen
     	stage.show();	//fenster wird sichtbar gemacht
 
     	stage.setTitle("Roulette Programm");	//titel des Fensters
-		stage.setResizable(false);			//feste fenstergr√∂√üe (fenster kann nicht mehr mit der maus gr√∂√üer oder kleiner gezogen werden)/
+		stage.setResizable(false);			//feste fenstergrˆﬂe (fenster kann nicht mehr mit der maus grˆﬂer oder kleiner gezogen werden)/
 
     	((Node)(event.getSource())).getScene().getWindow().hide();	//verbirgt das vorherige Fenster
     }
@@ -266,8 +266,8 @@ public class ControllerGame {
     }
 
     @FXML
-    void onSchlie√üen2Click(ActionEvent event) {
-    	Platform.exit();	//schlie√üt das fenster wenn auf den "Schlie√üen" knopf gedr√ºckt wird
+    void onSchlieﬂen2Click(ActionEvent event) {
+    	Platform.exit();	//schlieﬂt das fenster wenn auf den "Schlieﬂen" knopf gedr¸ckt wird
     }
 
     @FXML
@@ -283,11 +283,11 @@ public class ControllerGame {
     static void einsatzFenster(ActionEvent event) throws IOException{
     	AnchorPane ControllerGameAnchorPane = FXMLLoader.load(ControllerGame.class.getResource("einsatz.fxml"));	//"einsatz.fxml" datei laden (befehle die das GUI erstellen)
     	Stage stage = new Stage();	//new stage erstellen
-    	stage.setScene(new Scene(ControllerGameAnchorPane));	//"ControllernAnchorPane" zur Scene hinzuf√ºgen
+    	stage.setScene(new Scene(ControllerGameAnchorPane));	//"ControllernAnchorPane" zur Scene hinzuf¸gen
     	stage.show();	//fenster wird sichtbar gemacht
 
     	stage.setTitle("Roulette Programm");	//titel des Fensters
-		stage.setResizable(false);			//feste fenstergr√∂√üe (fenster kann nicht mehr mit der maus gr√∂√üer oder kleiner gezogen werden)
+		stage.setResizable(false);			//feste fenstergrˆﬂe (fenster kann nicht mehr mit der maus grˆﬂer oder kleiner gezogen werden)
     }//end einsatzFenster
 
 }
