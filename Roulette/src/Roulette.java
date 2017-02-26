@@ -14,7 +14,7 @@ public class Roulette {
 			System.out.println(Zahl);
 		System.out.println("Endlich funzt das hier!");
 		int Get rkt = 15;
-		
+		int boi = -1;
 
 	}
 
