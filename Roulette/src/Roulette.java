@@ -16,7 +16,7 @@ public class Roulette {
 		int Get rkt = 15;
 		int grad =0;
 		int boi = 10;
-		lmao;
+		int lmao = 0;
 
 	}
 
