@@ -23,7 +23,7 @@ public class ControllerGame {
     }
 
     @FXML
-    void on10blackClick(ActionEvent event) {
+    void on10blackClick(ActionEvent event) throws IOException {
     	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
     }
 
