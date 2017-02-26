@@ -4,35 +4,21 @@ public class Roulette {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-<<<<<<< HEAD
-		int Blyat=3;
-		for(int i=0;i<Blyat;i++)
-			System.out.println(Blyat);
-		Nope.avi;
-		Boi;
-		Jup;
-=======
-
 		int Zahl=0;
 
-		int summe = Zahl + 5;
+		int summe[] = {4, 5, 4, 2};
 
 
-		for(int i=0;i<Zahl;i++)
-			System.out.println(Zahl);
-		System.out.println("Endlich funzt das hier!");
+		for(int i:summe){
+			System.out.println("fu");
+		}
 
-		int TEst3 =0;
+		System.out.println("test?!");
 
-
-
-		int Get rkt = 15;
-		int grad =0;
+		int testrekt = 20;
+		int grad = 0;
 		int boi = 10;
 		int lmao = 0;
-
-
->>>>>>> refs/heads/MainQuellcodeChanges
 	}
 
 }
