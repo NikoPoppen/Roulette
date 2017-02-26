@@ -16,7 +16,11 @@ public class Roulette {
 		System.out.println("test?!");
 		System.out.println("test2?!");
 		System.out.println("Test Junge");
+<<<<<<< HEAD
 		int Nacken=4000;
+=======
+		
+>>>>>>> branch 'MainQuellcode' of https://github.com/NikoPoppen/Roulette.git
 
 		int tewss = 20;
 		int grad = 0;
