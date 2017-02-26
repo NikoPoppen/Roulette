@@ -16,7 +16,7 @@ public class Roulette {
 		System.out.println("test?!");
 		System.out.println("test2?!");
 		System.out.println("Test Junge");
-		int Nacken;
+		int Nacken = 3000;
 
 		int tewss = 20;
 		int grad = 0;
