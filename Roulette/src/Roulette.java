@@ -7,14 +7,17 @@ public class Roulette {
 
 		int Zahl=0;
 
-		int summe = Zahl + 5;
+		int summe[] = {4, 5, 4, 2};
 
 
-		for(int i=0;i<Zahl;i++)
-			System.out.println(Zahl);
-		System.out.println("Endlich funzt das hier!");
-		int Getrkt = 20;
-		int grad =0;
+		for(int i:summe){
+			System.out.println("fu");
+		}
+
+		System.out.println("test?!");
+
+		int testrekt = 20;
+		int grad = 0;
 		int boi = 10;
 		int lmao = 0;
 
