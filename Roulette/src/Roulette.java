@@ -31,7 +31,7 @@ public class Roulette {
 		int boi = 10;
 
 		int lmao = 130;
-		int Lol = 101;
+		int Lol = 200;
 
 
 	}
