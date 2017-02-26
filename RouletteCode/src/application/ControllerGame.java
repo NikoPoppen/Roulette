@@ -24,7 +24,7 @@ public class ControllerGame {
 
     @FXML
     void on10blackClick(ActionEvent event) {
-
+    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
     }
 
     @FXML
