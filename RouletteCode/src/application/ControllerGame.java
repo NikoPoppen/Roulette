@@ -24,7 +24,7 @@ public class ControllerGame {
 
     @FXML
     void on10blackClick(ActionEvent event) throws IOException {
-    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
+    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster) test
     }
 
     @FXML
@@ -251,11 +251,11 @@ public class ControllerGame {
     void onHauptmenuClick(ActionEvent event) throws IOException {
     	AnchorPane ControllerGameAnchorPane = FXMLLoader.load(ControllerGame.class.getResource("menu.fxml"));	//"menu.fxml" datei laden (befehle die das GUI erstellen)
     	Stage stage = new Stage();	//new stage erstellen
-    	stage.setScene(new Scene(ControllerGameAnchorPane));	//"ControllernAnchorPane" zur Scene hinzuf¸gen
+    	stage.setScene(new Scene(ControllerGameAnchorPane));	//"ControllernAnchorPane" zur Scene hinzuf√ºgen
     	stage.show();	//fenster wird sichtbar gemacht
 
     	stage.setTitle("Roulette Programm");	//titel des Fensters
-		stage.setResizable(false);			//feste fenstergrˆﬂe (fenster kann nicht mehr mit der maus grˆﬂer oder kleiner gezogen werden)/
+		stage.setResizable(false);			//feste fenstergr√∂√üe (fenster kann nicht mehr mit der maus gr√∂√üer oder kleiner gezogen werden)/
 
     	((Node)(event.getSource())).getScene().getWindow().hide();	//verbirgt das vorherige Fenster
     }
@@ -266,8 +266,8 @@ public class ControllerGame {
     }
 
     @FXML
-    void onSchlieﬂen2Click(ActionEvent event) {
-    	Platform.exit();	//schlieﬂt das fenster wenn auf den "Schlieﬂen" knopf gedr¸ckt wird
+    void onSchlie√üen2Click(ActionEvent event) {
+    	Platform.exit();	//schlie√üt das fenster wenn auf den "Schlie√üen" knopf gedr√ºckt wird
     }
 
     @FXML
@@ -283,11 +283,11 @@ public class ControllerGame {
     static void einsatzFenster(ActionEvent event) throws IOException{
     	AnchorPane ControllerGameAnchorPane = FXMLLoader.load(ControllerGame.class.getResource("einsatz.fxml"));	//"einsatz.fxml" datei laden (befehle die das GUI erstellen)
     	Stage stage = new Stage();	//new stage erstellen
-    	stage.setScene(new Scene(ControllerGameAnchorPane));	//"ControllernAnchorPane" zur Scene hinzuf¸gen
+    	stage.setScene(new Scene(ControllerGameAnchorPane));	//"ControllernAnchorPane" zur Scene hinzuf√ºgen
     	stage.show();	//fenster wird sichtbar gemacht
 
     	stage.setTitle("Roulette Programm");	//titel des Fensters
-		stage.setResizable(false);			//feste fenstergrˆﬂe (fenster kann nicht mehr mit der maus grˆﬂer oder kleiner gezogen werden)
+		stage.setResizable(false);			//feste fenstergr√∂√üe (fenster kann nicht mehr mit der maus gr√∂√üer oder kleiner gezogen werden)
     }//end einsatzFenster
 
 }
