@@ -18,9 +18,9 @@ public class Roulette {
 		
 
 		int testrekt = 20;
-		int grad = 0;
+		int grad = 1;
 		int boi = 10;
-		int lmao = 0;
+		int lmao = 100;
 	}
 
 }
