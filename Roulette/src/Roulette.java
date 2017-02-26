@@ -8,6 +8,7 @@ public class Roulette {
 		for(int i=0;i<Blyat;i++)
 			System.out.println(Blyat);
 		Boi;
+		Jup;
 	}
 
 }
