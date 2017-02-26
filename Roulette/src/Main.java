@@ -20,17 +20,18 @@ public class Main extends Application {
 	@Override
 	public void start(Stage primaryStage) throws IOException {
 		primaryStage.setTitle("Roulette Programm");	//titel des Fensters
-		primaryStage.setResizable(false);			//feste fenstergröße (fenster kann nicht mehr mit der maus größer oder kleiner gezogen werden)
+		primaryStage.setResizable(false);			//feste fenstergrÃ¶ÃŸe (fenster kann nicht mehr mit der maus grÃ¶ÃŸer oder kleiner gezogen werden)
 
 
 		//fxml datei einbinden
 		AnchorPane mainAnchorPane = (AnchorPane) FXMLLoader.load(Main.class.getResource("menu.fxml"));	//"menu.fxml" datei laden (befehle die das GUI erstellen)
-		primaryStage.setScene(new Scene(mainAnchorPane));	//"mainAnchorPane" zur Scene hinzufügen
+		primaryStage.setScene(new Scene(mainAnchorPane));	//"mainAnchorPane" zur Scene hinzufÃ¼gen
 		primaryStage.show();	//fenster wird sichtbar gemacht
 	}
 
 
 	public static void main(String[] args) {
+		//lounch
 		launch(args);
 	}
 }
