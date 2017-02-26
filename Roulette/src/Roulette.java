@@ -25,7 +25,7 @@ public class Roulette {
 		int testrekt = 30;
 		int grad = 1;
 		int boi = 10;
-		int lmao = 100;
+		int lmao = 90;
 	}
 
 }
