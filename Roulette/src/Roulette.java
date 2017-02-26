@@ -13,7 +13,7 @@ public class Roulette {
 		for(int i=0;i<Zahl;i++)
 			System.out.println(Zahl);
 		System.out.println("Endlich funzt das hier!");
-		int Getrkt = 15;
+		int Getrkt = 20;
 		int grad =0;
 		int boi = 10;
 		int lmao = 0;
