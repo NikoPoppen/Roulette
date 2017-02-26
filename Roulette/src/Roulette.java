@@ -25,7 +25,11 @@ public class Roulette {
 		int testrekt = 30;
 		int grad = 1;
 		int boi = 10;
+<<<<<<< HEAD
 		int lmao = 130;
+=======
+		int lmao = 90;
+>>>>>>> branch 'MainQuellcode' of https://github.com/NikoPoppen/Roulette.git
 	}
 
 }
