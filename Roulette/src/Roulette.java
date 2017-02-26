@@ -17,7 +17,7 @@ public class Roulette {
 		System.out.println("test2?!");
 		
 
-		int testrekt = 20;
+		int testrekt = 30;
 		int grad = 1;
 		int boi = 10;
 		int lmao = 100;
