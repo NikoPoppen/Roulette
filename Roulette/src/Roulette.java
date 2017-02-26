@@ -7,6 +7,7 @@ public class Roulette {
 		int Blyat=3;
 		for(int i=0;i<Blyat;i++)
 			System.out.println(Blyat);
+		Boi;
 	}
 
 }
