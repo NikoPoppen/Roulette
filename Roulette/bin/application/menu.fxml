@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="590.0" prefWidth="890.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ControllerMenu">
+   <children>
+      <ToolBar prefHeight="40.0" prefWidth="900.0">
+         <items>
+            <Button mnemonicParsing="false" onAction="#onSchließenClick" prefHeight="25.0" prefWidth="70.0" text="Schließen" />
+         </items>
+      </ToolBar>
+      <SplitPane dividerPositions="0.75" layoutY="40.0" prefHeight="560.0" prefWidth="900.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <Label layoutX="180.0" layoutY="15.0" text="Roulette Simulator">
+                     <font>
+                        <Font name="System Bold" size="40.0" />
+                     </font>
+                  </Label>
+                  <Button layoutX="219.0" layoutY="177.0" mnemonicParsing="false" onAction="#onDemoClick" prefHeight="70.0" prefWidth="250.0" text="Demo">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="219.0" layoutY="298.0" mnemonicParsing="false" onAction="#onStartClick" prefHeight="70.0" prefWidth="250.0" text="Start">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <TextField fx:id="username" layoutX="28.0" layoutY="61.0" promptText="MaxMustermann" />
+                  <PasswordField fx:id="password" layoutX="28.0" layoutY="117.0" promptText="*********" />
+                  <Label layoutX="28.0" layoutY="44.0" text="Benutzername:" />
+                  <Label layoutX="64.0" layoutY="14.0" text="Anmeldung">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="28.0" layoutY="100.0" text="Passwort:" />
+                  <Button layoutX="145.0" layoutY="158.0" mnemonicParsing="false" onAction="#onLoginClick" text="Ok" />
+                  <Hyperlink layoutX="28.0" layoutY="159.0" onAction="#onRegistrierenClick" text="Registrieren" />
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
