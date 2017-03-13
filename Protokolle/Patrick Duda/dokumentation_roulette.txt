@@ -1,0 +1,55 @@
+24.02.2017
+
+Start: 16:00Uhr	Ende:18:30
+-Entwicklung des Menus
+-Entwicklung des Spielfelds (grafisch)
+
+Start: 18:30Uhr	Ende:19:15Uhr
+-Spielfeld GUI angepasst
+-Speilfeld GUI in Java eingebunden
+-Menu GUI und Spielfeld GUI miteinadner verbunden
+-Gui für den Wetteinsatz erstellt
+-Bug fix (öffnen des einsatz fensters)
+-Wetteinsatzfenster mit dem Spielfeld verbuden
+
+---
+
+03.03.2017
+
+Zeit: 90min
+-GUI Verbesserungsvorschläge gesammelt
+-mit Niko Poppen unterhalten, wie wir beim Programmieren des Algorithmus vorgehen wollen 
+
+---
+
+08.03.2017
+
+Zeit: 1h
+-Erstellung des Registrierungsfensters
+-in Java eingebunden
+
+---
+
+09.03.2017
+
+Zeit: 1,5h
+-PowerPoint zu unserem Projektthema ersttelt (Niko Poppen hat dabei geholfen)
+-Informationen für die PowerPoint wurde aus dem Lastenheft entnommen, dass Sebastion Koch erstellt hat
+
+---
+
+10.03.2017
+
+Start: 11:20Uhr	Ende:12:50Uhr
+-Erstlleung eines Klassendiagramms mit StarUML
+
+---
+
+13.03.2017
+
+Start: 21:30Uhr	Ende: 21:50Uhr
+-bug fix package
+-Klassendiargamm überarbeitet
+
+---
+
