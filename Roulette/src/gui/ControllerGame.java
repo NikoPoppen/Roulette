@@ -6,6 +6,7 @@ package gui;
 
 import java.io.IOException;
 
+import algorithmus.Algorithmus;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -17,11 +18,15 @@ import javafx.stage.Stage;
 
 public class ControllerGame {
 
+	Algorithmus objectAlgorithmus = new Algorithmus();	//Hier wird ein Objekt einer Klasse erstellt.
+
     @FXML
     void on0Click(ActionEvent event) throws IOException {
 //    	int zero = 0;
     	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
     	System.out.println("Test Feld 0");
+
+//    	objectAlgorithmus.test();	//Aufruf der Methode einer anderen klasse
     }
 
     @FXML
@@ -282,13 +287,14 @@ public class ControllerGame {
     	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
     }
 
-    static void einsatzFenster(ActionEvent event) throws IOException{
+    public static void einsatzFenster(ActionEvent event) throws IOException{
     	AnchorPane ControllerGameAnchorPane = FXMLLoader.load(ControllerGame.class.getResource("einsatz.fxml"));	//"einsatz.fxml" datei laden (befehle die das GUI erstellen)
     	Stage stage = new Stage();	//new stage erstellen
     	stage.setScene(new Scene(ControllerGameAnchorPane));	//"ControllernAnchorPane" zur Scene hinzufügen
     	stage.show();	//fenster wird sichtbar gemacht
 
 		stage.setResizable(false);			//feste fenstergröße (fenster kann nicht mehr mit der maus größer oder kleiner gezogen werden)
+
     }//end einsatzFenster
 
 }

@@ -20,9 +20,17 @@ public class ControllerEinsatz {
     }
 
     @FXML
-    void onOkEinsatzClick(ActionEvent event) {
-    	System.out.println("Einsatz: " + einsatz.getText() + "EUR");
+//    public double onOkEinsatzClick(double einsatzZahl)
+    public double onOkEinsatzClick(ActionEvent event) {
+    	String einsatzStr = einsatz.getText();
+    	double einsatzZahl;
+
+		einsatzZahl = Double.parseDouble(einsatzStr);	//Umwandlung von String zu double
+
+    	System.out.println("Einsatz: "+ einsatzZahl + "EUR");
     	((Node)(event.getSource())).getScene().getWindow().hide();	//verbirgt das vorherige Fenster
+
+    	return einsatzZahl;
     }
 
 }
