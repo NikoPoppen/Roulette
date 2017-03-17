@@ -1,24 +1,31 @@
 package algorithmus;
 
-import gui.ControllerEinsatz;
+import gui.*;
 import javafx.event.ActionEvent;
 
 public class Algorithmus {
 
 
-	public static void main(String[] args) {
+
+	public void main(String[] args) {
 		// TODO Auto-generated method stub
 
 
-		}
 
-	public static void test(){
-//		System.out.println();
-//		double zahl;
-//		ControllerEinsatz einsatz = new ControllerEinsatz();
-//		zahl = einsatz.onOkEinsatzClick(einsatzZahl);
-//
-//		System.out.println(zahl);
+
+	}
+
+	public void auffuhrung(double zahl1){
+
+		ControllerEinsatz einsatz = new ControllerEinsatz();
+		test(zahl1);
+		System.out.println("test" + zahl1);
+	}
+
+	public double test(double zahl){
+		ControllerEinsatz einsatz = new ControllerEinsatz();
+		System.out.println(zahl + " Ausgabe aus der Algorithmus Klasse");
+		return(zahl);
 	}
 
 }

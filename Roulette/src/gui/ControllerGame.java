@@ -18,7 +18,7 @@ import javafx.stage.Stage;
 
 public class ControllerGame {
 
-	Algorithmus objectAlgorithmus = new Algorithmus();	//Hier wird ein Objekt einer Klasse erstellt.
+//	Algorithmus objectAlgorithmus = new Algorithmus();	//Hier wird ein Objekt einer Klasse erstellt.
 
     @FXML
     void on0Click(ActionEvent event) throws IOException {
