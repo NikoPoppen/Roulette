@@ -60,8 +60,9 @@ Zeit:90min
 -Einsatz einen Rückgabewert gegeben
 
 17.03.2017
-ZEit:60min
--kruse
+Zeit:60min
+-Klassen- und Packageübergreifend funktion aufrufen
 
 Zeit: 90min
-- model view controller
+-model view controller
+-der eingegebene einsatzwert in den algorithmus übergeben & aufrufen
