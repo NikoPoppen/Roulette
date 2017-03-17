@@ -8,8 +8,8 @@ Start: 18:30Uhr	Ende:19:15Uhr
 -Spielfeld GUI angepasst
 -Speilfeld GUI in Java eingebunden
 -Menu GUI und Spielfeld GUI miteinadner verbunden
--Gui für den Wetteinsatz erstellt
--Bug fix (öffnen des einsatz fensters)
+-Gui fÃ¼r den Wetteinsatz erstellt
+-Bug fix (Ã¶ffnen des einsatz fensters)
 -Wetteinsatzfenster mit dem Spielfeld verbuden
 
 ---
@@ -17,7 +17,7 @@ Start: 18:30Uhr	Ende:19:15Uhr
 03.03.2017
 
 Zeit: 90min
--GUI Verbesserungsvorschläge gesammelt
+-GUI VerbesserungsvorschlÃ¤ge gesammelt
 -mit Niko Poppen unterhalten, wie wir beim Programmieren des Algorithmus vorgehen wollen 
 
 ---
@@ -34,7 +34,7 @@ Zeit: 1h
 
 Zeit: 1,5h
 -PowerPoint zu unserem Projektthema ersttelt (Niko Poppen hat dabei geholfen)
--Informationen für die PowerPoint wurde aus dem Lastenheft entnommen, dass Sebastion Koch erstellt hat
+-Informationen fÃ¼r die PowerPoint wurde aus dem Lastenheft entnommen, dass Sebastion Koch erstellt hat
 
 ---
 
@@ -49,12 +49,19 @@ Start: 11:20Uhr	Ende:12:50Uhr
 
 Start: 21:30Uhr	Ende: 21:50Uhr
 -bug fix package
--Klassendiargamm überarbeitet
+-Klassendiargamm Ã¼berarbeitet
 
 ---
 
 14.03.2017
 
 Zeit:90min
--Funktionen Klassenübergreifend aufrufen
--Einsatz einen Rückgabewert gegeben
+-Funktionen KlassenÃ¼bergreifend aufrufen
+-Einsatz einen RÃ¼ckgabewert gegeben
+
+17.03.2017
+ZEit:60min
+-kruse
+
+Zeit: 90min
+- model view controller
