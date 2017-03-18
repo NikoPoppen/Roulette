@@ -25,8 +25,6 @@ public class Algorithmus {
 	public double test(double zahl){
 		ControllerEinsatz einsatz = new ControllerEinsatz();
 		System.out.println(zahl + " Ausgabe aus der Algorithmus Klasse.");
-		System.out.println("TEST2");
-		System.out.println("TEST");
 
 		return(zahl);
 	}
