@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="890.0" prefWidth="1390.0" style="-fx-background-color: #00703C;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.ControllerGame">
+   <children>
+      <ToolBar prefHeight="40.0" prefWidth="1400.0">
+        <items>
+          <Button mnemonicParsing="false" onAction="#onSchließen2Click" prefHeight="25.0" prefWidth="80.0" text="Schließen" />
+            <Button mnemonicParsing="false" onAction="#onHauptmenuClick" prefHeight="25.0" prefWidth="80.0" text="Hauptmenu" />
+        </items>
+      </ToolBar>
+      <Label layoutX="14.0" layoutY="74.0" text="Guthaben:" textFill="WHITE" textOverrun="CLIP">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <GridPane layoutX="26.0" layoutY="182.0">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" prefWidth="95.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" prefWidth="95.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" prefWidth="95.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" prefWidth="95.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" prefWidth="95.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" prefWidth="95.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" prefWidth="95.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" prefWidth="95.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" prefWidth="95.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" prefWidth="95.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" prefWidth="95.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" prefWidth="95.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" prefWidth="95.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" prefWidth="95.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="95.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" prefHeight="95.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" prefHeight="95.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="95.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="95.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button mnemonicParsing="false" onAction="#on0Click" prefHeight="285.0" prefWidth="95.0" text="0" GridPane.rowSpan="3">
+               <font>
+                  <Font size="48.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#on3redClick" prefHeight="95.0" prefWidth="95.0" style="-fx-background-color: red;" text="3" textFill="WHITE" GridPane.columnIndex="1">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#on6blackClick" prefHeight="95.0" prefWidth="95.0" style="-fx-background-color: black;" text="6" textFill="WHITE" GridPane.columnIndex="2">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#on9redClick" prefHeight="95.0" prefWidth="95.0" style="-fx-background-color: red;" text="9" textFill="WHITE" GridPane.columnIndex="3">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#on12redClick" prefHeight="95.0" prefWidth="95.0" style="-fx-background-color: red;" text="12" textFill="WHITE" GridPane.columnIndex="4">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#on15blackClick" prefHeight="95.0" prefWidth="95.0" style="-fx-background-color: black;" text="15" textFill="WHITE" GridPane.columnIndex="5">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#on18redClick" prefHeight="95.0" prefWidth="95.0" style="-fx-background-color: red;" text="18" textFill="WHITE" GridPane.columnIndex="6">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#on21redClick" prefHeight="95.0" prefWidth="95.0" style="-fx-background-color: red;" text="21" textFill="WHITE" GridPane.columnIndex="7">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#on24blackClick" prefHeight="95.0" prefWidth="95.0" style="-fx-background-color: black;" text="24" textFill="WHITE" GridPane.columnIndex="8">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#on27redClick" prefHeight="95.0" prefWidth="95.0" style="-fx-background-color: red;" text="27" textFill="WHITE" GridPane.columnIndex="9">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#on30redClick" prefHeight="95.0" prefWidth="95.0" style="-fx-background-color: red;" text="30" textFill="WHITE" GridPane.columnIndex="10">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#on33blackClick" prefHeight="95.0" prefWidth="95.0" style="-fx-background-color: black;" text="33" textFill="WHITE" GridPane.columnIndex="11">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#on36redClick" prefHeight="95.0" prefWidth="95.0" style="-fx-background-color: red;" text="36" textFill="WHITE" GridPane.columnIndex="12">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#on3rdClick" prefHeight="95.0" prefWidth="95.0" text="3rd" GridPane.columnIndex="13">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#on2blackClick" prefHeight="95.0" prefWidth="95.0" style="-fx-background-color: black;" text="2" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#on5redClick" prefHeight="95.0" prefWidth="95.0" style="-fx-background-color: red;" text="5" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#on8blackClick" prefHeight="95.0" prefWidth="95.0" style="-fx-background-color: black;" text="8" textFill="WHITE" GridPane.columnIndex="3" GridPane.rowIndex="1">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#on11blackClick" prefHeight="95.0" prefWidth="95.0" style="-fx-background-color: black;" text="11" textFill="WHITE" GridPane.columnIndex="4" GridPane.rowIndex="1">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#on14redClick" prefHeight="95.0" prefWidth="95.0" style="-fx-background-color: red;" text="14" textFill="WHITE" GridPane.columnIndex="5" GridPane.rowIndex="1">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#on17blackClick" prefHeight="95.0" prefWidth="95.0" style="-fx-background-color: black;" text="17" textFill="WHITE" GridPane.columnIndex="6" GridPane.rowIndex="1">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#on20blackClick" prefHeight="95.0" prefWidth="95.0" style="-fx-background-color: black;" text="20" textFill="WHITE" GridPane.columnIndex="7" GridPane.rowIndex="1">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#on23redClick" prefHeight="95.0" prefWidth="95.0" style="-fx-background-color: red;" text="23" textFill="WHITE" GridPane.columnIndex="8" GridPane.rowIndex="1">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#on26blackClick" prefHeight="95.0" prefWidth="95.0" style="-fx-background-color: black;" text="26" textFill="WHITE" GridPane.columnIndex="9" GridPane.rowIndex="1">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#on29blackClick" prefHeight="95.0" prefWidth="95.0" style="-fx-background-color: black;" text="29" textFill="WHITE" GridPane.columnIndex="10" GridPane.rowIndex="1">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#on32redClick" prefHeight="95.0" prefWidth="95.0" style="-fx-background-color: red;" text="32" textFill="WHITE" GridPane.columnIndex="11" GridPane.rowIndex="1">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#on35blackClick" prefHeight="95.0" prefWidth="95.0" style="-fx-background-color: black;" text="35" textFill="WHITE" GridPane.columnIndex="12" GridPane.rowIndex="1">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#on2ndClick" prefHeight="95.0" prefWidth="95.0" text="2nd" GridPane.columnIndex="13" GridPane.rowIndex="1">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#on1redClick" prefHeight="95.0" prefWidth="95.0" style="-fx-background-color: red;" text="1" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#on4blackClick" prefHeight="95.0" prefWidth="95.0" style="-fx-background-color: black;" text="4" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="2">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#on7redClick" prefHeight="95.0" prefWidth="95.0" style="-fx-background-color: red;" text="7" textFill="WHITE" GridPane.columnIndex="3" GridPane.rowIndex="2">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#on10blackClick" prefHeight="95.0" prefWidth="95.0" style="-fx-background-color: black;" text="10" textFill="WHITE" GridPane.columnIndex="4" GridPane.rowIndex="2">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#on13blackClick" prefHeight="95.0" prefWidth="95.0" style="-fx-background-color: black;" text="13" textFill="WHITE" GridPane.columnIndex="5" GridPane.rowIndex="2">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#on16redClick" prefHeight="95.0" prefWidth="95.0" style="-fx-background-color: red;" text="16" textFill="WHITE" GridPane.columnIndex="6" GridPane.rowIndex="2">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#on19redClick" prefHeight="95.0" prefWidth="95.0" style="-fx-background-color: red;" text="19" textFill="WHITE" GridPane.columnIndex="7" GridPane.rowIndex="2">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#on22blackClick" prefHeight="95.0" prefWidth="95.0" style="-fx-background-color: black;" text="22" textFill="WHITE" GridPane.columnIndex="8" GridPane.rowIndex="2">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#on25redClick" prefHeight="95.0" prefWidth="95.0" style="-fx-background-color: red;" text="25" textFill="WHITE" GridPane.columnIndex="9" GridPane.rowIndex="2">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#on28blackClick" prefHeight="95.0" prefWidth="95.0" style="-fx-background-color: black;" text="28" textFill="WHITE" GridPane.columnIndex="10" GridPane.rowIndex="2">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#on31blackClick" prefHeight="95.0" prefWidth="95.0" style="-fx-background-color: black;" text="31" textFill="WHITE" GridPane.columnIndex="11" GridPane.rowIndex="2">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#on34redClick" prefHeight="95.0" prefWidth="95.0" style="-fx-background-color: red;" text="34" textFill="WHITE" GridPane.columnIndex="12" GridPane.rowIndex="2">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#on1stClick" prefHeight="95.0" prefWidth="95.0" text="1st" GridPane.columnIndex="13" GridPane.rowIndex="2">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#on1_12Click" prefHeight="95.0" prefWidth="380.0" text="1 - 12" GridPane.columnIndex="1" GridPane.columnSpan="4" GridPane.rowIndex="3">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#on13_24Click" prefHeight="95.0" prefWidth="380.0" text="13 - 24" GridPane.columnIndex="5" GridPane.columnSpan="4" GridPane.rowIndex="3">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#on25_36Click" prefHeight="95.0" prefWidth="380.0" text="25 - 36" GridPane.columnIndex="9" GridPane.columnSpan="4" GridPane.rowIndex="3">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#on1_18Click" prefHeight="95.0" prefWidth="190.0" text="1- 18" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="4">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#onGeradeClick" prefHeight="95.0" prefWidth="190.0" text="GERADE" GridPane.columnIndex="3" GridPane.columnSpan="2" GridPane.rowIndex="4">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#onRotClick" prefHeight="95.0" prefWidth="190.0" style="-fx-background-color: red;" text="ROT" textFill="WHITE" GridPane.columnIndex="5" GridPane.columnSpan="2" GridPane.rowIndex="4">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#onSchwarzClick" prefHeight="95.0" prefWidth="190.0" style="-fx-background-color: black;" text="SCHWARZ" textFill="WHITE" GridPane.columnIndex="7" GridPane.columnSpan="2" GridPane.rowIndex="4">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#onUngeradeClick" prefHeight="95.0" prefWidth="190.0" text="UNGERADE" GridPane.columnIndex="9" GridPane.columnSpan="2" GridPane.rowIndex="4">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#on19_36Click" prefHeight="95.0" prefWidth="190.0" text="19-36" GridPane.columnIndex="11" GridPane.columnSpan="2" GridPane.rowIndex="4">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Button>
+         </children>
+      </GridPane>
+      <Label layoutX="13.0" layoutY="43.0" text="Benutzername:" textFill="WHITE" textOverrun="CLIP">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
