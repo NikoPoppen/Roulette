@@ -21,6 +21,9 @@ public class Main extends Application {
 	public void start(Stage primaryStage) throws IOException {
 		primaryStage.setTitle("Roulette Simulator");	//titel des Fensters
 		primaryStage.setResizable(false);			//feste fenstergröße (fenster kann nicht mehr mit der maus größer oder kleiner gezogen werden)
+		// hoehe und breite der Stage festlegen
+		primaryStage.setWidth(900);
+		primaryStage.setHeight(600);
 
 
 		//fxml datei einbinden

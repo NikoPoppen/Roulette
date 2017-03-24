@@ -13,9 +13,6 @@ import javafx.scene.control.TextField;
 public class ControllerEinsatz {
 
 
-
-	public double einsatzZahl;
-
     @FXML // fx:id="einsatz"
     private TextField einsatz; // Value injected by FXMLLoader
 
@@ -27,15 +24,17 @@ public class ControllerEinsatz {
     @FXML
 //    public double onOkEinsatzClick(double einsatzZahl)
     public double onOkEinsatzClick(ActionEvent event) {
-    	String einsatzStr = einsatz.getText();
+    	Algorithmus classAlgo = new Algorithmus();	//Algorithmus Klasse aufrufen
+
+    	double einsatzZahl;
+    	String einsatzStr = einsatz.getText();	//get Text aus dem Eingabe Fenster
 
 		einsatzZahl = Double.parseDouble(einsatzStr);	//Umwandlung von String zu double
 
-    	System.out.println("Einsatz: "+ einsatzZahl + "EUR");
+    	System.out.println("ControllerEinsatz: "+ einsatzZahl + "EUR");	//Text Ausgabe zur Überprüfung (einsatzZahl)
     	((Node)(event.getSource())).getScene().getWindow().hide();	//verbirgt das vorherige Fenster
 
-    	Algorithmus classAlgo = new Algorithmus();
-    	classAlgo.auffuhrung(einsatzZahl);
+    	classAlgo.Ausführung(einsatzZahl);	//Aufrufen der Funtion Ausführung aus der Algorithmus Klasse
 
     	return einsatzZahl;
 

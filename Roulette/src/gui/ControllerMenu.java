@@ -31,7 +31,7 @@ public class ControllerMenu {
 
     @FXML
     void onSchließenClick(ActionEvent event) {
-    	Platform.exit();	//schließt das fenster wenn auf den "Schließen" knopf gedrückt wird
+    	Platform.exit();
     }
 
     @FXML
@@ -48,6 +48,9 @@ public class ControllerMenu {
 
     	stage.setTitle("Roulette Simulator");	//titel des Fensters
 		stage.setResizable(false);			//feste fenstergröße (fenster kann nicht mehr mit der maus größer oder kleiner gezogen werden)
+		// hoehe und breite der Stage festlegen
+		stage.setWidth(1400);
+		stage.setHeight(900);
 
     	((Node)(event.getSource())).getScene().getWindow().hide();	//verbirgt das vorherige Fenster
     }
@@ -68,6 +71,9 @@ public class ControllerMenu {
     	stage.show();	//fenster wird sichtbar gemacht
 
 		stage.setResizable(false);			//feste fenstergröße (fenster kann nicht mehr mit der maus größer oder kleiner gezogen werden)
+		// hoehe und breite der Stage festlegen
+		stage.setWidth(240);
+		stage.setHeight(260);
     }
 
 }
