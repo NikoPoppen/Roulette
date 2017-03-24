@@ -59,10 +59,36 @@ Zeit:90min
 -Funktionen Klassenübergreifend aufrufen
 -Einsatz einen Rückgabewert gegeben
 
+---
+
 17.03.2017
+
 Zeit:60min
 -Klassen- und Packageübergreifend funktion aufrufen
 
 Zeit: 90min
 -model view controller
 -der eingegebene einsatzwert in den algorithmus übergeben & aufrufen
+
+---
+
+21.03.2017
+
+Zeit:90min
+-zähler variabel erstellt für array
+  -die zähler variabel gibt die größe des arrays an
+-button wert zugewiesen
+-Math.random
+
+24.03.2017
+Zeit:170min
+-allen buttons in der game.fxml/GameController die zähler variabel hinzugefügt
+-allen buttons in der game.fxml/GameController einen wert gegeben
+-array erstellt in dem alle gesetzen werte abgespeichert werden -> als eigene Funtion
+-arrayausgabe zur überprüfung
+-im menü "start" button zu "Simulator" umbenannt
+-spielfeld buttons mit einem weißen rahmen versehen
+
+Zeit: 60min
+- fenstergrößen bug behoben (bei allen Fenstern)
+- versucht github einzurichten -> push und fetch funktioniert immernoch nicht
