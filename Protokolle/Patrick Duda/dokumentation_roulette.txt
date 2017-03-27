@@ -80,7 +80,10 @@ Zeit:90min
 -button wert zugewiesen
 -Math.random
 
+---
+
 24.03.2017
+
 Zeit:170min
 -allen buttons in der game.fxml/GameController die zähler variabel hinzugefügt
 -allen buttons in der game.fxml/GameController einen wert gegeben
@@ -92,3 +95,12 @@ Zeit:170min
 Zeit: 60min
 - fenstergrößen bug behoben (bei allen Fenstern)
 - versucht github einzurichten -> push und fetch funktioniert immernoch nicht
+
+---
+
+27.03.2017
+
+Start: 20:00Uhr End: 21:10Uhr
+-game.fxml -> start button der den Algorithmus startet von der Größe angepasst
+-variabel "usernameVar" als public static gesetzt, damit der eingegebener Benutzername immer und überall ausgegeben werden kann
+-usernameVar wird oben links in der ecke des Spielfeldes angezeigt (muss noch verschoben werden)
