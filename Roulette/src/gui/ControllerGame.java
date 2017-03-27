@@ -5,7 +5,6 @@
 package gui;
 
 import java.io.IOException;
-
 import algorithmus.Algorithmus;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
@@ -19,16 +18,26 @@ import javafx.stage.Stage;
 public class ControllerGame {
 
 	public Algorithmus algo = new Algorithmus();
+	public ControllerMenu menu = new ControllerMenu();
 	public static int zähler = 0;
+
+
 
 	@FXML
     void on0Click(ActionEvent event) throws IOException {
 
-    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
+
+
+		//eingegebenen Benutzernamen ausgeben
+//		System.out.println("Ausgabe vom eingegebenen Benutzernamen: " + menu.usernameVar);
+
+		einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
 
     	int zero = 0;
     	zähler++;
     	algo.Arrayspeicher(zero);
+
+
     }
 
     @FXML

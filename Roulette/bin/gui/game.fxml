@@ -299,9 +299,9 @@
             <Font name="System Bold" size="18.0" />
          </font>
       </Label>
-      <Button layoutX="598.0" layoutY="728.0" mnemonicParsing="false" onAction="#onSpielenClick" prefHeight="95.0" prefWidth="190.0" text="Start">
+      <Button layoutX="616.0" layoutY="743.0" mnemonicParsing="false" onAction="#onSpielenClick" prefHeight="70.0" prefWidth="150.0" text="Start">
          <font>
-            <Font size="36.0" />
+            <Font size="24.0" />
          </font>
       </Button>
    </children>
