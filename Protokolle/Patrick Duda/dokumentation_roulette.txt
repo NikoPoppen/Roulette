@@ -113,4 +113,8 @@ Zeit:90min
 -versucht github in der schule in der portabel einzurichten
 -informiert über java swing befehle, um dynamische textausgaben im fenster auszugeben
 
+Zeit:60min
+-über github einstellungen informeirt
+github in eclipse eingebunden
+
 ---
