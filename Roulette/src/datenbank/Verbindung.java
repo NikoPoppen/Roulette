@@ -6,6 +6,7 @@ public class Verbindung {
 		// TODO Auto-generated method stub
 
 		//test aus eclipse (hochladen)
+		//test aus github (download into eclipse)
 
 	}
 
