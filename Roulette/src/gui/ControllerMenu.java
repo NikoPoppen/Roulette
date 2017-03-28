@@ -25,7 +25,7 @@ import javafx.stage.Stage;
 public class ControllerMenu {
 
 	public static String usernameVar;
-	public String passwordVar;
+	public static String passwordVar;
 
     @FXML // fx:id="password"
     private PasswordField password; // Value injected by FXMLLoader
@@ -59,14 +59,17 @@ public class ControllerMenu {
     	((Node)(event.getSource())).getScene().getWindow().hide();	//verbirgt das vorherige Fenster
 
     	//Ausgabe vom eingegebenen Benutzernamen im Spielfeld
+//    	label.setText(usernameVar);
+
     	ControllerMenuAnchorPane.getChildren().add(new Label(usernameVar));
 
     }
 
-    @FXML
+
+	@FXML
     void onLoginClick(ActionEvent event) {
     	usernameVar = username.getText();
-    	String passwordVar = password.getText();
+    	passwordVar = password.getText();
     	System.out.println("Login\n" + "Benutzername: " + usernameVar + "\nPasswort: " + passwordVar);	//eingegebener text im textfeld "username" und "password" wird durch das klicken auf den "ok" knopf ausgelesen
 
     }

@@ -30,10 +30,6 @@ public class Main extends Application {
 		AnchorPane mainAnchorPane = (AnchorPane) FXMLLoader.load(Main.class.getResource("menu.fxml"));	//"menu.fxml" datei laden (befehle die das GUI erstellen)
 		primaryStage.setScene(new Scene(mainAnchorPane));	//"mainAnchorPane" zur Scene hinzufügen
 		primaryStage.show();	//fenster wird sichtbar gemacht
-
-
-
-
 	}
 
 

@@ -22,17 +22,16 @@ public class ControllerGame {
 	public static int zähler = 0;
 
 
-
 	@FXML
     void on0Click(ActionEvent event) throws IOException {
 
 		//eingegebenen Benutzernamen ausgeben
 //		System.out.println("Ausgabe vom eingegebenen Benutzernamen: " + menu.usernameVar);
 
+		einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
+
 		int zero = 0;
     	zähler++;
-		algo.Arrayspeicher(zero);
-		einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
 		algo.Ausführung(zero);
 
     }
@@ -540,6 +539,8 @@ public class ControllerGame {
 
     @FXML
     void onSpielenClick(ActionEvent event) {
+
+    	System.out.println("\n...Algorithmusstart...\n");
 
     }
 

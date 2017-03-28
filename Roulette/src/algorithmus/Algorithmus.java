@@ -38,6 +38,7 @@ public class Algorithmus {
 	 */
 	public static int[] Arrayspeicher(int z){
 		ControllerGame game = new ControllerGame();
+
 		int Array[] = new int [game.zähler];
 
 		//Werte in das Array abspeichern
@@ -51,7 +52,9 @@ public class Algorithmus {
 
 			System.out.println("Arrayausgabe " + Array[i]);
 		}
-		//Speicher();
+
+//		Speicher();
+
 		return Array;
 	}
 
