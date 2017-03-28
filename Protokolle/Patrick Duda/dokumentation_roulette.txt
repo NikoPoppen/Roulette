@@ -104,3 +104,13 @@ Start: 20:00Uhr End: 21:10Uhr
 -game.fxml -> start button der den Algorithmus startet von der Größe angepasst
 -variabel "usernameVar" als public static gesetzt, damit der eingegebener Benutzername immer und überall ausgegeben werden kann
 -usernameVar wird oben links in der ecke des Spielfeldes angezeigt (muss noch verschoben werden)
+
+---
+
+28.03.2017
+
+Zeit:90min
+-versucht github in der schule in der portabel einzurichten
+-informiert über java swing befehle, um dynamische textausgaben im fenster auszugeben
+
+---
