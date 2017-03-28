@@ -7,7 +7,12 @@ import gui.*;
 
 public class Algorithmus {
 
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
 
+
+
+	}
 
 	/**
 	 *
@@ -46,7 +51,7 @@ public class Algorithmus {
 
 			System.out.println("Arrayausgabe " + Array[i]);
 		}
-
+		//Speicher();
 		return Array;
 	}
 

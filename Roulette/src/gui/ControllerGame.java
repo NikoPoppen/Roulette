@@ -26,17 +26,14 @@ public class ControllerGame {
 	@FXML
     void on0Click(ActionEvent event) throws IOException {
 
-
-
 		//eingegebenen Benutzernamen ausgeben
 //		System.out.println("Ausgabe vom eingegebenen Benutzernamen: " + menu.usernameVar);
 
-		einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
-
-    	int zero = 0;
+		int zero = 0;
     	zähler++;
-    	algo.Arrayspeicher(zero);
-
+		algo.Arrayspeicher(zero);
+		einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
+		algo.Ausführung(zero);
 
     }
 
@@ -511,9 +508,9 @@ public class ControllerGame {
 
     	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
 //    Wird am Ende Festgelegt
-      	int ten = 10;
+      	int red = 998;
       	zähler++;
-      	algo.Arrayspeicher(ten);
+      	algo.Arrayspeicher(red);
     }
 
     @FXML
@@ -525,20 +522,20 @@ public class ControllerGame {
     void onSchwarzClick(ActionEvent event) throws IOException {
 
     	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
-//     Wird am Ende Festgelegt
-      	int ten = 10;
+
+      	int black = 999;
       	zähler++;
-      	algo.Arrayspeicher(ten);
+      	algo.Arrayspeicher(black);
     }
 
     @FXML
     void onUngeradeClick(ActionEvent event) throws IOException {
 
     	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
-//     Wird am Ende Festgelegt
-      	int ten = 10;
+
+      	int ungerade = 2000;
       	zähler++;
-      	algo.Arrayspeicher(ten);
+      	algo.Arrayspeicher(ungerade);
     }
 
     @FXML
