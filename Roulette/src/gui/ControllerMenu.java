@@ -6,7 +6,13 @@ package gui;
 
 
 
+import java.awt.Container;
 import java.io.IOException;
+import java.util.List;
+
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -61,7 +67,13 @@ public class ControllerMenu {
     	//Ausgabe vom eingegebenen Benutzernamen im Spielfeld
 //    	label.setText(usernameVar);
 
-    	ControllerMenuAnchorPane.getChildren().add(new Label(usernameVar));
+//    	ControllerMenuAnchorPane.getChildren().add(new Label(usernameVar));
+
+    	JLabel label=new JLabel(usernameVar);
+    	JFrame frame=new JFrame();
+    	frame.add(label);
+    	frame.setVisible(true);
+
 
     }
 
