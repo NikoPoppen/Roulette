@@ -115,6 +115,13 @@ Zeit:90min
 
 Zeit:60min
 -über github einstellungen informeirt
-github in eclipse eingebunden
+-github in eclipse eingebunden
 
 ---
+
+31.03.2017
+
+Zeit: 150min
+-informiert über java fx und wie man labels erstellt
+-label erstellt mit dynamischen text -> eingegebener Benutzername (usernameVar) wird an der richtigen Position ausgegeben#
+-größe des textes angepasst
