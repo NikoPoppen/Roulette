@@ -12,7 +12,9 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
 public class ControllerGame {
@@ -28,6 +30,9 @@ public class ControllerGame {
 
     	algo.arraySpeicher(zero);
 		einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
+
+		algo.kontostand = algo.kontostand - 100;
+		System.out.println(algo.kontostand);
     }
 
 	@FXML
@@ -508,7 +513,6 @@ public class ControllerGame {
 		// hoehe und breite der Stage festlegen
 		stage.setWidth(400);
 		stage.setHeight(200);
-
     }//end einsatzFenster
 
 }

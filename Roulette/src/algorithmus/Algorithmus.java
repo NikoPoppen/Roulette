@@ -7,7 +7,7 @@ import gui.*;
 
 public class Algorithmus {
 
-	public double kontostand = 3000;
+	public static double kontostand = 3000;
 
 	/**
 	 *

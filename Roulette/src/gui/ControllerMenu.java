@@ -9,6 +9,7 @@ package gui;
 
 import java.io.IOException;
 
+import algorithmus.Algorithmus;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -48,7 +49,9 @@ public class ControllerMenu {
 
     @FXML
     void onStartClick(ActionEvent event) throws IOException {
-		AnchorPane ControllerMenuAnchorPane = FXMLLoader.load(ControllerMenu.class.getResource("game.fxml"));	//"game.fxml" datei laden (befehle die das GUI erstellen)
+    	Algorithmus algo = new Algorithmus();
+
+    	AnchorPane ControllerMenuAnchorPane = FXMLLoader.load(ControllerMenu.class.getResource("game.fxml"));	//"game.fxml" datei laden (befehle die das GUI erstellen)
     	Stage stage = new Stage();	//new stage erstellen
     	stage.setScene(new Scene(ControllerMenuAnchorPane));	//"ControllernAnchorPane" zur Scene hinzufügen
 
@@ -60,15 +63,27 @@ public class ControllerMenu {
 		stage.setHeight(900);
 
 		//
-		Label myLabel = new Label(usernameVar);	//neues label
-		myLabel.setTranslateY(50);	//label position y kordinate
-		myLabel.setTranslateX(170);	//label position x kordinate
-		myLabel.setScaleX(1.5);	//label größe breite
-        myLabel.setScaleY(1.5); //label größe höhe
-        myLabel.setTextFill(Color.web("#FFFFFF"));	//label/text farbe
-        myLabel.setPrefWidth(100);	//maximale breite des labels
-        myLabel.setWrapText(false);	//wenn die maximale breite erreicht ist, bei false: text abhacken und "..." hinter setzen & bei true: text im nächsten absatz weiter führen
-		ControllerMenuAnchorPane.getChildren().add((myLabel));	//ausgbae des labels im AnchorPane "ControllerMenuAnchorPane" -> (game.fxml/Spielfeld)
+		Label usernameLabel = new Label(usernameVar);	//neues label
+		usernameLabel.setTranslateY(50);	//label position y kordinate
+		usernameLabel.setTranslateX(170);	//label position x kordinate
+		usernameLabel.setScaleX(1.5);	//label größe breite
+		usernameLabel.setScaleY(1.5); //label größe höhe
+		usernameLabel.setTextFill(Color.web("#FFFFFF"));	//label/text farbe
+		usernameLabel.setPrefWidth(100);	//maximale breite des labels
+		usernameLabel.setWrapText(false);	//wenn die maximale breite erreicht ist, bei false: text abhacken und "..." hinter setzen & bei true: text im nächsten absatz weiter führen
+		ControllerMenuAnchorPane.getChildren().add((usernameLabel));	//ausgbae des labels im AnchorPane "ControllerMenuAnchorPane" -> (game.fxml/Spielfeld)
+
+		//
+		String kontostandStr= String.valueOf(algo.kontostand);	//Umwandlung von String zu double
+		Label kontostandLabel = new Label(kontostandStr);	//neues label
+		kontostandLabel.setTranslateY(81);	//label position y kordinate
+		kontostandLabel.setTranslateX(170);	//label position x kordinate
+		kontostandLabel.setScaleX(1.5);	//label größe breite
+		kontostandLabel.setScaleY(1.5); //label größe höhe
+		kontostandLabel.setTextFill(Color.web("#FFFFFF"));	//label/text farbe
+		kontostandLabel.setPrefWidth(100);	//maximale breite des labels
+		kontostandLabel.setWrapText(false);	//wenn die maximale breite erreicht ist, bei false: text abhacken und "..." hinter setzen & bei true: text im nächsten absatz weiter führen
+		ControllerMenuAnchorPane.getChildren().add((kontostandLabel));	//ausgbae des labels im AnchorPane "ControllerMenuAnchorPane" -> (game.fxml/Spielfeld)
 
 
     	stage.show();	//fenster wird sichtbar gemacht
