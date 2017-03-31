@@ -7,12 +7,7 @@ import gui.*;
 
 public class Algorithmus {
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
-
-
-	}
+	public double kontostand = 1000;
 
 	/**
 	 *

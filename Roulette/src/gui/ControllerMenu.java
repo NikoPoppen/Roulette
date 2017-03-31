@@ -6,17 +6,29 @@ package gui;
 
 
 
+
 import java.io.IOException;
+import java.awt.Color;
+import java.awt.Container;
+import java.util.List;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.geometry.Pos;
 import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.paint.Paint;
+import javafx.scene.text.Font;
+import javafx.scene.text.Text;
+import javafx.scene.text.TextAlignment;
 import javafx.stage.Stage;
 
 
@@ -26,6 +38,7 @@ public class ControllerMenu {
 
 	public static String usernameVar;
 	public static String passwordVar;
+
 
     @FXML // fx:id="password"
     private PasswordField password; // Value injected by FXMLLoader
@@ -48,21 +61,27 @@ public class ControllerMenu {
 		AnchorPane ControllerMenuAnchorPane = FXMLLoader.load(ControllerMenu.class.getResource("game.fxml"));	//"game.fxml" datei laden (befehle die das GUI erstellen)
     	Stage stage = new Stage();	//new stage erstellen
     	stage.setScene(new Scene(ControllerMenuAnchorPane));	//"ControllernAnchorPane" zur Scene hinzufügen
-    	stage.show();	//fenster wird sichtbar gemacht
 
     	stage.setTitle("Roulette Simulator");	//titel des Fensters
 		stage.setResizable(false);			//feste fenstergröße (fenster kann nicht mehr mit der maus größer oder kleiner gezogen werden)
-		// hoehe und breite der Stage festlegen
+
+		// hoehe und breite der Stage/Fenster festlegen
 		stage.setWidth(1400);
 		stage.setHeight(900);
 
+		//
+//		ControllerMenuAnchorPane.getChildren().add(new Label(usernameVar));
+		Label myLabel = new Label(usernameVar);	//neues label
+		myLabel.setTranslateY(47);	//label position y kordinate
+		myLabel.setTranslateX(155);	//label position x kordinate
+		myLabel.setScaleX(1.5);	//label größe breite
+        myLabel.setScaleY(1.5); //label größe höhe
+		ControllerMenuAnchorPane.getChildren().add((myLabel));	//ausgbae des labels im AnchorPane "ControllerMenuAnchorPane" -> (game.fxml/Spielfeld)
+
+
+    	stage.show();	//fenster wird sichtbar gemacht
+
     	((Node)(event.getSource())).getScene().getWindow().hide();	//verbirgt das vorherige Fenster
-
-    	//Ausgabe vom eingegebenen Benutzernamen im Spielfeld
-//    	label.setText(usernameVar);
-
-    	ControllerMenuAnchorPane.getChildren().add(new Label(usernameVar));
-
     }
 
 
