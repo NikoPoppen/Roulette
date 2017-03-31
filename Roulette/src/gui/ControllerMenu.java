@@ -8,27 +8,17 @@ package gui;
 
 
 import java.io.IOException;
-import java.awt.Color;
-import java.awt.Container;
-import java.util.List;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
 
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.geometry.Pos;
 import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.paint.Paint;
-import javafx.scene.text.Font;
-import javafx.scene.text.Text;
-import javafx.scene.text.TextAlignment;
 import javafx.stage.Stage;
 
 
@@ -70,7 +60,6 @@ public class ControllerMenu {
 		stage.setHeight(900);
 
 		//
-//		ControllerMenuAnchorPane.getChildren().add(new Label(usernameVar));
 		Label myLabel = new Label(usernameVar);	//neues label
 		myLabel.setTranslateY(47);	//label position y kordinate
 		myLabel.setTranslateX(155);	//label position x kordinate
