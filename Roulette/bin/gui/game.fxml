@@ -17,7 +17,7 @@
             <Button mnemonicParsing="false" onAction="#onHauptmenuClick" prefHeight="25.0" prefWidth="80.0" text="Hauptmenü" />
         </items>
       </ToolBar>
-      <Label layoutX="14.0" layoutY="74.0" text="Guthaben:" textFill="WHITE" textOverrun="CLIP">
+      <Label layoutX="16.0" layoutY="76.0" text="Guthaben:" textFill="WHITE" textOverrun="CLIP">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
@@ -294,7 +294,7 @@
             </Button>
          </children>
       </GridPane>
-      <Label layoutX="13.0" layoutY="43.0" text="Benutzername:" textFill="WHITE" textOverrun="CLIP">
+      <Label layoutX="15.0" layoutY="45.0" text="Benutzername:" textFill="WHITE" textOverrun="CLIP">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>

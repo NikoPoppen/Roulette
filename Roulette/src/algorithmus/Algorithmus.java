@@ -7,21 +7,20 @@ import gui.*;
 
 public class Algorithmus {
 
-	public double kontostand = 1000;
+	public double kontostand = 3000;
 
 	/**
 	 *
 	 * @param z
 	 */
-	public void Ausführung(double z){
-		ControllerEinsatz einsatz = new ControllerEinsatz();
+	public void ausführung(double z){
 		ControllerGame game = new ControllerGame();
 
 
-		EinsatzWertÜbergabe(z);	//Aufrufen der EinsatzWertÜbergabe Funtion
+		einsatzWertÜbergabe(z);	//Aufrufen der EinsatzWertÜbergabe Funtion
 		System.out.println("EinsatzWertÜbergabe " + z);	//Text Ausgabe zur Überprüfung (einsatz)
 
-		ZahlenGenerator();	//Aufrufen der ZahlenGenerator Funtion
+		zahlenGenerator();	//Aufrufen der ZahlenGenerator Funtion
 
 		System.out.println("Zählerwert " + game.zähler + "\n");
 	}
@@ -31,9 +30,8 @@ public class Algorithmus {
 	 * @param z
 	 * @return
 	 */
-	public static int[] Arrayspeicher(int z){
+	public static int[] arraySpeicher(int z){
 		ControllerGame game = new ControllerGame();
-
 		int Array[] = new int [game.zähler];
 
 		//Werte in das Array abspeichern
@@ -58,8 +56,7 @@ public class Algorithmus {
 	 * @param z
 	 * @return
 	 */
-	public double EinsatzWertÜbergabe(double z){
-		ControllerEinsatz einsatz = new ControllerEinsatz();
+	public double einsatzWertÜbergabe(double z){
 
 		System.out.println("AlgorithmusEinsatz " + z);	//Text Ausageb zur Überprüfung (einsatz)
 
@@ -70,7 +67,7 @@ public class Algorithmus {
 	 *
 	 * @return
 	 */
-	public int ZahlenGenerator(){
+	public int zahlenGenerator(){
 
 		double zahl = Math.random()*36;	//zufällige Zahl zwischen 0 und 36
 		int zufallZahl = (int) zahl;	//double zu int umwandeln

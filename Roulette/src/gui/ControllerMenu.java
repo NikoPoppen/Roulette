@@ -19,6 +19,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
 
@@ -61,10 +62,13 @@ public class ControllerMenu {
 
 		//
 		Label myLabel = new Label(usernameVar);	//neues label
-		myLabel.setTranslateY(47);	//label position y kordinate
-		myLabel.setTranslateX(155);	//label position x kordinate
+		myLabel.setTranslateY(50);	//label position y kordinate
+		myLabel.setTranslateX(170);	//label position x kordinate
 		myLabel.setScaleX(1.5);	//label größe breite
         myLabel.setScaleY(1.5); //label größe höhe
+        myLabel.setTextFill(Color.web("#FFFFFF"));	//label/text farbe
+        myLabel.setPrefWidth(100);	//maximale breite des labels
+        myLabel.setWrapText(false);	//wenn die maximale breite erreicht ist, bei false: text abhacken und "..." hinter setzen & bei true: text im nächsten absatz weiter führen
 		ControllerMenuAnchorPane.getChildren().add((myLabel));	//ausgbae des labels im AnchorPane "ControllerMenuAnchorPane" -> (game.fxml/Spielfeld)
 
 
