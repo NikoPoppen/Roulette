@@ -30,12 +30,11 @@ public class ControllerMenu {
 	public static String usernameVar;
 	public static String passwordVar;
 
+	@FXML // fx:id="username"
+    private TextField username; // Value injected by FXMLLoader
 
     @FXML // fx:id="password"
     private PasswordField password; // Value injected by FXMLLoader
-
-    @FXML // fx:id="username"
-    private TextField username; // Value injected by FXMLLoader
 
     @FXML
     void onSchlieﬂenClick(ActionEvent event) {
@@ -76,7 +75,6 @@ public class ControllerMenu {
 
     	((Node)(event.getSource())).getScene().getWindow().hide();	//verbirgt das vorherige Fenster
     }
-
 
 	@FXML
     void onLoginClick(ActionEvent event) {
