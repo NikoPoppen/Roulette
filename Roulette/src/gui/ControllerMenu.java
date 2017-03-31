@@ -23,6 +23,8 @@ import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.text.Font;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 
@@ -32,6 +34,7 @@ public class ControllerMenu {
 
 	public static String usernameVar;
 	public static String passwordVar;
+
 
     @FXML // fx:id="password"
     private PasswordField password; // Value injected by FXMLLoader
@@ -65,14 +68,19 @@ public class ControllerMenu {
     	((Node)(event.getSource())).getScene().getWindow().hide();	//verbirgt das vorherige Fenster
 
     	//Ausgabe vom eingegebenen Benutzernamen im Spielfeld
-//    	label.setText(usernameVar);
+//    	label.setTitle(usernameVar);
 
-//    	ControllerMenuAnchorPane.getChildren().add(new Label(usernameVar));
+    	ControllerMenuAnchorPane.getChildren().add(new Label(usernameVar));
 
-    	JLabel label=new JLabel(usernameVar);
-    	JFrame frame=new JFrame();
-    	frame.add(label);
-    	frame.setVisible(true);
+//    	JLabel label=new JLabel(usernameVar);
+//    	JFrame frame=new JFrame();
+//    	frame.add(label);
+//    	frame.setVisible(true);
+
+//    	Label myLabel = new Label(usernameVar);
+//    	myLabel.setFont(new Font("Arial", 20));
+//    	frame.add(myLabel, 0 , 0);
+
 
 
     }
