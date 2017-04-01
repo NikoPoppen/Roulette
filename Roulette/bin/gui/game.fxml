@@ -294,7 +294,7 @@
             </Button>
          </children>
       </GridPane>
-      <Label layoutX="15.0" layoutY="45.0" text="Benutzername:" textFill="WHITE" textOverrun="CLIP">
+      <Label layoutX="15.0" layoutY="45.0" text="Angemeldet als:" textFill="WHITE" textOverrun="CLIP">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>

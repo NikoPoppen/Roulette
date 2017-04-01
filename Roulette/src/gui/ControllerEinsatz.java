@@ -3,6 +3,8 @@
  */
 
 package gui;
+import java.io.IOException;
+
 import algorithmus.*;
 
 import javafx.event.ActionEvent;
@@ -12,6 +14,9 @@ import javafx.scene.control.TextField;
 
 public class ControllerEinsatz {
 
+	public Algorithmus algo = new Algorithmus();	//Algorithmus Klasse aufrufen
+	public ControllerGame game = new ControllerGame();
+	public ControllerMenu menu = new ControllerMenu();
 
     @FXML // fx:id="einsatz"
     private TextField einsatz; // Value injected by FXMLLoader
@@ -23,8 +28,8 @@ public class ControllerEinsatz {
 
     @FXML
 //    public double onOkEinsatzClick(double einsatzZahl)
-    public double onOkEinsatzClick(ActionEvent event) {
-    	Algorithmus classAlgo = new Algorithmus();	//Algorithmus Klasse aufrufen
+    public double onOkEinsatzClick(ActionEvent event){
+
 
     	double einsatzZahl;
     	String einsatzStr = einsatz.getText();	//get Text aus dem Eingabe Fenster
@@ -34,7 +39,8 @@ public class ControllerEinsatz {
     	System.out.println("ControllerEinsatz: "+ einsatzZahl + "EUR");	//Text Ausgabe zur Überprüfung (einsatzZahl)
     	((Node)(event.getSource())).getScene().getWindow().hide();	//verbirgt das vorherige Fenster
 
-    	classAlgo.ausführung(einsatzZahl);	//Aufrufen der Funtion Ausführung aus der Algorithmus Klasse
+    	algo.ausführung(einsatzZahl);	//Aufrufen der Funtion Ausführung aus der Algorithmus Klasse
+    	menu.refreshKontostand(einsatzZahl);
 
     	return einsatzZahl;
 

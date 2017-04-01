@@ -30,9 +30,6 @@ public class ControllerGame {
 
     	algo.arraySpeicher(zero);
 		einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
-
-		algo.kontostand = algo.kontostand - 100;
-		System.out.println(algo.kontostand);
     }
 
 	@FXML
@@ -503,7 +500,7 @@ public class ControllerGame {
      * @param event
      * @throws IOException
      */
-    public static void einsatzFenster(ActionEvent event) throws IOException{
+    public void einsatzFenster(ActionEvent event) throws IOException{
     	AnchorPane ControllerGameAnchorPane = FXMLLoader.load(ControllerGame.class.getResource("einsatz.fxml"));	//"einsatz.fxml" datei laden (befehle die das GUI erstellen)
     	Stage stage = new Stage();	//new stage erstellen
     	stage.setScene(new Scene(ControllerGameAnchorPane));	//"ControllernAnchorPane" zur Scene hinzufügen
@@ -514,6 +511,10 @@ public class ControllerGame {
 		stage.setWidth(400);
 		stage.setHeight(200);
     }//end einsatzFenster
+
+    /**
+     *
+     */
 
 }
 
