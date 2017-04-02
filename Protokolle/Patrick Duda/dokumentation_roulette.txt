@@ -136,3 +136,10 @@ Start: 19:15Uhr Ende:21.20Uhr
 
 ---
 
+01.04.2017
+
+Zeit: 5h
+-versucht das Guthaben Label im Spielfeld immerwieder zu aktualisieren
+
+---
+
