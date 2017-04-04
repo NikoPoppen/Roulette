@@ -31,8 +31,8 @@ public class ControllerMenu {
 	public static String usernameVar;
 	public static String passwordVar;
 
-	Algorithmus algo = new Algorithmus();
-	AnchorPane ControllerMenuAnchorPane = new AnchorPane();
+	static Algorithmus algo = new Algorithmus();
+	static AnchorPane ControllerMenuAnchorPane = new AnchorPane();
 
 
 	@FXML // fx:id="username"
@@ -123,14 +123,15 @@ public class ControllerMenu {
 
 		System.out.println("Kontostand: " + algo.kontostand);
 
-//		refreshKontostand(kontostandLabel);
+		refreshKontostand(kontostandLabel);
     }
 
-    public void refreshKontostand(Label myLabel){
+    public static void refreshKontostand(Label myLabel){
 
     	ControllerMenuAnchorPane.getChildren().remove(myLabel);
 
     	String str= String.valueOf(algo.kontostand);	//Umwandlung von String zu double
+//    	String str = "Hallo";
     	Label refreshLabel = new Label(str);
     	refreshLabel.setTranslateY(81);	//label position y kordinate
     	refreshLabel.setTranslateX(135);	//label position x kordinate

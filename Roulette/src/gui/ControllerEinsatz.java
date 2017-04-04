@@ -41,6 +41,7 @@ public class ControllerEinsatz {
 
     	algo.ausführung(einsatzZahl);	//Aufrufen der Funtion Ausführung aus der Algorithmus Klasse
     	menu.ausgabeKontostand(einsatzZahl);
+//    	menu.refreshKontostand(kontostandLabel);
 
     	return einsatzZahl;
 
