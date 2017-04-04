@@ -12,7 +12,9 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
 public class ControllerGame {
@@ -21,469 +23,452 @@ public class ControllerGame {
 	public ControllerMenu menu = new ControllerMenu();
 	public static int zähler = 0;
 
-
 	@FXML
     void on0Click(ActionEvent event) throws IOException {
-
-		//eingegebenen Benutzernamen ausgeben
-//		System.out.println("Ausgabe vom eingegebenen Benutzernamen: " + menu.usernameVar);
-
-		einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
-
 		int zero = 0;
     	zähler++;
-		algo.Ausführung(zero);
 
+    	algo.arraySpeicher(zero);
+		einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
     }
 
-    @FXML
-    void on10blackClick(ActionEvent event) throws IOException {
-
-    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
-
-    	int ten = 10;
-    	zähler++;
-    	algo.Arrayspeicher(ten);
-    }
-
-    @FXML
-    void on11blackClick(ActionEvent event) throws IOException {
-
-    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
-
-    	int eleven = 11;
-    	zähler++;
-    	algo.Arrayspeicher(eleven);
-    }
-
-    @FXML
-    void on12redClick(ActionEvent event) throws IOException {
-
-    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
-
-    	int twelve = 12;
-    	zähler++;
-    	algo.Arrayspeicher(twelve);
-    }
-
-    @FXML
-    void on13_24Click(ActionEvent event) throws IOException {
-
-    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
-
-    	int thirteentotwentyfour  = 10;
-    	zähler++;
-    	algo.Arrayspeicher(thirteentotwentyfour);
-    }
-
-    @FXML
-    void on13blackClick(ActionEvent event) throws IOException {
-
-    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
-
-    	int thirteen = 13;
-    	zähler++;
-    	algo.Arrayspeicher(thirteen);
-    }
-
-    @FXML
-    void on14redClick(ActionEvent event) throws IOException {
-
-    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
-
-    	int fourteen = 14;
-    	zähler++;
-    	algo.Arrayspeicher(fourteen);
-    }
-
-    @FXML
-    void on15blackClick(ActionEvent event) throws IOException {
-
-    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
-
-    	int fifteen = 15;
-    	zähler++;
-    	algo.Arrayspeicher(fifteen);
-    }
-
-    @FXML
-    void on16redClick(ActionEvent event) throws IOException {
-
-    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
-
-    	int sixteen = 16;
-    	zähler++;
-    	algo.Arrayspeicher(sixteen);
-    }
-
-    @FXML
-    void on17blackClick(ActionEvent event) throws IOException {
-
-    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
-
-    	int seventeen = 17;
-    	zähler++;
-    	algo.Arrayspeicher(seventeen);
-    }
-
-    @FXML
-    void on18redClick(ActionEvent event) throws IOException {
-
-    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
-
-    	int eighteen = 18;
-    	zähler++;
-    	algo.Arrayspeicher(eighteen);
-    }
-
-    @FXML
-    void on19_36Click(ActionEvent event) throws IOException {
-
-    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
-
-    	int nineteentothirtysix = 1936;
-    	zähler++;
-    	algo.Arrayspeicher(nineteentothirtysix);
-    }
-
-    @FXML
-    void on19redClick(ActionEvent event) throws IOException {
-
-    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
-
-    	int nineteen = 19;
-    	zähler++;
-    	algo.Arrayspeicher(nineteen);
-    }
-
-    @FXML
-    void on1_12Click(ActionEvent event) throws IOException {
-
-    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
-
-    	int onetotwelve = 112;
-    	zähler++;
-    	algo.Arrayspeicher(onetotwelve);
-    }
-
-    @FXML
-    void on1_18Click(ActionEvent event) throws IOException {
-
-    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
-
-    	int onetoeighteen = 118;
-    	zähler++;
-    	algo.Arrayspeicher(onetoeighteen);
-    }
-
-    @FXML
+	@FXML
     void on1redClick(ActionEvent event) throws IOException {
-
-    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
-
-    	int one = 1;
+		int one = 1;
     	zähler++;
-    	algo.Arrayspeicher(one);
+
+    	algo.arraySpeicher(one);
+    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
     }
 
-    @FXML
-    void on1stClick(ActionEvent event) throws IOException {
-
-    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
-
-    	int first = 100;
-    	zähler++;
-    	algo.Arrayspeicher(first);
-    }
-
-    @FXML
-    void on20blackClick(ActionEvent event) throws IOException {
-
-    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
-
-    	int twenty = 20;
-    	zähler++;
-    	algo.Arrayspeicher(twenty);
-    }
-
-    @FXML
-    void on21redClick(ActionEvent event) throws IOException {
-
-    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
-
-    	int twentyone = 21;
-    	zähler++;
-    	algo.Arrayspeicher(twentyone);
-    }
-
-    @FXML
-    void on22blackClick(ActionEvent event) throws IOException {
-
-    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
-
-    	int twentytwo = 22;
-    	zähler++;
-    	algo.Arrayspeicher(twentytwo);
-    }
-
-    @FXML
-    void on23redClick(ActionEvent event) throws IOException {
-
-    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
-
-    	int twentythree = 23;
-    	zähler++;
-    	algo.Arrayspeicher(twentythree);
-    }
-
-    @FXML
-    void on24blackClick(ActionEvent event) throws IOException {
-
-    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
-
-    	int twentyfour = 24;
-    	zähler++;
-    	algo.Arrayspeicher(twentyfour);
-    }
-
-    @FXML
-    void on25_36Click(ActionEvent event) throws IOException {
-
-    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
-//    Wird am Ende Festgelegt
-    	int twentyfivetothirtysix = 2536;
-    	zähler++;
-    	algo.Arrayspeicher(twentyfivetothirtysix);
-    }
-
-    @FXML
-    void on25redClick(ActionEvent event) throws IOException {
-
-    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
-
-    	int twentyfive = 25;
-    	zähler++;
-    	algo.Arrayspeicher(twentyfive);
-    }
-
-    @FXML
-    void on26blackClick(ActionEvent event) throws IOException {
-
-    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
-
-    	int twentysix = 26;
-    	zähler++;
-    	algo.Arrayspeicher(twentysix);
-    }
-
-    @FXML
-    void on27redClick(ActionEvent event) throws IOException {
-
-    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
-
-    	int twentyseven = 27;
-    	zähler++;
-    	algo.Arrayspeicher(twentyseven);
-    }
-
-    @FXML
-    void on28blackClick(ActionEvent event) throws IOException {
-
-    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
-
-    	int twentyeight = 28;
-    	zähler++;
-    	algo.Arrayspeicher(twentyeight);
-    }
-
-    @FXML
-    void on29blackClick(ActionEvent event) throws IOException {
-
-    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
-
-    	int twentynine = 29;
-    	zähler++;
-    	algo.Arrayspeicher(twentynine);
-    }
-
-    @FXML
+	@FXML
     void on2blackClick(ActionEvent event) throws IOException {
-
-    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
-
-    	int two = 2;
+		int two = 2;
     	zähler++;
-    	algo.Arrayspeicher(two);
+
+    	algo.arraySpeicher(two);
+    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
     }
 
-    @FXML
-    void on2ndClick(ActionEvent event) throws IOException {
-
-    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
-
-    	int second = 200;
-    	zähler++;
-    	algo.Arrayspeicher(second);
-    }
-
-    @FXML
-    void on30redClick(ActionEvent event) throws IOException {
-
-    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
-
-    	int thirty = 30;
-    	zähler++;
-    	algo.Arrayspeicher(thirty);
-    }
-
-    @FXML
-    void on31blackClick(ActionEvent event) throws IOException {
-
-    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
-
-    	int thirtyone = 31;
-    	zähler++;
-    	algo.Arrayspeicher(thirtyone);
-    }
-
-    @FXML
-    void on32redClick(ActionEvent event) throws IOException {
-
-    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
-
-    	int thirtytwo = 32;
-    	zähler++;
-    	algo.Arrayspeicher(thirtytwo);
-    }
-
-    @FXML
-    void on33blackClick(ActionEvent event) throws IOException {
-
-    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
-
-    	int thirtythree = 33;
-    	zähler++;
-    	algo.Arrayspeicher(thirtythree);
-    }
-
-    @FXML
-    void on34redClick(ActionEvent event) throws IOException {
-
-    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
-
-    	int thirtyfour = 34;
-    	zähler++;
-    	algo.Arrayspeicher(thirtyfour);
-    }
-
-    @FXML
-    void on35blackClick(ActionEvent event) throws IOException {
-
-    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
-
-    	int thirtyfive = 35;
-    	zähler++;
-    	algo.Arrayspeicher(thirtyfive);
-    }
-
-    @FXML
-    void on36redClick(ActionEvent event) throws IOException {
-
-    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
-
-    	int thirtysix = 36;
-    	zähler++;
-    	algo.Arrayspeicher(thirtysix);
-    }
-
-    @FXML
-    void on3rdClick(ActionEvent event) throws IOException {
-
-    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
-
-    	int third = 300;
-    	zähler++;
-    	algo.Arrayspeicher(third);
-    }
-
-    @FXML
+	@FXML
     void on3redClick(ActionEvent event) throws IOException {
-
-    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
-
-    	int three = 3;
+		int three = 3;
     	zähler++;
-    	algo.Arrayspeicher(three);
+
+    	algo.arraySpeicher(three);
+    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
     }
 
-    @FXML
+	@FXML
     void on4blackClick(ActionEvent event) throws IOException {
-
-    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
-
-    	int four = 4;
+		int four = 4;
     	zähler++;
-    	algo.Arrayspeicher(four);
+
+    	algo.arraySpeicher(four);
+    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
     }
 
-    @FXML
+	@FXML
     void on5redClick(ActionEvent event) throws IOException {
-
-    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
-
-    	int five = 5;
+		int five = 5;
     	zähler++;
-    	algo.Arrayspeicher(five);
+
+    	algo.arraySpeicher(five);
+    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
     }
 
-    @FXML
+	@FXML
     void on6blackClick(ActionEvent event) throws IOException {
-
-    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
-
-    	int six = 6;
+		int six = 6;
     	zähler++;
-    	algo.Arrayspeicher(six);
+
+    	algo.arraySpeicher(six);
+    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
     }
 
-    @FXML
+	@FXML
     void on7redClick(ActionEvent event) throws IOException {
-
-    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
-
-    	int seven = 7;
+		int seven = 7;
     	zähler++;
-    	algo.Arrayspeicher(seven);
+
+    	algo.arraySpeicher(seven);
+    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
     }
 
     @FXML
     void on8blackClick(ActionEvent event) throws IOException {
-
-    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
-
     	int eight = 8;
     	zähler++;
-    	algo.Arrayspeicher(eight);
+
+    	algo.arraySpeicher(eight);
+    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
     }
 
     @FXML
     void on9redClick(ActionEvent event) throws IOException {
-
-    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
-
     	int nine = 9;
     	zähler++;
-    	algo.Arrayspeicher(nine);
+
+    	algo.arraySpeicher(nine);
+    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
+    }
+
+	@FXML
+    void on10blackClick(ActionEvent event) throws IOException {
+		int ten = 10;
+    	zähler++;
+
+    	algo.arraySpeicher(ten);
+    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
+    }
+
+    @FXML
+    void on11blackClick(ActionEvent event) throws IOException {
+    	int eleven = 11;
+    	zähler++;
+
+    	algo.arraySpeicher(eleven);
+    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
+    }
+
+    @FXML
+    void on12redClick(ActionEvent event) throws IOException {
+    	int twelve = 12;
+    	zähler++;
+
+    	algo.arraySpeicher(twelve);
+    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
+    }
+
+    @FXML
+    void on13blackClick(ActionEvent event) throws IOException {
+    	int thirteen = 13;
+    	zähler++;
+
+    	algo.arraySpeicher(thirteen);
+    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
+    }
+
+    @FXML
+    void on14redClick(ActionEvent event) throws IOException {
+    	int fourteen = 14;
+    	zähler++;
+
+    	algo.arraySpeicher(fourteen);
+    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
+    }
+
+    @FXML
+    void on15blackClick(ActionEvent event) throws IOException {
+    	int fifteen = 15;
+    	zähler++;
+
+    	algo.arraySpeicher(fifteen);
+    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
+    }
+
+    @FXML
+    void on16redClick(ActionEvent event) throws IOException {
+    	int sixteen = 16;
+    	zähler++;
+
+    	algo.arraySpeicher(sixteen);
+    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
+    }
+
+    @FXML
+    void on17blackClick(ActionEvent event) throws IOException {
+    	int seventeen = 17;
+    	zähler++;
+
+    	algo.arraySpeicher(seventeen);
+    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
+    }
+
+    @FXML
+    void on18redClick(ActionEvent event) throws IOException {
+    	int eighteen = 18;
+    	zähler++;
+
+    	algo.arraySpeicher(eighteen);
+    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
+    }
+
+    @FXML
+    void on19redClick(ActionEvent event) throws IOException {
+    	int nineteen = 19;
+    	zähler++;
+
+    	algo.arraySpeicher(nineteen);
+    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
+    }
+
+    @FXML
+    void on20blackClick(ActionEvent event) throws IOException {
+    	int twenty = 20;
+    	zähler++;
+
+    	algo.arraySpeicher(twenty);
+    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
+    }
+
+    @FXML
+    void on21redClick(ActionEvent event) throws IOException {
+    	int twentyone = 21;
+    	zähler++;
+
+    	algo.arraySpeicher(twentyone);
+    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
+    }
+
+    @FXML
+    void on22blackClick(ActionEvent event) throws IOException {
+    	int twentytwo = 22;
+    	zähler++;
+
+    	algo.arraySpeicher(twentytwo);
+    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
+    }
+
+    @FXML
+    void on23redClick(ActionEvent event) throws IOException {
+    	int twentythree = 23;
+    	zähler++;
+
+    	algo.arraySpeicher(twentythree);
+    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
+    }
+
+    @FXML
+    void on24blackClick(ActionEvent event) throws IOException {
+    	int twentyfour = 24;
+    	zähler++;
+
+    	algo.arraySpeicher(twentyfour);
+    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
+    }
+
+    @FXML
+    void on25redClick(ActionEvent event) throws IOException {
+    	int twentyfive = 25;
+    	zähler++;
+
+    	algo.arraySpeicher(twentyfive);
+    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
+    }
+
+    @FXML
+    void on26blackClick(ActionEvent event) throws IOException {
+    	int twentysix = 26;
+    	zähler++;
+
+    	algo.arraySpeicher(twentysix);
+    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
+    }
+
+    @FXML
+    void on27redClick(ActionEvent event) throws IOException {
+    	int twentyseven = 27;
+    	zähler++;
+
+    	algo.arraySpeicher(twentyseven);
+    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
+    }
+
+    @FXML
+    void on28blackClick(ActionEvent event) throws IOException {
+    	int twentyeight = 28;
+    	zähler++;
+
+    	algo.arraySpeicher(twentyeight);
+    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
+    }
+
+    @FXML
+    void on29blackClick(ActionEvent event) throws IOException {
+    	int twentynine = 29;
+    	zähler++;
+
+    	algo.arraySpeicher(twentynine);
+    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
+    }
+
+    @FXML
+    void on30redClick(ActionEvent event) throws IOException {
+    	int thirty = 30;
+    	zähler++;
+
+    	algo.arraySpeicher(thirty);
+    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
+    }
+
+    @FXML
+    void on31blackClick(ActionEvent event) throws IOException {
+    	int thirtyone = 31;
+    	zähler++;
+
+    	algo.arraySpeicher(thirtyone);
+    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
+    }
+
+    @FXML
+    void on32redClick(ActionEvent event) throws IOException {
+    	int thirtytwo = 32;
+    	zähler++;
+
+    	algo.arraySpeicher(thirtytwo);
+    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
+    }
+
+    @FXML
+    void on33blackClick(ActionEvent event) throws IOException {
+    	int thirtythree = 33;
+    	zähler++;
+
+    	algo.arraySpeicher(thirtythree);
+    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
+    }
+
+    @FXML
+    void on34redClick(ActionEvent event) throws IOException {
+    	int thirtyfour = 34;
+    	zähler++;
+
+    	algo.arraySpeicher(thirtyfour);
+    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
+    }
+
+    @FXML
+    void on35blackClick(ActionEvent event) throws IOException {
+    	int thirtyfive = 35;
+    	zähler++;
+
+    	algo.arraySpeicher(thirtyfive);
+    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
+    }
+
+    @FXML
+    void on36redClick(ActionEvent event) throws IOException {
+    	int thirtysix = 36;
+    	zähler++;
+
+    	algo.arraySpeicher(thirtysix);
+    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
+    }
+
+    @FXML
+    void on1stClick(ActionEvent event) throws IOException {
+    	int first = 100;
+    	zähler++;
+
+    	algo.arraySpeicher(first);
+    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
+    }
+
+    @FXML
+    void on2ndClick(ActionEvent event) throws IOException {
+    	int second = 200;
+    	zähler++;
+
+    	algo.arraySpeicher(second);
+    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
+    }
+
+    @FXML
+    void on3rdClick(ActionEvent event) throws IOException {
+    	int third = 300;
+    	zähler++;
+
+    	algo.arraySpeicher(third);
+    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
+    }
+
+    @FXML
+    void on1_12Click(ActionEvent event) throws IOException {
+    	int onetotwelve = 112;
+    	zähler++;
+
+    	algo.arraySpeicher(onetotwelve);
+    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
+    }
+
+    @FXML
+    void on13_24Click(ActionEvent event) throws IOException {
+    	int thirteentotwentyfour  = 10;
+    	zähler++;
+
+    	algo.arraySpeicher(thirteentotwentyfour);
+    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
+    }
+
+    @FXML
+    void on25_36Click(ActionEvent event) throws IOException {
+    	//Wird am Ende Festgelegt
+    	int twentyfivetothirtysix = 2536;
+    	zähler++;
+
+    	algo.arraySpeicher(twentyfivetothirtysix);
+    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
+    }
+
+    @FXML
+    void on1_18Click(ActionEvent event) throws IOException {
+    	int onetoeighteen = 118;
+    	zähler++;
+
+    	algo.arraySpeicher(onetoeighteen);
+    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
+    }
+
+    @FXML
+    void on19_36Click(ActionEvent event) throws IOException {
+    	int nineteentothirtysix = 1936;
+    	zähler++;
+
+    	algo.arraySpeicher(nineteentothirtysix);
+    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
     }
 
     @FXML
     void onGeradeClick(ActionEvent event) throws IOException {
-
-    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
-
     	int gerade = 1000;
     	zähler++;
-    	algo.Arrayspeicher(gerade);
+
+    	algo.arraySpeicher(gerade);
+    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
+    }
+
+    @FXML
+    void onUngeradeClick(ActionEvent event) throws IOException {
+    	int ungerade = 2000;
+      	zähler++;
+
+      	algo.arraySpeicher(ungerade);
+    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
+    }
+
+    @FXML
+    void onRotClick(ActionEvent event) throws IOException {
+    	//Wird am Ende Festgelegt
+      	int red = 998;
+      	zähler++;
+
+      	algo.arraySpeicher(red);
+    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
+    }
+
+    @FXML
+    void onSchwarzClick(ActionEvent event) throws IOException {
+    	int black = 999;
+      	zähler++;
+
+      	algo.arraySpeicher(black);
+    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
+    }
+
+    @FXML
+    void onSchließen2Click(ActionEvent event) throws IOException {
+    	Platform.exit();	//schließt das fenster wenn auf den "Schließen" knopf gedrückt wird
     }
 
     @FXML
@@ -503,48 +488,19 @@ public class ControllerGame {
     }
 
     @FXML
-    void onRotClick(ActionEvent event) throws IOException {
-
-    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
-//    Wird am Ende Festgelegt
-      	int red = 998;
-      	zähler++;
-      	algo.Arrayspeicher(red);
-    }
-
-    @FXML
-    void onSchließen2Click(ActionEvent event) throws IOException {
-    	Platform.exit();	//schließt das fenster wenn auf den "Schließen" knopf gedrückt wird
-    }
-
-    @FXML
-    void onSchwarzClick(ActionEvent event) throws IOException {
-
-    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
-
-      	int black = 999;
-      	zähler++;
-      	algo.Arrayspeicher(black);
-    }
-
-    @FXML
-    void onUngeradeClick(ActionEvent event) throws IOException {
-
-    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
-
-      	int ungerade = 2000;
-      	zähler++;
-      	algo.Arrayspeicher(ungerade);
-    }
-
-    @FXML
     void onSpielenClick(ActionEvent event) {
 
     	System.out.println("\n...Algorithmusstart...\n");
 
     }
 
-    public static void einsatzFenster(ActionEvent event) throws IOException{
+
+    /**
+     *
+     * @param event
+     * @throws IOException
+     */
+    public void einsatzFenster(ActionEvent event) throws IOException{
     	AnchorPane ControllerGameAnchorPane = FXMLLoader.load(ControllerGame.class.getResource("einsatz.fxml"));	//"einsatz.fxml" datei laden (befehle die das GUI erstellen)
     	Stage stage = new Stage();	//new stage erstellen
     	stage.setScene(new Scene(ControllerGameAnchorPane));	//"ControllernAnchorPane" zur Scene hinzufügen
@@ -554,8 +510,11 @@ public class ControllerGame {
 		// hoehe und breite der Stage festlegen
 		stage.setWidth(400);
 		stage.setHeight(200);
-
     }//end einsatzFenster
+
+    /**
+     *
+     */
 
 }
 
