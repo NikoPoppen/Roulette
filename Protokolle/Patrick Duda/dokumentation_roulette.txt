@@ -143,3 +143,10 @@ Zeit: 5h
 
 ---
 
+04.04.2017
+
+Zeit:90min
+-grafische Kontostandausgabe wird jetzt vom neuen Kontostand überlappt
+
+---
+
