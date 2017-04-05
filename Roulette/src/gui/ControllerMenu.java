@@ -31,8 +31,8 @@ public class ControllerMenu {
 	public static String usernameVar;
 	public static String passwordVar;
 
-	Algorithmus algo = new Algorithmus();
-	AnchorPane ControllerMenuAnchorPane = new AnchorPane();
+	static Algorithmus algo = new Algorithmus();
+	static AnchorPane ControllerMenuAnchorPane = new AnchorPane();
 
 
 	@FXML // fx:id="username"
@@ -52,7 +52,7 @@ public class ControllerMenu {
     }
 
     @FXML
-    void onStartClick(ActionEvent event) throws IOException {
+    public void onStartClick(ActionEvent event) throws IOException {
 
 
     	ControllerMenuAnchorPane = FXMLLoader.load(getClass().getResource("game.fxml"));	//"game.fxml" datei laden (befehle die das GUI erstellen)
@@ -78,7 +78,7 @@ public class ControllerMenu {
 		ControllerMenuAnchorPane.getChildren().add((usernameLabel));	//ausgbae des labels im AnchorPane "ControllerMenuAnchorPane" -> (game.fxml/Spielfeld)
 
 		//
-		refreshKontostand(0);
+		ausgabeKontostand(0);
 
 
     	stage.show();	//fenster wird sichtbar gemacht
@@ -107,7 +107,7 @@ public class ControllerMenu {
 		stage.setHeight(260);
     }
 
-    public void refreshKontostand(double z){
+    public void ausgabeKontostand(double z){
 
     	algo.kontostand = algo.kontostand - z;
 		String kontostandStr= String.valueOf(algo.kontostand);	//Umwandlung von String zu double
@@ -119,10 +119,31 @@ public class ControllerMenu {
 		kontostandLabel.setTextFill(Color.web("#FFFFFF"));	//label/text farbe
 		kontostandLabel.setPrefWidth(100);	//maximale breite des labels
 		kontostandLabel.setWrapText(false);	//wenn die maximale breite erreicht ist, bei false: text abhacken und "..." hinter setzen & bei true: text im nächsten absatz weiter führen
-		ControllerMenuAnchorPane.getChildren().add((kontostandLabel));	//ausgbae des labels im AnchorPane "ControllerMenuAnchorPane" -> (game.fxml/Spielfeld)
-
+		ControllerMenuAnchorPane.getChildren().add(kontostandLabel);	//ausgbae des labels im AnchorPane "ControllerMenuAnchorPane" -> (game.fxml/Spielfeld)
 
 		System.out.println("Kontostand: " + algo.kontostand);
+
+		refreshKontostand(kontostandLabel);
+    }
+
+    public static void refreshKontostand(Label myLabel){
+
+    	ControllerMenuAnchorPane.getChildren().remove(myLabel);
+
+    	String str= String.valueOf(algo.kontostand);	//Umwandlung von String zu double
+//    	String str = "Hallo";
+    	Label refreshLabel = new Label(str);
+    	refreshLabel.setTranslateY(81);	//label position y kordinate
+    	refreshLabel.setTranslateX(135);	//label position x kordinate
+    	refreshLabel.setScaleX(1.5);	//label größe breite
+    	refreshLabel.setScaleY(1.5); //label größe höhe
+    	refreshLabel.setTextFill(Color.web("#FFFFFF"));	//label/text farbe
+    	refreshLabel.setPrefWidth(100);	//maximale breite des labels
+    	refreshLabel.setWrapText(false);	//wenn die maximale breite erreicht ist, bei false: text abhacken und "..." hinter setzen & bei true: text im nächsten absatz weiter führen
+    	ControllerMenuAnchorPane.getChildren().add(refreshLabel);	//ausgbae des labels im AnchorPane "ControllerMenuAnchorPane" -> (game.fxml/Spielfeld)
+
+    	System.out.println("refreshKontostand: " + algo.kontostand);
+
     }
 
 }

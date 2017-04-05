@@ -8,11 +8,6 @@ import gui.*;
 public class Algorithmus {
 
 
-	public static void main(String[] args) {
-
-
-	}
-
 	public static double kontostand = 3000;
 
 	/**
@@ -35,7 +30,7 @@ public class Algorithmus {
 	 * @param z
 	 * @return
 	 */
-	public static int[] arraySpeicher(int z){
+	public static void arraySpeicher(int z){
 		ControllerGame game = new ControllerGame();
 		int Array[] = new int [game.zähler];
 
@@ -51,9 +46,8 @@ public class Algorithmus {
 			System.out.println("Arrayausgabe " + Array[i]);
 		}
 
-//		Speicher();
 
-		return Array;
+//		return Array;
 	}
 
 	/**
@@ -68,8 +62,9 @@ public class Algorithmus {
 		return(z);
 	}
 
-	public static void rechnungsVorgang(int[]AuswahlArr,int Zufalsszahl){
+	public static void rechnungsVorgang(int[] AuswahlArr,int Zufallszahl,double Einsatz){
 
+		AuswahlArr = arraySpeicher();
 
 	}
 

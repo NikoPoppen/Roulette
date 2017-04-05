@@ -40,7 +40,8 @@ public class ControllerEinsatz {
     	((Node)(event.getSource())).getScene().getWindow().hide();	//verbirgt das vorherige Fenster
 
     	algo.ausführung(einsatzZahl);	//Aufrufen der Funtion Ausführung aus der Algorithmus Klasse
-    	menu.refreshKontostand(einsatzZahl);
+    	menu.ausgabeKontostand(einsatzZahl);
+//    	menu.refreshKontostand(kontostandLabel);
 
     	return einsatzZahl;
 
