@@ -7,6 +7,8 @@ import gui.*;
 
 public class Algorithmus {
 
+	static ControllerGame game = new ControllerGame();
+
 	public static double kontostand = 3000;
 
 	/**
@@ -15,7 +17,6 @@ public class Algorithmus {
 	 */
 	public void ausführung(double z){
 		ControllerGame game = new ControllerGame();
-
 
 		einsatzWertÜbergabe(z);	//Aufrufen der EinsatzWertÜbergabe Funtion
 		System.out.println("EinsatzWertÜbergabe " + z);	//Text Ausgabe zur Überprüfung (einsatz)
@@ -31,7 +32,7 @@ public class Algorithmus {
 	 * @return
 	 */
 	public static int[] arraySpeicher(int z){
-		ControllerGame game = new ControllerGame();
+//		ControllerGame game = new ControllerGame();
 		int Array[] = new int [game.zähler];
 
 		//Werte in das Array abspeichern
@@ -46,7 +47,6 @@ public class Algorithmus {
 			System.out.println("Arrayausgabe " + Array[i]);
 		}
 
-//		Speicher();
 
 		return Array;
 	}
@@ -63,11 +63,18 @@ public class Algorithmus {
 		return(z);
 	}
 
+	public static void rechnungsVorgang(){
+
+		int Array2[] = new int [game.zähler];
+//		Array2 = arraySpeicher();
+
+	}
+
 	/**
 	 *
 	 * @return
 	 */
-	public int zahlenGenerator(){
+	public static int zahlenGenerator(){
 
 		double zahl = Math.random()*36;	//zufällige Zahl zwischen 0 und 36
 		int zufallZahl = (int) zahl;	//double zu int umwandeln
