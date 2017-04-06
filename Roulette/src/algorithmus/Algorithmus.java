@@ -65,9 +65,15 @@ public class Algorithmus {
 
 	public static void rechnungsVorgang(){
 
-		int Array2[] = new int [game.zähler];
+//		int Array2[] = new int [game.zähler];
 //		Array2 = arraySpeicher();
 
+	}
+
+	public static int[] einsatzArray(int[] einsatzArray){
+
+
+		return einsatzArray;
 	}
 
 	/**
