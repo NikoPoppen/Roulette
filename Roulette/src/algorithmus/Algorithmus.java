@@ -30,7 +30,7 @@ public class Algorithmus {
 	 * @param z
 	 * @return
 	 */
-	public static void arraySpeicher(int z){
+	public static int[] arraySpeicher(int z){
 		ControllerGame game = new ControllerGame();
 		int Array[] = new int [game.zähler];
 
@@ -47,7 +47,7 @@ public class Algorithmus {
 		}
 
 
-//		return Array;
+		return Array;
 	}
 
 	/**
@@ -62,9 +62,9 @@ public class Algorithmus {
 		return(z);
 	}
 
-	public static void rechnungsVorgang(int[] AuswahlArr,int Zufallszahl,double Einsatz){
+	public static void rechnungsVorgang(int[] AuswahlArr,double Einsatz){
 
-		AuswahlArr = arraySpeicher();
+
 
 	}
 
