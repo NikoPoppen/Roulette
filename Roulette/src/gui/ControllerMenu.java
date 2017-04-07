@@ -34,6 +34,8 @@ public class ControllerMenu {
 	static Algorithmus algo = new Algorithmus();
 	static AnchorPane ControllerMenuAnchorPane = new AnchorPane();
 
+	String kontostandStr;
+	public static Label kontostandLabel = new Label();	//neues label
 
 	@FXML // fx:id="username"
     private TextField username; // Value injected by FXMLLoader
@@ -110,8 +112,9 @@ public class ControllerMenu {
     public void ausgabeKontostand(double z){
 
     	algo.kontostand = algo.kontostand - z;
-		String kontostandStr= String.valueOf(algo.kontostand);	//Umwandlung von String zu double
-		Label kontostandLabel = new Label(kontostandStr);	//neues label
+		kontostandStr = String.valueOf(algo.kontostand);	//Umwandlung von String zu double
+//		Label kontostandLabel = new Label(kontostandStr);	//neues label
+		kontostandLabel = new Label (kontostandStr);
 		kontostandLabel.setTranslateY(81);	//label position y kordinate
 		kontostandLabel.setTranslateX(135);	//label position x kordinate
 		kontostandLabel.setScaleX(1.5);	//label größe breite
@@ -123,26 +126,12 @@ public class ControllerMenu {
 
 		System.out.println("Kontostand: " + algo.kontostand);
 
-		refreshKontostand(kontostandLabel);
+//		refreshKontostand(kontostandLabel);
     }
 
-    public static void refreshKontostand(Label myLabel){
+    public static void refreshKontostand(){
 
-    	ControllerMenuAnchorPane.getChildren().remove(myLabel);
-
-    	String str= String.valueOf(algo.kontostand);	//Umwandlung von String zu double
-//    	String str = "Hallo";
-    	Label refreshLabel = new Label(str);
-    	refreshLabel.setTranslateY(81);	//label position y kordinate
-    	refreshLabel.setTranslateX(135);	//label position x kordinate
-    	refreshLabel.setScaleX(1.5);	//label größe breite
-    	refreshLabel.setScaleY(1.5); //label größe höhe
-    	refreshLabel.setTextFill(Color.web("#FFFFFF"));	//label/text farbe
-    	refreshLabel.setPrefWidth(100);	//maximale breite des labels
-    	refreshLabel.setWrapText(false);	//wenn die maximale breite erreicht ist, bei false: text abhacken und "..." hinter setzen & bei true: text im nächsten absatz weiter führen
-    	ControllerMenuAnchorPane.getChildren().add(refreshLabel);	//ausgbae des labels im AnchorPane "ControllerMenuAnchorPane" -> (game.fxml/Spielfeld)
-
-    	System.out.println("refreshKontostand: " + algo.kontostand);
+    	ControllerMenuAnchorPane.getChildren().remove(kontostandLabel);
 
     }
 
