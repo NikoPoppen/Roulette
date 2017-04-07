@@ -19,8 +19,9 @@ import javafx.stage.Stage;
 
 public class ControllerGame {
 
-	public Algorithmus algo = new Algorithmus();
-	public ControllerMenu menu = new ControllerMenu();
+	int[] array = new int[1];	//Arraylist
+	Algorithmus algo = new Algorithmus();
+	ControllerMenu menu = new ControllerMenu();
 	public static int zähler = 0;
 
 	@FXML
@@ -28,7 +29,7 @@ public class ControllerGame {
 		int zero = 0;
     	zähler++;
 
-    	algo.arraySpeicher(zero);
+    	array = algo.arraySpeicher(zero);
 		einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
     }
 
@@ -491,6 +492,8 @@ public class ControllerGame {
     void onSpielenClick(ActionEvent event) {
 
     	System.out.println("\n...Algorithmusstart...\n");
+
+
 
     }
 

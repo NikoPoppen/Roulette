@@ -62,10 +62,16 @@ public class Algorithmus {
 		return(z);
 	}
 
-	public static void rechnungsVorgang(int[] AuswahlArr,double Einsatz){
+	public static int[] ZahlenArray(int[] AuswahlArr){
 
 
+		return AuswahlArr;
+	}
 
+	public static int[] einsatzArray(int[] einsatzArray){
+
+
+		return einsatzArray;
 	}
 
 	/**
