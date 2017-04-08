@@ -39,7 +39,8 @@ public class ControllerEinsatz {
     	System.out.println("ControllerEinsatz: "+ einsatzZahl + "EUR");	//Text Ausgabe zur Überprüfung (einsatzZahl)
     	((Node)(event.getSource())).getScene().getWindow().hide();	//verbirgt das vorherige Fenster
 
-    	algo.ausführung(einsatzZahl);	//Aufrufen der Funtion Ausführung aus der Algorithmus Klasse
+    	game.Einsatzarray.add(einsatzZahl);
+    	//algo.ausführung(einsatzZahl);	//Aufrufen der Funtion Ausführung aus der Algorithmus Klasse
     	menu.refreshKontostand();
     	menu.ausgabeKontostand(einsatzZahl);
 //    	menu.refreshKontostand(kontostandLabel);

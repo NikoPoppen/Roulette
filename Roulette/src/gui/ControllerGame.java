@@ -5,6 +5,7 @@
 package gui;
 
 import java.io.IOException;
+import java.util.*;
 import algorithmus.Algorithmus;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
@@ -19,7 +20,12 @@ import javafx.stage.Stage;
 
 public class ControllerGame {
 
-	int[] array = new int[1];	//Arraylist
+	int i = 0; //Zür besseren Testausgabe in der ArrayListe Auswahlarray
+	int z = 0; //Zür besseren Testausgabe in der ArrayListe Einsatzarray
+
+	static ArrayList<Integer> Auswahlarray = new ArrayList<Integer>();	//Gewählte Zahl Array
+	static ArrayList<Double> Einsatzarray = new ArrayList<Double>(); //Einsatz Array
+
 	Algorithmus algo = new Algorithmus();
 	ControllerMenu menu = new ControllerMenu();
 	public static int zähler = 0;
@@ -29,7 +35,7 @@ public class ControllerGame {
 		int zero = 0;
     	zähler++;
 
-    	array = algo.arraySpeicher(zero);
+    	Auswahlarray.add(zero);
 		einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
     }
 
@@ -38,7 +44,7 @@ public class ControllerGame {
 		int one = 1;
     	zähler++;
 
-    	algo.arraySpeicher(one);
+    	Auswahlarray.add(one);
     	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
     }
 
@@ -47,7 +53,7 @@ public class ControllerGame {
 		int two = 2;
     	zähler++;
 
-    	algo.arraySpeicher(two);
+    	Auswahlarray.add(two);
     	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
     }
 
@@ -56,7 +62,7 @@ public class ControllerGame {
 		int three = 3;
     	zähler++;
 
-    	algo.arraySpeicher(three);
+    	Auswahlarray.add(three);
     	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
     }
 
@@ -65,7 +71,7 @@ public class ControllerGame {
 		int four = 4;
     	zähler++;
 
-    	algo.arraySpeicher(four);
+    	Auswahlarray.add(four);
     	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
     }
 
@@ -74,7 +80,7 @@ public class ControllerGame {
 		int five = 5;
     	zähler++;
 
-    	algo.arraySpeicher(five);
+    	Auswahlarray.add(five);
     	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
     }
 
@@ -83,7 +89,7 @@ public class ControllerGame {
 		int six = 6;
     	zähler++;
 
-    	algo.arraySpeicher(six);
+    	Auswahlarray.add(six);
     	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
     }
 
@@ -92,7 +98,7 @@ public class ControllerGame {
 		int seven = 7;
     	zähler++;
 
-    	algo.arraySpeicher(seven);
+    	Auswahlarray.add(seven);
     	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
     }
 
@@ -101,7 +107,7 @@ public class ControllerGame {
     	int eight = 8;
     	zähler++;
 
-    	algo.arraySpeicher(eight);
+    	Auswahlarray.add(eight);
     	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
     }
 
@@ -110,7 +116,7 @@ public class ControllerGame {
     	int nine = 9;
     	zähler++;
 
-    	algo.arraySpeicher(nine);
+    	Auswahlarray.add(nine);
     	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
     }
 
@@ -119,7 +125,7 @@ public class ControllerGame {
 		int ten = 10;
     	zähler++;
 
-    	algo.arraySpeicher(ten);
+    	Auswahlarray.add(ten);
     	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
     }
 
@@ -128,7 +134,7 @@ public class ControllerGame {
     	int eleven = 11;
     	zähler++;
 
-    	algo.arraySpeicher(eleven);
+    	Auswahlarray.add(eleven);
     	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
     }
 
@@ -137,7 +143,7 @@ public class ControllerGame {
     	int twelve = 12;
     	zähler++;
 
-    	algo.arraySpeicher(twelve);
+    	Auswahlarray.add(twelve);
     	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
     }
 
@@ -146,7 +152,7 @@ public class ControllerGame {
     	int thirteen = 13;
     	zähler++;
 
-    	algo.arraySpeicher(thirteen);
+    	Auswahlarray.add(thirteen);
     	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
     }
 
@@ -155,7 +161,7 @@ public class ControllerGame {
     	int fourteen = 14;
     	zähler++;
 
-    	algo.arraySpeicher(fourteen);
+    	Auswahlarray.add(fourteen);
     	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
     }
 
@@ -164,7 +170,7 @@ public class ControllerGame {
     	int fifteen = 15;
     	zähler++;
 
-    	algo.arraySpeicher(fifteen);
+    	Auswahlarray.add(fifteen);
     	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
     }
 
@@ -173,7 +179,7 @@ public class ControllerGame {
     	int sixteen = 16;
     	zähler++;
 
-    	algo.arraySpeicher(sixteen);
+    	Auswahlarray.add(sixteen);
     	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
     }
 
@@ -182,7 +188,7 @@ public class ControllerGame {
     	int seventeen = 17;
     	zähler++;
 
-    	algo.arraySpeicher(seventeen);
+    	Auswahlarray.add(seventeen);
     	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
     }
 
@@ -191,7 +197,7 @@ public class ControllerGame {
     	int eighteen = 18;
     	zähler++;
 
-    	algo.arraySpeicher(eighteen);
+    	Auswahlarray.add(eighteen);
     	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
     }
 
@@ -200,7 +206,7 @@ public class ControllerGame {
     	int nineteen = 19;
     	zähler++;
 
-    	algo.arraySpeicher(nineteen);
+    	Auswahlarray.add(nineteen);
     	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
     }
 
@@ -209,7 +215,7 @@ public class ControllerGame {
     	int twenty = 20;
     	zähler++;
 
-    	algo.arraySpeicher(twenty);
+    	Auswahlarray.add(twenty);
     	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
     }
 
@@ -218,7 +224,7 @@ public class ControllerGame {
     	int twentyone = 21;
     	zähler++;
 
-    	algo.arraySpeicher(twentyone);
+    	Auswahlarray.add(twentyone);
     	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
     }
 
@@ -227,7 +233,7 @@ public class ControllerGame {
     	int twentytwo = 22;
     	zähler++;
 
-    	algo.arraySpeicher(twentytwo);
+    	Auswahlarray.add(twentytwo);
     	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
     }
 
@@ -236,7 +242,7 @@ public class ControllerGame {
     	int twentythree = 23;
     	zähler++;
 
-    	algo.arraySpeicher(twentythree);
+    	Auswahlarray.add(twentythree);
     	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
     }
 
@@ -245,7 +251,7 @@ public class ControllerGame {
     	int twentyfour = 24;
     	zähler++;
 
-    	algo.arraySpeicher(twentyfour);
+    	Auswahlarray.add(twentyfour);
     	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
     }
 
@@ -254,7 +260,7 @@ public class ControllerGame {
     	int twentyfive = 25;
     	zähler++;
 
-    	algo.arraySpeicher(twentyfive);
+    	Auswahlarray.add(twentyfive);
     	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
     }
 
@@ -263,7 +269,7 @@ public class ControllerGame {
     	int twentysix = 26;
     	zähler++;
 
-    	algo.arraySpeicher(twentysix);
+    	Auswahlarray.add(twentysix);
     	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
     }
 
@@ -272,7 +278,7 @@ public class ControllerGame {
     	int twentyseven = 27;
     	zähler++;
 
-    	algo.arraySpeicher(twentyseven);
+    	Auswahlarray.add(twentyseven);
     	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
     }
 
@@ -281,7 +287,7 @@ public class ControllerGame {
     	int twentyeight = 28;
     	zähler++;
 
-    	algo.arraySpeicher(twentyeight);
+    	Auswahlarray.add(twentyeight);
     	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
     }
 
@@ -290,7 +296,7 @@ public class ControllerGame {
     	int twentynine = 29;
     	zähler++;
 
-    	algo.arraySpeicher(twentynine);
+    	Auswahlarray.add(twentynine);
     	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
     }
 
@@ -299,7 +305,7 @@ public class ControllerGame {
     	int thirty = 30;
     	zähler++;
 
-    	algo.arraySpeicher(thirty);
+    	Auswahlarray.add(thirty);
     	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
     }
 
@@ -308,7 +314,7 @@ public class ControllerGame {
     	int thirtyone = 31;
     	zähler++;
 
-    	algo.arraySpeicher(thirtyone);
+    	Auswahlarray.add(thirtyone);
     	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
     }
 
@@ -317,7 +323,7 @@ public class ControllerGame {
     	int thirtytwo = 32;
     	zähler++;
 
-    	algo.arraySpeicher(thirtytwo);
+    	Auswahlarray.add(thirtytwo);
     	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
     }
 
@@ -326,7 +332,7 @@ public class ControllerGame {
     	int thirtythree = 33;
     	zähler++;
 
-    	algo.arraySpeicher(thirtythree);
+    	Auswahlarray.add(thirtythree);
     	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
     }
 
@@ -335,7 +341,7 @@ public class ControllerGame {
     	int thirtyfour = 34;
     	zähler++;
 
-    	algo.arraySpeicher(thirtyfour);
+    	Auswahlarray.add(thirtyfour);
     	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
     }
 
@@ -344,7 +350,7 @@ public class ControllerGame {
     	int thirtyfive = 35;
     	zähler++;
 
-    	algo.arraySpeicher(thirtyfive);
+    	Auswahlarray.add(thirtyfive);
     	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
     }
 
@@ -353,7 +359,7 @@ public class ControllerGame {
     	int thirtysix = 36;
     	zähler++;
 
-    	algo.arraySpeicher(thirtysix);
+    	Auswahlarray.add(thirtysix);
     	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
     }
 
@@ -362,7 +368,7 @@ public class ControllerGame {
     	int first = 100;
     	zähler++;
 
-    	algo.arraySpeicher(first);
+    	Auswahlarray.add(first);
     	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
     }
 
@@ -371,7 +377,7 @@ public class ControllerGame {
     	int second = 200;
     	zähler++;
 
-    	algo.arraySpeicher(second);
+    	Auswahlarray.add(second);
     	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
     }
 
@@ -380,7 +386,7 @@ public class ControllerGame {
     	int third = 300;
     	zähler++;
 
-    	algo.arraySpeicher(third);
+    	Auswahlarray.add(third);
     	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
     }
 
@@ -389,16 +395,16 @@ public class ControllerGame {
     	int onetotwelve = 112;
     	zähler++;
 
-    	algo.arraySpeicher(onetotwelve);
+    	Auswahlarray.add(onetotwelve);
     	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
     }
 
     @FXML
     void on13_24Click(ActionEvent event) throws IOException {
-    	int thirteentotwentyfour  = 10;
+    	int thirteentotwentyfour  = 1324;
     	zähler++;
 
-    	algo.arraySpeicher(thirteentotwentyfour);
+    	Auswahlarray.add(thirteentotwentyfour);
     	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
     }
 
@@ -408,7 +414,7 @@ public class ControllerGame {
     	int twentyfivetothirtysix = 2536;
     	zähler++;
 
-    	algo.arraySpeicher(twentyfivetothirtysix);
+    	Auswahlarray.add(twentyfivetothirtysix);
     	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
     }
 
@@ -417,7 +423,7 @@ public class ControllerGame {
     	int onetoeighteen = 118;
     	zähler++;
 
-    	algo.arraySpeicher(onetoeighteen);
+    	Auswahlarray.add(onetoeighteen);
     	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
     }
 
@@ -426,7 +432,7 @@ public class ControllerGame {
     	int nineteentothirtysix = 1936;
     	zähler++;
 
-    	algo.arraySpeicher(nineteentothirtysix);
+    	Auswahlarray.add(nineteentothirtysix);
     	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
     }
 
@@ -435,7 +441,7 @@ public class ControllerGame {
     	int gerade = 1000;
     	zähler++;
 
-    	algo.arraySpeicher(gerade);
+    	Auswahlarray.add(gerade);
     	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
     }
 
@@ -444,7 +450,7 @@ public class ControllerGame {
     	int ungerade = 2000;
       	zähler++;
 
-      	algo.arraySpeicher(ungerade);
+      	Auswahlarray.add(ungerade);
     	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
     }
 
@@ -454,7 +460,7 @@ public class ControllerGame {
       	int red = 998;
       	zähler++;
 
-      	algo.arraySpeicher(red);
+      	Auswahlarray.add(red);
     	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
     }
 
@@ -463,7 +469,7 @@ public class ControllerGame {
     	int black = 999;
       	zähler++;
 
-      	algo.arraySpeicher(black);
+      	Auswahlarray.add(black);
     	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
     }
 
@@ -493,7 +499,17 @@ public class ControllerGame {
 
     	System.out.println("\n...Algorithmusstart...\n");
 
+    	//Überprüfungs Ausgabe für Arralist der Auswahl
+    	for(int Ausgabe : Auswahlarray){
+    		System.out.println("Arrayliste Auswahl an der Stelle " + i + ": " + Ausgabe);
+    		i++;
+    	}
 
+    	//Überprüfungs Ausgabe für Arralist des Einsatzes
+    	for(double Ausgabe : Einsatzarray){
+    		System.out.println("Arrayliste Einsatz an Stelle " + z + ": " + Ausgabe);
+    		z++;
+    	}
 
     }
 

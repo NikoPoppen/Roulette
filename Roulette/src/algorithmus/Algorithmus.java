@@ -26,30 +26,6 @@ public class Algorithmus {
 		System.out.println("Zählerwert " + game.zähler + "\n");
 	}
 
-	/**
-	 *
-	 * @param z
-	 * @return
-	 */
-	public static int[] arraySpeicher(int z){
-//		ControllerGame game = new ControllerGame();
-		int Array[] = new int [game.zähler];
-
-		//Werte in das Array abspeichern
-		for(int i = 0;i<Array.length;i++){
-
-			Array[i] = z;
-		}
-
-		//Arrayausgabe
-		for(int i =0;i<1;i++){
-
-			System.out.println("Arrayausgabe " + Array[i]);
-		}
-
-
-		return Array;
-	}
 
 	/**
 	 *
@@ -65,16 +41,9 @@ public class Algorithmus {
 
 	public static void rechnungsVorgang(){
 
-//		int Array2[] = new int [game.zähler];
-//		Array2 = arraySpeicher();
 
 	}
 
-	public static int[] einsatzArray(int[] einsatzArray){
-
-
-		return einsatzArray;
-	}
 
 	/**
 	 *
