@@ -150,3 +150,10 @@ Zeit:90min
 
 ---
 
+07.04.2017
+
+Zeit: 90min
+-dynamische grafische Ausgabe des Guthabens im Spielfeldfenster
+
+---
+
