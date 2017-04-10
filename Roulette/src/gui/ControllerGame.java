@@ -23,8 +23,8 @@ public class ControllerGame {
 	int i = 0; //Zür besseren Testausgabe in der ArrayListe Auswahlarray
 	int z = 0; //Zür besseren Testausgabe in der ArrayListe Einsatzarray
 
-	static ArrayList<Integer> Auswahlarray = new ArrayList<Integer>();	//Gewählte Zahl Array
-	static ArrayList<Double> Einsatzarray = new ArrayList<Double>(); //Einsatz Array
+	public static ArrayList<Integer> Auswahlarray = new ArrayList<Integer>();	//Gewählte Zahl Array
+	public static ArrayList<Double> Einsatzarray = new ArrayList<Double>(); //Einsatz Array
 
 	Algorithmus algo = new Algorithmus();
 	ControllerMenu menu = new ControllerMenu();
@@ -497,19 +497,9 @@ public class ControllerGame {
     @FXML
     void onSpielenClick(ActionEvent event) {
 
-    	System.out.println("\n...Algorithmusstart...\n");
+    	System.out.println("---------------Algorithmus Startet----------------");
 
-    	//Überprüfungs Ausgabe für Arralist der Auswahl
-    	for(int Ausgabe : Auswahlarray){
-    		System.out.println("Arrayliste Auswahl an der Stelle " + i + ": " + Ausgabe);
-    		i++;
-    	}
-
-    	//Überprüfungs Ausgabe für Arralist des Einsatzes
-    	for(double Ausgabe : Einsatzarray){
-    		System.out.println("Arrayliste Einsatz an Stelle " + z + ": " + Ausgabe);
-    		z++;
-    	}
+    	algo.rechnungsVorgang();
 
     }
 

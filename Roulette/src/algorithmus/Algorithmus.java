@@ -4,8 +4,11 @@
 package algorithmus;
 
 import gui.*;
+import java.util.*;
 
 public class Algorithmus {
+	static int i = 0; //Zür besseren Testausgabe in der ArrayListe Auswahlarray
+	static int z = 0; //Zür besseren Testausgabe in der ArrayListe Einsatzarray
 
 	static ControllerGame game = new ControllerGame();
 
@@ -41,8 +44,31 @@ public class Algorithmus {
 
 	public static void rechnungsVorgang(){
 
+		//Zufällige Zahl wird geholt
+    	int zufallsZahl = zahlenGenerator();
 
-	}
+    	//ArrayListe wird zum ListIterator gemacht um mehrere Methoden zur Abfrage zu haben
+    	ListIterator<Integer> list = game.Auswahlarray.listIterator();
+
+    	for(int i = 0;i<game.zähler;i++){
+
+    		while(list.hasNext()){				//Solange ArrayListe noch einen nächsten Wert hat
+
+    		if(list.next() == (zufallsZahl)) 	//Fragt den Wert im Index ab und springt danach 1 weiter
+    		{
+    			System.out.println("Sie haben Gewonnen!");
+    		}
+
+
+    		else
+    		{
+    			System.out.println("Sie haben leider nicht gewonnen!");
+    		}
+    	}
+
+    }
+
+}
 
 
 	/**
