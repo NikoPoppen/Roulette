@@ -27,23 +27,17 @@ public class ControllerEinsatz {
     }
 
     @FXML
-//    public double onOkEinsatzClick(double einsatzZahl)
     public double onOkEinsatzClick(ActionEvent event){
-
 
     	double einsatzZahl;
     	String einsatzStr = einsatz.getText();	//get Text aus dem Eingabe Fenster
 
 		einsatzZahl = Double.parseDouble(einsatzStr);	//Umwandlung von String zu double
-
-    	System.out.println("ControllerEinsatz: "+ einsatzZahl + "EUR");	//Text Ausgabe zur Überprüfung (einsatzZahl)
     	((Node)(event.getSource())).getScene().getWindow().hide();	//verbirgt das vorherige Fenster
 
     	game.Einsatzarray.add(einsatzZahl);
-    	//algo.ausführung(einsatzZahl);	//Aufrufen der Funtion Ausführung aus der Algorithmus Klasse
     	menu.refreshKontostand();
     	menu.ausgabeKontostand(einsatzZahl);
-//    	menu.refreshKontostand(kontostandLabel);
 
     	return einsatzZahl;
 

@@ -9,6 +9,7 @@ package gui;
 
 import java.io.IOException;
 
+import algorithmus.Algorithmus;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.stage.Stage;

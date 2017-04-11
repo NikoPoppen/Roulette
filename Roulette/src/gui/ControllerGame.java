@@ -20,9 +20,6 @@ import javafx.stage.Stage;
 
 public class ControllerGame {
 
-	int i = 0; //Zür besseren Testausgabe in der ArrayListe Auswahlarray
-	int z = 0; //Zür besseren Testausgabe in der ArrayListe Einsatzarray
-
 	public static ArrayList<Integer> Auswahlarray = new ArrayList<Integer>();	//Gewählte Zahl Array
 	public static ArrayList<Double> Einsatzarray = new ArrayList<Double>(); //Einsatz Array
 
