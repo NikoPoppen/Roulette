@@ -157,3 +157,16 @@ Zeit: 90min
 
 ---
 
+12.04.2017
+
+Start: 19:00Uhr Ende:20:00Uhr
+-Methode rechnungsVorgang zusammen mit Niko Poppen besprochen
+
+Start: 20.45Uhr	Ende: 23:50Uhr
+-grafische Ausgabe des Guthabens wird nach jedem setzten und Gewinn aktualisiert
+-Gewinnüberprüfung eingebaut
+--es kann jetzt auf alle Felder gesetzt werden und danach wird mit der zufällig gezogenen Zahl überprüft ob man etwas gewonnen hat oder nicht
+---dazu wurden Arrays für die Felder mit den entsprechenden Zahlen angelegt. Diese Zahlen werden mithilfe einer For-Schleife in eine angelegte ArrayList gespeichert. Die ArrayList wird für die Überprüfung der einzelnen Felder benötigt, indem überprüft wird ob die zufällig gezogene Zahl in der Liste vorhanden ist oder nicht. Wenn ja wird der entsprechende Gewinn ausgerechnet & wenn nicht wird in der Konsole ausgegeben, dass man nichts gewonnen hat
+
+---
+
