@@ -366,7 +366,7 @@ public class Algorithmus {
 	 */
 	public static int zahlenGenerator(){
 
-		double zahl = Math.random()*36;	//zufällige Zahl zwischen 0 und 36
+		double zahl = Math.random()+1;	//zufällige Zahl zwischen 0 und 36
 		int zufallZahl = (int) zahl;	//double zu int umwandeln
 		System.out.println("zufällige Zahl: " + zufallZahl);	//Text Ausgabe zur Überprüfung (zufallZahl)
 
