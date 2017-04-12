@@ -350,14 +350,20 @@ public class Algorithmus {
     				kontostand = Gewinn + Einsatzlist.previous() +  kontostand;
     				break;
     			}
+    			default:
+    			{
+    				Auswahllist.next();
+    			}
+
     			} //Ende Switch
 
     		} //Ende if Abfrage
 
+
     		else
     		{
 
-    			if(MehrfachAuswahl.contains(Auswahllist.previous())){
+    			if(onetotwelvelist.contains(Auswahllist.previous())){
 
     				switch(Auswahllist.next())
     				{
