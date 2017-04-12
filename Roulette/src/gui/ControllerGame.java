@@ -32,8 +32,8 @@ public class ControllerGame {
 		int zero = 0;
     	zähler++;
 
-    	Auswahlarray.add(zero);
 		einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
+		Auswahlarray.add(zero);
     }
 
 	@FXML

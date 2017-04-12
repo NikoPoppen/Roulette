@@ -4,6 +4,7 @@
 
 package gui;
 import java.io.IOException;
+import java.util.ListIterator;
 
 import algorithmus.*;
 
@@ -24,6 +25,11 @@ public class ControllerEinsatz {
     @FXML
     void onAbbrechenClick(ActionEvent event) {
     	((Node)(event.getSource())).getScene().getWindow().hide();	//verbirgt das vorherige Fenster
+    	//ListIterator wird erstellt zur Einbindung von Methoden
+    	ListIterator<Integer> Auswahllist = game.Auswahlarray.listIterator();
+    	game.Auswahlarray.remove(Auswahllist.next()); //Entfernt den Wert aus dem Auswahlarray
+    	Auswahllist.previousIndex(); // Springt 1 Index zurück
+
     }
 
     @FXML

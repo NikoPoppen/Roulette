@@ -13,8 +13,6 @@ public class Algorithmus {
 
 	public static double kontostand = 3000;
 
-
-
 	/**
 	 *
 	 */
@@ -95,10 +93,9 @@ public class Algorithmus {
     	for(int i =0;i<schwarzArr.length;i++)
     		schwarzAuswahl.add(schwarzArr[i]);
 
-
-    	//ArrayListe wird zum ListIterator gemacht um mehrere Methoden zur Abfrage zu haben
     	ListIterator<Integer> Auswahllist = game.Auswahlarray.listIterator();
     	ListIterator<Double> Einsatzlist = game.Einsatzarray.listIterator();
+
 
 
 		//Hier soll noch ein Fenster aufgerufen werden mit dieser Ausgabe.
