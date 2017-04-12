@@ -9,8 +9,14 @@ import java.util.*;
 public class Algorithmus {
 
 	static ControllerGame game = new ControllerGame();
-
 	public static double kontostand = 3000;
+
+	//Array mit Werten von Einfachen Auswahlen
+	public static int MehrfachArray[] = {112,1324,2536,118,1936,100,200,300,1000,2000,999,998};
+	public static int onetotwelveArray [] = {1,2,3,4,5,6,7,8,9,10,11,12};
+	public static ArrayList<Integer> MehrfachAuswahl = new ArrayList<Integer>();
+	public static ArrayList<Integer> onetotwelveAuswahl = new ArrayList<Integer>();
+	public static ArrayList<Integer> onetotwelvelist = new ArrayList<Integer>();
 
 
 	public static void rechnungsVorgang(){
@@ -30,6 +36,11 @@ public class Algorithmus {
     	//ArrayListe wird zum ListIterator gemacht um mehrere Methoden zur Abfrage zu haben
     	ListIterator<Integer> Auswahllist = game.Auswahlarray.listIterator();
     	ListIterator<Double> Einsatzlist = game.Einsatzarray.listIterator();
+    	ListIterator<Integer> Mehrfachlist = MehrfachAuswahl.listIterator();
+
+    	for(int i =0;i<MehrfachArray.length;i++){
+    		Mehrfachlist.add(MehrfachArray[i]);
+    	}
 
     	for(int i = 0;i<game.zähler;i++){
 
@@ -339,16 +350,123 @@ public class Algorithmus {
     				kontostand = Gewinn + Einsatzlist.previous() +  kontostand;
     				break;
     			}
-
-
     			} //Ende Switch
 
-    		}
-
+    		} //Ende if Abfrage
 
     		else
     		{
-    			System.out.println("Sie haben leider nicht gewonnen!");
+
+    			if(MehrfachAuswahl.contains(Auswahllist.previous())){
+
+    				switch(Auswahllist.next())
+    				{
+    				case(100): //Case für First
+        			{
+        				double Gewinn = Einsatzlist.next()*2;
+        				System.out.println("Ihr gewinn beträgt: " + Gewinn);
+        				Auswahllist.previous();
+        				kontostand = Gewinn + Einsatzlist.previous() +  kontostand;
+        				break;
+        			}
+        			case(200): //Case für Second
+        			{
+        				double Gewinn = Einsatzlist.next()*2;
+        				System.out.println("Ihr gewinn beträgt: " + Gewinn);
+        				Auswahllist.next();
+        				kontostand = Gewinn + Einsatzlist.previous() +  kontostand;
+        				break;
+        			}
+        			case(300): //Case für Third
+        			{
+        				double Gewinn = Einsatzlist.next()*2;
+        				System.out.println("Ihr gewinn beträgt: " + Gewinn);
+        				Auswahllist.next();
+        				kontostand = Gewinn + Einsatzlist.previous() +  kontostand;
+        				break;
+        			}
+        			case(112): //Case für 1 bis 12
+        			{
+        				double Gewinn = Einsatzlist.next()*2;
+        				System.out.println("Ihr gewinn beträgt: " + Gewinn);
+        				Auswahllist.next();
+        				kontostand = Gewinn + Einsatzlist.previous() +  kontostand;
+        				break;
+        			}
+        			case(1324):
+        			{
+        				double Gewinn = Einsatzlist.next()*2;
+        				System.out.println("Ihr gewinn beträgt: " + Gewinn);
+        				Auswahllist.next();
+        				kontostand = Gewinn + Einsatzlist.previous() +  kontostand;
+        				break;
+        			}
+        			case(2536):
+        			{
+        				double Gewinn = Einsatzlist.next()*2;
+        				System.out.println("Ihr gewinn beträgt: " + Gewinn);
+        				Auswahllist.next();
+        				kontostand = Gewinn + Einsatzlist.previous() +  kontostand;
+        				break;
+        			}
+        			case(118):
+        			{
+        				double Gewinn = Einsatzlist.next() + Einsatzlist.previous();
+        				System.out.println("Ihr gewinn beträgt: " + Gewinn);
+        				Auswahllist.next();
+        				kontostand = Gewinn + kontostand;
+        				break;
+        			}
+        			case(1936):
+        			{
+        				double Gewinn = Einsatzlist.next() + Einsatzlist.previous();
+        				System.out.println("Ihr gewinn beträgt: " + Gewinn);
+        				Auswahllist.next();
+        				kontostand = Gewinn + kontostand;
+        				break;
+        			}
+        			case(1000):
+        			{
+        				double Gewinn = Einsatzlist.next() + Einsatzlist.previous();
+        				System.out.println("Ihr gewinn beträgt: " + Gewinn);
+        				Auswahllist.next();
+        				kontostand = Gewinn + kontostand;
+        				break;
+        			}
+        			case(2000):
+        			{
+        				double Gewinn = Einsatzlist.next() + Einsatzlist.previous();
+        				System.out.println("Ihr gewinn beträgt: " + Gewinn);
+        				Auswahllist.next();
+        				kontostand = Gewinn + kontostand;
+        				break;
+        			}
+        			case(998):
+        			{
+        				double Gewinn = Einsatzlist.next() + Einsatzlist.previous();
+        				System.out.println("Ihr gewinn beträgt: " + Gewinn);
+        				Auswahllist.next();
+        				kontostand = Gewinn + kontostand;
+        				break;
+        			}
+        			case(999):
+        			{
+        				double Gewinn = Einsatzlist.next() + Einsatzlist.previous();
+        				System.out.println("Ihr gewinn beträgt: " + Gewinn);
+        				Auswahllist.next();
+        				kontostand = Gewinn + kontostand;
+        				break;
+        			}
+
+    				}//Ende Switch
+    			}//Ende If
+
+    			else
+    			{
+    				System.out.println("Sie haben leider nicht gewonnen!");
+    			}
+
+
     		}
     	}// Ende While Schleife
 
@@ -366,11 +484,16 @@ public class Algorithmus {
 	 */
 	public static int zahlenGenerator(){
 
-		double zahl = Math.random()*36;	//zufällige Zahl zwischen 0 und 36
+		double zahl = Math.random()+11;	//zufällige Zahl zwischen 0 und 36
 		int zufallZahl = (int) zahl;	//double zu int umwandeln
 		System.out.println("zufällige Zahl: " + zufallZahl);	//Text Ausgabe zur Überprüfung (zufallZahl)
 
 		return zufallZahl;
+	}
+
+	public static void Überprüfung(){
+
+
 	}
 
 }
