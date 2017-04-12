@@ -518,9 +518,5 @@ public class ControllerGame {
 		stage.setHeight(200);
     }//end einsatzFenster
 
-    /**
-     *
-     */
-
 }
 
