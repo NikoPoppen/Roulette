@@ -4,11 +4,7 @@
 
 package gui;
 
-
-
-
 import java.io.IOException;
-
 import algorithmus.Algorithmus;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
@@ -22,9 +18,6 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
-
-
-
 
 public class ControllerMenu {
 
@@ -55,8 +48,6 @@ public class ControllerMenu {
 
     @FXML
     public void onStartClick(ActionEvent event) throws IOException {
-
-
     	ControllerMenuAnchorPane = FXMLLoader.load(getClass().getResource("gameMini.fxml"));	//"game.fxml" datei laden (befehle die das GUI erstellen)
     	Stage stage = new Stage();	//new stage erstellen
     	stage.setScene(new Scene(ControllerMenuAnchorPane));	//"ControllernAnchorPane" zur Scene hinzufügen
@@ -68,21 +59,14 @@ public class ControllerMenu {
 		stage.setWidth(1200);
 		stage.setHeight(800);
 
-		//Ausgabe des angemeldeten benutzernamen
-		Label usernameLabel = new Label(usernameVar);	//neues label
-		usernameLabel.setTranslateY(52);	//label position y kordinate
-		usernameLabel.setTranslateX(155);	//label position x kordinate
-		usernameLabel.setScaleX(1.3);	//label größe breite
-		usernameLabel.setScaleY(1.3); //label größe höhe
-		usernameLabel.setTextFill(Color.web("#FFFFFF"));	//label/text farbe
-		usernameLabel.setPrefWidth(100);	//maximale breite des labels
-		usernameLabel.setWrapText(false);	//wenn die maximale breite erreicht ist, bei false: text abhacken und "..." hinter setzen & bei true: text im nächsten absatz weiter führen
-		ControllerMenuAnchorPane.getChildren().add((usernameLabel));	//ausgbae des labels im AnchorPane "ControllerMenuAnchorPane" -> (game.fxml/Spielfeld)
+		if(usernameVar == null){
+			gastBenutzer();				//falls keine Zeichenkette in usernameVar vorhanden ist, wird man als Gast "angemeldet"
+		}
+		else
+			angemeldeterBenutzer();		//Ausgabe des angemeldeten benutzernamen
 
-		//
-		ausgabeKontostand(0);
-
-
+		ausgabeKontostand(0);			//Ausgabe des Kontostandes
+		
     	stage.show();	//fenster wird sichtbar gemacht
 
     	((Node)(event.getSource())).getScene().getWindow().hide();	//verbirgt das vorherige Fenster
@@ -109,11 +93,44 @@ public class ControllerMenu {
 		stage.setHeight(260);
     }
 
-    public void ausgabeKontostand(double z){
+    /**
+     * 
+     */
+    public void angemeldeterBenutzer(){
+    	Label usernameLabel = new Label(usernameVar);	//neues label
+		usernameLabel.setTranslateY(52);	//label position y kordinate
+		usernameLabel.setTranslateX(155);	//label position x kordinate
+		usernameLabel.setScaleX(1.3);	//label größe breite
+		usernameLabel.setScaleY(1.3); //label größe höhe
+		usernameLabel.setTextFill(Color.web("#FFFFFF"));	//label/text farbe
+		usernameLabel.setPrefWidth(100);	//maximale breite des labels
+		usernameLabel.setWrapText(false);	//wenn die maximale breite erreicht ist, bei false: text abhacken und "..." hinter setzen & bei true: text im nächsten absatz weiter führen
+		ControllerMenuAnchorPane.getChildren().add((usernameLabel));	//ausgbae des labels im AnchorPane "ControllerMenuAnchorPane" -> (game.fxml/Spielfeld)
+    }
 
+    /**
+     * 
+     */
+    public void gastBenutzer(){
+    	String gastBenutzerStr = "Gast";
+    	Label gastLabel = new Label(gastBenutzerStr);	//neues label
+    	gastLabel.setTranslateY(52);	//label position y kordinate
+    	gastLabel.setTranslateX(155);	//label position x kordinate
+    	gastLabel.setScaleX(1.3);	//label größe breite
+    	gastLabel.setScaleY(1.3); //label größe höhe
+    	gastLabel.setTextFill(Color.web("#FFFFFF"));	//label/text farbe
+    	gastLabel.setPrefWidth(100);	//maximale breite des labels
+		gastLabel.setWrapText(false);	//wenn die maximale breite erreicht ist, bei false: text abhacken und "..." hinter setzen & bei true: text im nächsten absatz weiter führen
+		ControllerMenuAnchorPane.getChildren().add((gastLabel));	//ausgbae des labels im AnchorPane "ControllerMenuAnchorPane" -> (game.fxml/Spielfeld)
+    }
+
+    /**
+     * 
+     * @param z
+     */
+    public void ausgabeKontostand(double z){
     	algo.kontostand = algo.kontostand - z;
 		kontostandStr = String.valueOf(algo.kontostand);	//Umwandlung von String zu double
-//		Label kontostandLabel = new Label(kontostandStr);	//neues label
 		kontostandLabel = new Label (kontostandStr);
 		kontostandLabel.setTranslateY(78);	//label position y kordinate
 		kontostandLabel.setTranslateX(113);	//label position x kordinate
@@ -125,15 +142,13 @@ public class ControllerMenu {
 		ControllerMenuAnchorPane.getChildren().add(kontostandLabel);	//ausgbae des labels im AnchorPane "ControllerMenuAnchorPane" -> (game.fxml/Spielfeld)
 
 		System.out.println("Kontostand: " + algo.kontostand);
-
-//		refreshKontostand(kontostandLabel);
     }
 
+    /**
+     * 
+     */
     public static void refreshKontostand(){
-
     	ControllerMenuAnchorPane.getChildren().remove(kontostandLabel);
-
     }
 
 }
-

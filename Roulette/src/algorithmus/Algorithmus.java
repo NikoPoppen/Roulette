@@ -1,6 +1,7 @@
 /**
  *
  */
+
 package algorithmus;
 
 import gui.*;
@@ -592,7 +593,5 @@ public class Algorithmus {
 
 		return zufallZahl;
 	}//end method
-
-
 
 }//end class

@@ -1,4 +1,10 @@
+/**
+ * 
+ */
+
 package datenbank;
+
+
 
 public class Verbindung {
 

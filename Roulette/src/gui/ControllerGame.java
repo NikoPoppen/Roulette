@@ -13,9 +13,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Scene;
-import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
 public class ControllerGame {
@@ -488,19 +486,19 @@ public class ControllerGame {
 		stage.setWidth(900);
 		stage.setHeight(600);
 
+		menu.usernameVar = null;	//leert die Zeichenkette von usernameVar
+
     	((Node)(event.getSource())).getScene().getWindow().hide();	//verbirgt das vorherige Fenster
     }
 
     @FXML
     void onSpielenClick(ActionEvent event) {
-
     	System.out.println("---------------Algorithmus Startet----------------");
 
     	algo.rechnungsVorgang();
-
     }
 
-
+    
     /**
      *
      * @param event
@@ -516,7 +514,7 @@ public class ControllerGame {
 		// hoehe und breite der Stage festlegen
 		stage.setWidth(400);
 		stage.setHeight(200);
-    }//end einsatzFenster
+    }//end method einsatzFenster
 
 }
 

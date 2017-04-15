@@ -3,11 +3,8 @@
  */
 
 package gui;
-import java.io.IOException;
+
 import java.util.ListIterator;
-
-import algorithmus.*;
-
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
@@ -15,9 +12,8 @@ import javafx.scene.control.TextField;
 
 public class ControllerEinsatz {
 
-	public Algorithmus algo = new Algorithmus();	//Algorithmus Klasse aufrufen
-	public ControllerGame game = new ControllerGame();
-	public ControllerMenu menu = new ControllerMenu();
+	ControllerGame game = new ControllerGame();
+	ControllerMenu menu = new ControllerMenu();
 
     @FXML // fx:id="einsatz"
     private TextField einsatz; // Value injected by FXMLLoader
@@ -29,12 +25,10 @@ public class ControllerEinsatz {
     	ListIterator<Integer> Auswahllist = game.Auswahlarray.listIterator();
     	game.Auswahlarray.remove(Auswahllist.next()); //Entfernt den Wert aus dem Auswahlarray
     	Auswahllist.previousIndex(); // Springt 1 Index zurück
-
     }
 
     @FXML
     public double onOkEinsatzClick(ActionEvent event){
-
     	double einsatzZahl;
     	String einsatzStr = einsatz.getText();	//get Text aus dem Eingabe Fenster
 
@@ -46,7 +40,6 @@ public class ControllerEinsatz {
     	menu.ausgabeKontostand(einsatzZahl);
 
     	return einsatzZahl;
-
     }
 
 }
