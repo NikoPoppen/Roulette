@@ -5,9 +5,12 @@
 package algorithmus;
 
 import gui.*;
+import javafx.fxml.FXML;
+import javafx.scene.control.TextArea;
+
 import java.util.*;
 
-public class Algorithmus {
+public class Algorithmus{
 
 	static ControllerGame game = new ControllerGame();
 	static ControllerMenu menu = new ControllerMenu();
@@ -578,6 +581,7 @@ public class Algorithmus {
     		menu.ausgabeKontostand(0);
 
     		System.out.println("---------------Algorithmus Ende-------------------");
+
 	}//end method
 
 
@@ -593,5 +597,7 @@ public class Algorithmus {
 
 		return zufallZahl;
 	}//end method
+
+
 
 }//end class

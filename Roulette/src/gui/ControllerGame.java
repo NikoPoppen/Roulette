@@ -15,6 +15,7 @@ import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
+import javafx.scene.control.TextArea;
 
 public class ControllerGame {
 
@@ -24,6 +25,9 @@ public class ControllerGame {
 	Algorithmus algo = new Algorithmus();
 	ControllerMenu menu = new ControllerMenu();
 	public static int zähler = 0;
+
+	@FXML
+	public TextArea historie;
 
 	@FXML
     void on0Click(ActionEvent event) throws IOException {
@@ -494,11 +498,12 @@ public class ControllerGame {
     @FXML
     void onSpielenClick(ActionEvent event) {
     	System.out.println("---------------Algorithmus Startet----------------");
+    	historie.appendText("---------------Algorithmus Startet----------------");	//Text wird mit einem Absatz in das TextArea geschrieben
 
     	algo.rechnungsVorgang();
     }
 
-    
+
     /**
      *
      * @param event
@@ -515,6 +520,8 @@ public class ControllerGame {
 		stage.setWidth(400);
 		stage.setHeight(200);
     }//end method einsatzFenster
+
+
 
 }
 
