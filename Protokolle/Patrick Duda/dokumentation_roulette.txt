@@ -170,3 +170,25 @@ Start: 20.45Uhr	Ende: 23:50Uhr
 
 ---
 
+15.04.2017
+
+Start: 19:45Uhr	Ende:20:55Uhr
+-game.fxml (RouletteSpielfeld) Auflösung verändert zu 1200x800
+	-Namen zu gameMini.fxml geändert
+
+
+Start:21:40Uhr	Ende: 22:00Uhr
+-grafische Ausgabe des Benutzer in eine Methode gepackt
+-falls man keinen Bneutzernamen angibt bzw. sich nicht anmeldet, wird grafisch der Benutzername "Gast" ausgegeben
+-2 unnötige imports in der ControllerMenu Klasse entfernt
+-unnötige Zeilen wie Absätze entfernt bzw. zwecks übersicht einbegabut
+
+
+Start:22:10Uhr	Ende:01:00Uhr
+-textArea in gameMini.fxml hinzugefügt
+-informiert über Konsolenausgaben im TextArea
+-versucht Algorithmusverlauf im TextArea auszugeben
+	-bislang wird nur der Start des Algorithmus visuel im TextArea angezeigt
+	
+---
+
