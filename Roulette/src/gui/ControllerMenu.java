@@ -57,23 +57,23 @@ public class ControllerMenu {
     public void onStartClick(ActionEvent event) throws IOException {
 
 
-    	ControllerMenuAnchorPane = FXMLLoader.load(getClass().getResource("game.fxml"));	//"game.fxml" datei laden (befehle die das GUI erstellen)
+    	ControllerMenuAnchorPane = FXMLLoader.load(getClass().getResource("gameMini.fxml"));	//"game.fxml" datei laden (befehle die das GUI erstellen)
     	Stage stage = new Stage();	//new stage erstellen
     	stage.setScene(new Scene(ControllerMenuAnchorPane));	//"ControllernAnchorPane" zur Scene hinzufügen
 
     	stage.setTitle("Roulette Simulator");	//titel des Fensters
-		stage.setResizable(false);			//feste fenstergröße (fenster kann nicht mehr mit der maus größer oder kleiner gezogen werden)
+		stage.setResizable(true);			//feste fenstergröße (fenster kann nicht mehr mit der maus größer oder kleiner gezogen werden)
 
 		// hoehe und breite der Stage/Fenster festlegen
-		stage.setWidth(1400);
-		stage.setHeight(900);
+		stage.setWidth(1200);
+		stage.setHeight(800);
 
 		//Ausgabe des angemeldeten benutzernamen
 		Label usernameLabel = new Label(usernameVar);	//neues label
-		usernameLabel.setTranslateY(50);	//label position y kordinate
-		usernameLabel.setTranslateX(180);	//label position x kordinate
-		usernameLabel.setScaleX(1.5);	//label größe breite
-		usernameLabel.setScaleY(1.5); //label größe höhe
+		usernameLabel.setTranslateY(52);	//label position y kordinate
+		usernameLabel.setTranslateX(155);	//label position x kordinate
+		usernameLabel.setScaleX(1.3);	//label größe breite
+		usernameLabel.setScaleY(1.3); //label größe höhe
 		usernameLabel.setTextFill(Color.web("#FFFFFF"));	//label/text farbe
 		usernameLabel.setPrefWidth(100);	//maximale breite des labels
 		usernameLabel.setWrapText(false);	//wenn die maximale breite erreicht ist, bei false: text abhacken und "..." hinter setzen & bei true: text im nächsten absatz weiter führen
@@ -115,10 +115,10 @@ public class ControllerMenu {
 		kontostandStr = String.valueOf(algo.kontostand);	//Umwandlung von String zu double
 //		Label kontostandLabel = new Label(kontostandStr);	//neues label
 		kontostandLabel = new Label (kontostandStr);
-		kontostandLabel.setTranslateY(81);	//label position y kordinate
-		kontostandLabel.setTranslateX(135);	//label position x kordinate
-		kontostandLabel.setScaleX(1.5);	//label größe breite
-		kontostandLabel.setScaleY(1.5); //label größe höhe
+		kontostandLabel.setTranslateY(78);	//label position y kordinate
+		kontostandLabel.setTranslateX(113);	//label position x kordinate
+		kontostandLabel.setScaleX(1.3);	//label größe breite
+		kontostandLabel.setScaleY(1.3); //label größe höhe
 		kontostandLabel.setTextFill(Color.web("#FFFFFF"));	//label/text farbe
 		kontostandLabel.setPrefWidth(100);	//maximale breite des labels
 		kontostandLabel.setWrapText(false);	//wenn die maximale breite erreicht ist, bei false: text abhacken und "..." hinter setzen & bei true: text im nächsten absatz weiter führen

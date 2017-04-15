@@ -17,17 +17,22 @@
             <Button mnemonicParsing="false" onAction="#onHauptmenuClick" prefHeight="25.0" prefWidth="80.0" text="Hauptmenü" />
         </items>
       </ToolBar>
+      <Label layoutX="15.0" layoutY="45.0" text="Angemeldet als:" textFill="WHITE" textOverrun="CLIP">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
       <Label layoutX="16.0" layoutY="76.0" text="Guthaben:" textFill="WHITE" textOverrun="CLIP">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </Label>
-      <GridPane layoutX="26.0" layoutY="182.0">
+      <GridPane layoutX="30.0" layoutY="125.0">
         <columnConstraints>
             <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" prefWidth="95.0" />
             <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" prefWidth="95.0" />
-          <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" prefWidth="95.0" />
-          <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" prefWidth="95.0" />
+         	<ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" prefWidth="95.0" />
+          	<ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" prefWidth="95.0" />
             <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" prefWidth="95.0" />
             <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" prefWidth="95.0" />
             <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" prefWidth="95.0" />
@@ -294,14 +299,9 @@
             </Button>
          </children>
       </GridPane>
-      <Label layoutX="15.0" layoutY="45.0" text="Angemeldet als:" textFill="WHITE" textOverrun="CLIP">
+      <Button layoutX="645.0" layoutY="717.0" mnemonicParsing="false" onAction="#onSpielenClick" prefHeight="50.0" prefWidth="100.0" text="Start">
          <font>
-            <Font name="System Bold" size="18.0" />
-         </font>
-      </Label>
-      <Button layoutX="616.0" layoutY="743.0" mnemonicParsing="false" onAction="#onSpielenClick" prefHeight="70.0" prefWidth="150.0" text="Start">
-         <font>
-            <Font size="24.0" />
+            <Font size="18.0" />
          </font>
       </Button>
    </children>
