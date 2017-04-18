@@ -192,3 +192,20 @@ Start:22:10Uhr	Ende:01:00Uhr
 	
 ---
 
+18.04.2017
+
+Start: 15:15Uhr	Ende: 15:30Uhr
+-icon für die Fenster hinzugefügt (BBS2Leer Logo)
+
+Start: 21:45Uhr	Ende:23:05Uhr
+-alle console ausgaben werden im TextArea angezeigt
+	-dazu wurde eine neue klasse erstellt die das ermöglicht
+-ohne datenbank wird nach jedem neustart des spielfeldes das guthaben auf 3000 zurückgesetzt
+
+Start: 23:15Uhr	Ende: 01:10Uhr
+-gui vom Demo Modus eingebaut
+-algorithmus des demo modus fertiggestellt
+	-alle gezogenen zahlen werden im gui angezeigt
+	
+---
+
