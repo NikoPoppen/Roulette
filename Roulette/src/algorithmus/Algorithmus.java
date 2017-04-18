@@ -15,7 +15,8 @@ public class Algorithmus{
 	static ControllerGame game = new ControllerGame();
 	static ControllerMenu menu = new ControllerMenu();
 
-	public static double kontostand = 3000;
+	public static final double guthaben = 3000;
+	public static double kontostand = guthaben;
 
 	/**
 	 *
@@ -597,7 +598,5 @@ public class Algorithmus{
 
 		return zufallZahl;
 	}//end method
-
-
 
 }//end class

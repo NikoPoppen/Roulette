@@ -30,7 +30,6 @@ public class ControllerGame {
 
 	@FXML
 	public TextArea historie;
-	public String str;
 
 	@FXML
     void on0Click(ActionEvent event) throws IOException {
@@ -495,6 +494,7 @@ public class ControllerGame {
 		stage.getIcons().add(new Image(getClass().getResourceAsStream("BBS_Logo_transparentKopie.png")));
 
 		menu.usernameVar = null;	//leert die Zeichenkette von usernameVar
+		algo.kontostand = algo.guthaben;			//muss mit der datenbank verbunden und abgeglichen werden
 
     	((Node)(event.getSource())).getScene().getWindow().hide();	//verbirgt das vorherige Fenster
     }
@@ -525,8 +525,6 @@ public class ControllerGame {
 		stage.setHeight(200);
 		stage.getIcons().add(new Image(getClass().getResourceAsStream("BBS_Logo_transparentKopie.png")));
     }//end method einsatzFenster
-
-
 
 }
 
