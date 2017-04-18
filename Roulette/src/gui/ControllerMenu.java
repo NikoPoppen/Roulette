@@ -15,6 +15,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
@@ -58,6 +59,7 @@ public class ControllerMenu {
 		// hoehe und breite der Stage/Fenster festlegen
 		stage.setWidth(1200);
 		stage.setHeight(800);
+		stage.getIcons().add(new Image(getClass().getResourceAsStream("BBS_Logo_transparentKopie.png")));
 
 		if(usernameVar == null){
 			gastBenutzer();				//falls keine Zeichenkette in usernameVar vorhanden ist, wird man als Gast "angemeldet"
@@ -66,7 +68,7 @@ public class ControllerMenu {
 			angemeldeterBenutzer();		//Ausgabe des angemeldeten benutzernamen
 
 		ausgabeKontostand(0);			//Ausgabe des Kontostandes
-		
+
     	stage.show();	//fenster wird sichtbar gemacht
 
     	((Node)(event.getSource())).getScene().getWindow().hide();	//verbirgt das vorherige Fenster
@@ -91,10 +93,11 @@ public class ControllerMenu {
 		// hoehe und breite der Stage festlegen
 		stage.setWidth(240);
 		stage.setHeight(260);
+		stage.getIcons().add(new Image(getClass().getResourceAsStream("BBS_Logo_transparentKopie.png")));
     }
 
     /**
-     * 
+     *
      */
     public void angemeldeterBenutzer(){
     	Label usernameLabel = new Label(usernameVar);	//neues label
@@ -109,7 +112,7 @@ public class ControllerMenu {
     }
 
     /**
-     * 
+     *
      */
     public void gastBenutzer(){
     	String gastBenutzerStr = "Gast";
@@ -125,7 +128,7 @@ public class ControllerMenu {
     }
 
     /**
-     * 
+     *
      * @param z
      */
     public void ausgabeKontostand(double z){
@@ -145,7 +148,7 @@ public class ControllerMenu {
     }
 
     /**
-     * 
+     *
      */
     public static void refreshKontostand(){
     	ControllerMenuAnchorPane.getChildren().remove(kontostandLabel);

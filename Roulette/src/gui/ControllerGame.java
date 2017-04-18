@@ -16,6 +16,7 @@ import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import javafx.scene.control.TextArea;
+import javafx.scene.image.Image;
 
 public class ControllerGame {
 
@@ -489,6 +490,7 @@ public class ControllerGame {
 		// hoehe und breite der Stage festlegen
 		stage.setWidth(900);
 		stage.setHeight(600);
+		stage.getIcons().add(new Image(getClass().getResourceAsStream("BBS_Logo_transparentKopie.png")));
 
 		menu.usernameVar = null;	//leert die Zeichenkette von usernameVar
 
@@ -498,7 +500,7 @@ public class ControllerGame {
     @FXML
     void onSpielenClick(ActionEvent event) {
     	System.out.println("---------------Algorithmus Startet----------------");
-    	historie.appendText("---------------Algorithmus Startet----------------");	//Text wird mit einem Absatz in das TextArea geschrieben
+    	historie.appendText("\t\t\t\t\tAlgorithmus Startet");	//Text wird mit einem Absatz in das TextArea geschrieben
 
     	algo.rechnungsVorgang();
     }
@@ -519,6 +521,7 @@ public class ControllerGame {
 		// hoehe und breite der Stage festlegen
 		stage.setWidth(400);
 		stage.setHeight(200);
+		stage.getIcons().add(new Image(getClass().getResourceAsStream("BBS_Logo_transparentKopie.png")));
     }//end method einsatzFenster
 
 

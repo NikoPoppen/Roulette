@@ -13,6 +13,7 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.stage.Stage;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
 
 public class Main extends Application {
@@ -23,6 +24,7 @@ public class Main extends Application {
 		// hoehe und breite der Stage festlegen
 		primaryStage.setWidth(900);
 		primaryStage.setHeight(600);
+		primaryStage.getIcons().add(new Image(getClass().getResourceAsStream("BBS_Logo_transparentKopie.png")));
 
 
 		//fxml datei einbinden
