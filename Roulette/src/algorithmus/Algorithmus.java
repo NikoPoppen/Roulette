@@ -580,7 +580,7 @@ public class Algorithmus{
     		menu.refreshKontostand();
     		menu.ausgabeKontostand(0);
 
-    		System.out.println("---------------Algorithmus Ende-------------------");
+    		System.out.println("\t\t---------------Algorithmus Ende-------------------");
 
 	}//end method
 
@@ -591,7 +591,7 @@ public class Algorithmus{
 	 */
 	public static int zahlenGenerator(){
 
-		double zahl = Math.random()+11;	//zufällige Zahl zwischen 0 und 36
+		double zahl = Math.random()*36;	//zufällige Zahl zwischen 0 und 36
 		int zufallZahl = (int) zahl;	//double zu int umwandeln
 		System.out.println("zufällige Zahl: " + zufallZahl);	//Text Ausgabe zur Überprüfung (zufallZahl)
 

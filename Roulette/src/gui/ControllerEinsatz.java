@@ -30,16 +30,16 @@ public class ControllerEinsatz {
     @FXML
     public double onOkEinsatzClick(ActionEvent event){
     	double einsatzZahl;
-    	String einsatzStr = einsatz.getText();	//get Text aus dem Eingabe Fenster
+        String einsatzStr = einsatz.getText();	//get Text aus dem Eingabe Fenster
 
-		einsatzZahl = Double.parseDouble(einsatzStr);	//Umwandlung von String zu double
-    	((Node)(event.getSource())).getScene().getWindow().hide();	//verbirgt das vorherige Fenster
+    	einsatzZahl = Double.parseDouble(einsatzStr);	//Umwandlung von String zu double
+        ((Node)(event.getSource())).getScene().getWindow().hide();	//verbirgt das vorherige Fenster
 
-    	game.Einsatzarray.add(einsatzZahl);
-    	menu.refreshKontostand();
-    	menu.ausgabeKontostand(einsatzZahl);
+        game.Einsatzarray.add(einsatzZahl);
+        menu.refreshKontostand();
+        menu.ausgabeKontostand(einsatzZahl);
 
-    	return einsatzZahl;
+        return einsatzZahl;
     }
 
 }

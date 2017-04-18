@@ -14,6 +14,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.text.TextFlow;
 import javafx.stage.Stage;
 import javafx.scene.control.TextArea;
 import javafx.scene.image.Image;
@@ -29,6 +30,7 @@ public class ControllerGame {
 
 	@FXML
 	public TextArea historie;
+	public String str;
 
 	@FXML
     void on0Click(ActionEvent event) throws IOException {
@@ -499,8 +501,8 @@ public class ControllerGame {
 
     @FXML
     void onSpielenClick(ActionEvent event) {
-    	System.out.println("---------------Algorithmus Startet----------------");
-    	historie.appendText("\t\t\t\t\tAlgorithmus Startet");	//Text wird mit einem Absatz in das TextArea geschrieben
+    	PrintToTextArea.create(historie);
+    	System.out.println("\t\t---------------Algorithmus Startet----------------");
 
     	algo.rechnungsVorgang();
     }
