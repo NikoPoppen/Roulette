@@ -103,11 +103,11 @@ public class Algorithmus{
 
 
 
-		//Hier soll noch ein Fenster aufgerufen werden mit dieser Ausgabe.
+
 		System.out.println("Es wird gerollt...");
 
 		try{							// Ein Delay bevor überprüft wird ob man gewonnen hat
-		    Thread.sleep(2000);			// Delay wird in Millisekunden eingegeben
+		    game.historie.wait(0,10000);			// Delay wird in Millisekunden eingegeben
 		}
 		catch(InterruptedException ex){
 		    Thread.currentThread().interrupt(); // Beendet Thread nach angegebener Zeit
