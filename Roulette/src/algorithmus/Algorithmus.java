@@ -598,6 +598,4 @@ public class Algorithmus{
 		return zufallZahl;
 	}//end method
 
-
-
 }//end class
