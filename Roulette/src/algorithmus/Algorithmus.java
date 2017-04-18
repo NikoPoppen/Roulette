@@ -116,6 +116,7 @@ public class Algorithmus{
 
 		//Zufällige Zahl wird geholt
     	int zufallsZahl = zahlenGenerator();
+		System.out.println("zufällige Zahl: " + zufallsZahl);	//Text Ausgabe zur Überprüfung (zufallZahl)
 
 
     	for(int i = 0;i<game.zähler;i++){
@@ -594,7 +595,6 @@ public class Algorithmus{
 
 		double zahl = Math.random()*36;	//zufällige Zahl zwischen 0 und 36
 		int zufallZahl = (int) zahl;	//double zu int umwandeln
-		System.out.println("zufällige Zahl: " + zufallZahl);	//Text Ausgabe zur Überprüfung (zufallZahl)
 
 		return zufallZahl;
 	}//end method

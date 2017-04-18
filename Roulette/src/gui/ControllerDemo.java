@@ -2,12 +2,15 @@ package gui;
 
 import java.io.IOException;
 
+import algorithmus.Algorithmus;
+import algorithmus.Demo;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Scene;
+import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
@@ -15,16 +18,28 @@ import javafx.stage.Stage;
 
 public class ControllerDemo {
 
-	public int zahl;
-	
+	Algorithmus algo = new Algorithmus();
+
+	public static int zahl;
+
 	@FXML
     private TextField anzahlZahlen;
 
+	@FXML
+    public TextArea zahlenAusgabenTextArea;
+
     @FXML
     void onConfirmClick(ActionEvent event) {
+    	Demo demo = new Demo();
+
+    	zahlenAusgabenTextArea.clear();
+    	zahlenAusgabenTextArea.setWrapText(true);
+
+    	PrintToTextArea.create(zahlenAusgabenTextArea);
     	String zahlStr = anzahlZahlen.getText();
     	zahl = Integer.parseInt(zahlStr);	//Umwandlung von String zu double
-    	System.out.println("eingegebene Zahl: " + zahl + " ");
+
+    	demo.demoVorgang();
     }
 
     @FXML
@@ -49,5 +64,4 @@ public class ControllerDemo {
     void onSchlieﬂenClick(ActionEvent event) {
     	Platform.exit();
     }
-
 }

@@ -54,6 +54,7 @@ public class ControllerMenu {
     	// hoehe und breite der Stage/Fenster festlegen
     	stage.setWidth(900);
     	stage.setHeight(600);
+
     	stage.getIcons().add(new Image(getClass().getResourceAsStream("BBS_Logo_transparentKopie.png")));
 
     	stage.show();	//fenster wird sichtbar gemacht

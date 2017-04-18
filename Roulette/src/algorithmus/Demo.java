@@ -4,17 +4,23 @@
 
 package algorithmus;
 
+import gui.*;
+
 public class Demo {
 
+	ControllerDemo demoController = new ControllerDemo();
+	Algorithmus algo = new Algorithmus();
+
 	public void demoVorgang(){
+		int Arr[] = new int [demoController.zahl];
 
-		
+		for(int i = 0; i < demoController.zahl; i++){
+			Arr[i]=algo.zahlenGenerator();
+		}
 
-	}
+		for(int i = 0; i < Arr.length; i++){
+			System.out.print(Arr[i] + " ");
+		}
+	}//end method
 
-	void zufälligeZahlen(){
-		double zahl = Math.random()*36;	//zufällige Zahl zwischen 0 und 36
-		int zufallZahl = (int) zahl;	//double zu int umwandeln
-		System.out.println("zufällige Zahl: " + zufallZahl);	//Text Ausgabe zur Überprüfung (zufallZahl)
-	}
 }

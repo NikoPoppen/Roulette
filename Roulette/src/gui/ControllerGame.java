@@ -501,7 +501,7 @@ public class ControllerGame {
 
     @FXML
     void onSpielenClick(ActionEvent event) {
-    	PrintToTextArea.create(historie);
+    	ParagraphToTextArea.create(historie);
     	System.out.println("\t\t---------------Algorithmus Startet----------------");
 
     	algo.rechnungsVorgang();
