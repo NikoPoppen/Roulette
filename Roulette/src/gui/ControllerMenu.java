@@ -43,8 +43,22 @@ public class ControllerMenu {
     }
 
     @FXML
-    void onDemoClick(ActionEvent event) {
+    void onDemoClick(ActionEvent event) throws IOException {
+    	AnchorPane ControllerDemoAnchorPane = FXMLLoader.load(getClass().getResource("demo.fxml"));
+    	Stage stage = new Stage();	//new stage erstellen
+    	stage.setScene(new Scene(ControllerDemoAnchorPane));	//"ControllernAnchorPane" zur Scene hinzufügen
 
+    	stage.setTitle("Roulette Demo Modus");	//titel des Fensters
+    	stage.setResizable(false);			//feste fenstergröße (fenster kann nicht mehr mit der maus größer oder kleiner gezogen werden)
+
+    	// hoehe und breite der Stage/Fenster festlegen
+    	stage.setWidth(900);
+    	stage.setHeight(600);
+    	stage.getIcons().add(new Image(getClass().getResourceAsStream("BBS_Logo_transparentKopie.png")));
+
+    	stage.show();	//fenster wird sichtbar gemacht
+
+    	((Node)(event.getSource())).getScene().getWindow().hide();	//verbirgt das vorherige Fenster
     }
 
     @FXML
@@ -59,7 +73,7 @@ public class ControllerMenu {
 		// hoehe und breite der Stage/Fenster festlegen
 		stage.setWidth(1200);
 		stage.setHeight(800);
-		stage.getIcons().add(new Image(getClass().getResourceAsStream("BBS_Logo_transparentKopie.png")));
+		stage.getIcons().add(new Image(getClass().getResourceAsStream("BBS_Logo_transparentKopie.png")));	//icon des fensters
 
 		if(usernameVar == null){
 			gastBenutzer();				//falls keine Zeichenkette in usernameVar vorhanden ist, wird man als Gast "angemeldet"
