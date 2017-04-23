@@ -20,17 +20,15 @@ Musskriterien:
 
 - funktionierender Roulette Simulator
   - Umsetzung mit Java in Verbindung einer SQL-Datenbank
-  - Menu mit Login 
-      -und Spielmodi Auswahl ✓
+  - Menu mit Login und Spielmodi Auswahl
   - jeder Benutzer hat ein festes Guthaben (in der Datenbank hinterlegt)
     - nach dem Aufbrauchen des Guthabens wird das Guthaben auf den Startwert zurückgesetzt
-  - Roulette Spielfeld  ✓
-  - Wetteinsatz ✓
+  - Roulette Spielfeld
+  - Wetteinsatz
   
 - Demo Modus zur Überprüfung der zufälligen gelosten Zahlen
-  - es wird eine bestimmte Anzahl von zufälligen Zahlen gezogen ✓
-      -und in die Datenbank eingetragen
-  - Einträge werden gezählt und am Ende ausgegeben (zur Überprüfung ob die Zahlen wirklich zufällig sind) (✓)
+  - es wird eine bestimmte Anzahl von zufälligen Zahlen gezogen und in die Datenbank eingetragen
+  - Einträge werden gezählt und am Ende ausgegeben (zur Überprüfung ob die Zahlen wirklich zufällig sind)
   
 Wunschkriterien:
 
@@ -41,7 +39,7 @@ Wunschkriterien:
 
 Abgrenzungskriterien:
 
-- es kann nicht auf zwei oder vier Zahlen gleichzeitig (mit nur einem Klick) gesetzt werden ✓
+- es kann nicht auf zwei oder vier Zahlen gleichzeitig (mit nur einem Klick) gesetzt werden
 
 Nach Erfüllung der Aufgabe abhaken ✓
 
