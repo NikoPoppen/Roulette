@@ -39,7 +39,13 @@ public class ControllerEinsatz {
     	double einsatzZahl;
         String einsatzStr = einsatz.getText();	//get Text aus dem Eingabe Fenster
 
-    	einsatzZahl = Double.parseDouble(einsatzStr);	//Umwandlung von String zu double
+        if(einsatzStr.matches("[A-Za-z]") || einsatzStr.matches("[\\\\!\"#$%&()*+,./:;<=>?@\\[\\]^_{|}~]+")){
+        	System.out.println("Fehler: keine Zahl!");
+        	einsatzZahl = 0;
+        }
+        else
+        	einsatzZahl = Double.parseDouble(einsatzStr);	//Umwandlung von String zu double
+
 
     	if(einsatzZahl > algo.kontostand || einsatzZahl <= 0){
         	refreshfalscheWetteinsatzEingabe();
