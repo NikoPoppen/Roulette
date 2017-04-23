@@ -22,11 +22,11 @@ import javafx.scene.image.Image;
 public class ControllerGame {
 
 	public static ArrayList<Integer> Auswahlarray = new ArrayList<Integer>();	//Gewählte Zahl Array
-	public static ArrayList<Double> Einsatzarray = new ArrayList<Double>(); //Einsatz Array
+	public static ArrayList<Double> Einsatzarray = new ArrayList<Double>(); 	//Einsatz Array
 
-	Algorithmus algo = new Algorithmus();
-	ControllerMenu menu = new ControllerMenu();
-	public static int zähler = 0;
+	Algorithmus algo = new Algorithmus();		//Erlaubt es funktionen von Anderen Klassen zu benutzen
+	ControllerMenu menu = new ControllerMenu();	//Erlaubt es funktionen von Anderen Klassen zu benutzen
+	public static int zähler = 0; //Globaler Zähler der hochzählt bei Klick auf einen Button
 
 	static AnchorPane ControllerGameAnchorPane = new AnchorPane();
 
@@ -38,8 +38,8 @@ public class ControllerGame {
 		int zero = 0;
     	zähler++;
 
+    	Auswahlarray.add(zero); //Fügt der Arraylist den angegebenen Wert hinzu
 		einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
-		Auswahlarray.add(zero);
     }
 
 	@FXML
@@ -47,7 +47,7 @@ public class ControllerGame {
 		int one = 1;
     	zähler++;
 
-    	Auswahlarray.add(one);
+    	Auswahlarray.add(one); 	//Fügt der Arraylist den angegebenen Wert hinzu
     	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
     }
 
@@ -56,7 +56,7 @@ public class ControllerGame {
 		int two = 2;
     	zähler++;
 
-    	Auswahlarray.add(two);
+    	Auswahlarray.add(two); 	//Fügt der Arraylist den angegebenen Wert hinzu
     	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
     }
 
@@ -65,7 +65,7 @@ public class ControllerGame {
 		int three = 3;
     	zähler++;
 
-    	Auswahlarray.add(three);
+    	Auswahlarray.add(three); //Fügt der Arraylist den angegebenen Wert hinzu
     	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
     }
 
@@ -74,7 +74,7 @@ public class ControllerGame {
 		int four = 4;
     	zähler++;
 
-    	Auswahlarray.add(four);
+    	Auswahlarray.add(four); //Fügt der Arraylist den angegebenen Wert hinzu
     	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
     }
 
@@ -83,7 +83,7 @@ public class ControllerGame {
 		int five = 5;
     	zähler++;
 
-    	Auswahlarray.add(five);
+    	Auswahlarray.add(five); //Fügt der Arraylist den angegebenen Wert hinzu
     	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
     }
 
@@ -92,7 +92,7 @@ public class ControllerGame {
 		int six = 6;
     	zähler++;
 
-    	Auswahlarray.add(six);
+    	Auswahlarray.add(six);	//Fügt der Arraylist den angegebenen Wert hinzu
     	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
     }
 
@@ -101,7 +101,7 @@ public class ControllerGame {
 		int seven = 7;
     	zähler++;
 
-    	Auswahlarray.add(seven);
+    	Auswahlarray.add(seven);//Fügt der Arraylist den angegebenen Wert hinzu
     	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
     }
 
@@ -110,7 +110,7 @@ public class ControllerGame {
     	int eight = 8;
     	zähler++;
 
-    	Auswahlarray.add(eight);
+    	Auswahlarray.add(eight);//Fügt der Arraylist den angegebenen Wert hinzu
     	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
     }
 
@@ -119,7 +119,7 @@ public class ControllerGame {
     	int nine = 9;
     	zähler++;
 
-    	Auswahlarray.add(nine);
+    	Auswahlarray.add(nine); //Fügt der Arraylist den angegebenen Wert hinzu
     	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
     }
 
@@ -128,7 +128,7 @@ public class ControllerGame {
 		int ten = 10;
     	zähler++;
 
-    	Auswahlarray.add(ten);
+    	Auswahlarray.add(ten);	//Fügt der Arraylist den angegebenen Wert hinzu
     	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
     }
 
@@ -137,8 +137,8 @@ public class ControllerGame {
     	int eleven = 11;
     	zähler++;
 
-    	Auswahlarray.add(eleven);
-    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
+    	Auswahlarray.add(eleven);//Fügt der Arraylist den angegebenen Wert hinzu
+    	einsatzFenster(event);	 //Funktion aufrufen (einsatz fenster)
     }
 
     @FXML
@@ -146,8 +146,8 @@ public class ControllerGame {
     	int twelve = 12;
     	zähler++;
 
-    	Auswahlarray.add(twelve);
-    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
+    	Auswahlarray.add(twelve);//Fügt der Arraylist den angegebenen Wert hinzu
+    	einsatzFenster(event);	 //Funktion aufrufen (einsatz fenster)
     }
 
     @FXML
@@ -155,8 +155,8 @@ public class ControllerGame {
     	int thirteen = 13;
     	zähler++;
 
-    	Auswahlarray.add(thirteen);
-    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
+    	Auswahlarray.add(thirteen);//Fügt der Arraylist den angegebenen Wert hinzu
+    	einsatzFenster(event);	   //Funktion aufrufen (einsatz fenster)
     }
 
     @FXML
@@ -164,8 +164,8 @@ public class ControllerGame {
     	int fourteen = 14;
     	zähler++;
 
-    	Auswahlarray.add(fourteen);
-    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
+    	Auswahlarray.add(fourteen);//Fügt der Arraylist den angegebenen Wert hinzu
+    	einsatzFenster(event);	   //Funktion aufrufen (einsatz fenster)
     }
 
     @FXML
@@ -173,8 +173,8 @@ public class ControllerGame {
     	int fifteen = 15;
     	zähler++;
 
-    	Auswahlarray.add(fifteen);
-    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
+    	Auswahlarray.add(fifteen);//Fügt der Arraylist den angegebenen Wert hinzu
+    	einsatzFenster(event);	  //Funktion aufrufen (einsatz fenster)
     }
 
     @FXML
@@ -182,8 +182,8 @@ public class ControllerGame {
     	int sixteen = 16;
     	zähler++;
 
-    	Auswahlarray.add(sixteen);
-    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
+    	Auswahlarray.add(sixteen);//Fügt der Arraylist den angegebenen Wert hinzu
+    	einsatzFenster(event);	  //Funktion aufrufen (einsatz fenster)
     }
 
     @FXML
@@ -191,8 +191,8 @@ public class ControllerGame {
     	int seventeen = 17;
     	zähler++;
 
-    	Auswahlarray.add(seventeen);
-    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
+    	Auswahlarray.add(seventeen);//Fügt der Arraylist den angegebenen Wert hinzu
+    	einsatzFenster(event);	    //Funktion aufrufen (einsatz fenster)
     }
 
     @FXML
@@ -200,8 +200,8 @@ public class ControllerGame {
     	int eighteen = 18;
     	zähler++;
 
-    	Auswahlarray.add(eighteen);
-    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
+    	Auswahlarray.add(eighteen);//Fügt der Arraylist den angegebenen Wert hinzu
+    	einsatzFenster(event);	   //Funktion aufrufen (einsatz fenster)
     }
 
     @FXML
@@ -209,8 +209,8 @@ public class ControllerGame {
     	int nineteen = 19;
     	zähler++;
 
-    	Auswahlarray.add(nineteen);
-    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
+    	Auswahlarray.add(nineteen);//Fügt der Arraylist den angegebenen Wert hinzu
+    	einsatzFenster(event);	   //Funktion aufrufen (einsatz fenster)
     }
 
     @FXML
@@ -218,8 +218,8 @@ public class ControllerGame {
     	int twenty = 20;
     	zähler++;
 
-    	Auswahlarray.add(twenty);
-    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
+    	Auswahlarray.add(twenty);//Fügt der Arraylist den angegebenen Wert hinzu
+    	einsatzFenster(event);	 //Funktion aufrufen (einsatz fenster)
     }
 
     @FXML
@@ -227,8 +227,8 @@ public class ControllerGame {
     	int twentyone = 21;
     	zähler++;
 
-    	Auswahlarray.add(twentyone);
-    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
+    	Auswahlarray.add(twentyone);//Fügt der Arraylist den angegebenen Wert hinzu
+    	einsatzFenster(event);	    //Funktion aufrufen (einsatz fenster)
     }
 
     @FXML
@@ -236,8 +236,8 @@ public class ControllerGame {
     	int twentytwo = 22;
     	zähler++;
 
-    	Auswahlarray.add(twentytwo);
-    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
+    	Auswahlarray.add(twentytwo);//Fügt der Arraylist den angegebenen Wert hinzu
+    	einsatzFenster(event);	    //Funktion aufrufen (einsatz fenster)
     }
 
     @FXML
@@ -245,8 +245,8 @@ public class ControllerGame {
     	int twentythree = 23;
     	zähler++;
 
-    	Auswahlarray.add(twentythree);
-    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
+    	Auswahlarray.add(twentythree);//Fügt der Arraylist den angegebenen Wert hinzu
+    	einsatzFenster(event);	      //Funktion aufrufen (einsatz fenster)
     }
 
     @FXML
@@ -254,8 +254,8 @@ public class ControllerGame {
     	int twentyfour = 24;
     	zähler++;
 
-    	Auswahlarray.add(twentyfour);
-    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
+    	Auswahlarray.add(twentyfour);//Fügt der Arraylist den angegebenen Wert hinzu
+    	einsatzFenster(event);	     //Funktion aufrufen (einsatz fenster)
     }
 
     @FXML
@@ -263,8 +263,8 @@ public class ControllerGame {
     	int twentyfive = 25;
     	zähler++;
 
-    	Auswahlarray.add(twentyfive);
-    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
+    	Auswahlarray.add(twentyfive);//Fügt der Arraylist den angegebenen Wert hinzu
+    	einsatzFenster(event);		 //Funktion aufrufen (einsatz fenster)
     }
 
     @FXML
@@ -272,8 +272,8 @@ public class ControllerGame {
     	int twentysix = 26;
     	zähler++;
 
-    	Auswahlarray.add(twentysix);
-    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
+    	Auswahlarray.add(twentysix);//Fügt der Arraylist den angegebenen Wert hinzu
+    	einsatzFenster(event);		//Funktion aufrufen (einsatz fenster)
     }
 
     @FXML
@@ -281,8 +281,8 @@ public class ControllerGame {
     	int twentyseven = 27;
     	zähler++;
 
-    	Auswahlarray.add(twentyseven);
-    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
+    	Auswahlarray.add(twentyseven);//Fügt der Arraylist den angegebenen Wert hinzu
+    	einsatzFenster(event);		  //Funktion aufrufen (einsatz fenster)
     }
 
     @FXML
@@ -290,8 +290,8 @@ public class ControllerGame {
     	int twentyeight = 28;
     	zähler++;
 
-    	Auswahlarray.add(twentyeight);
-    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
+    	Auswahlarray.add(twentyeight);//Fügt der Arraylist den angegebenen Wert hinzu
+    	einsatzFenster(event);	      //Funktion aufrufen (einsatz fenster)
     }
 
     @FXML
@@ -299,8 +299,8 @@ public class ControllerGame {
     	int twentynine = 29;
     	zähler++;
 
-    	Auswahlarray.add(twentynine);
-    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
+    	Auswahlarray.add(twentynine);//Fügt der Arraylist den angegebenen Wert hinzu
+    	einsatzFenster(event);		 //Funktion aufrufen (einsatz fenster)
     }
 
     @FXML
@@ -308,8 +308,8 @@ public class ControllerGame {
     	int thirty = 30;
     	zähler++;
 
-    	Auswahlarray.add(thirty);
-    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
+    	Auswahlarray.add(thirty);//Fügt der Arraylist den angegebenen Wert hinzu
+    	einsatzFenster(event);	 //Funktion aufrufen (einsatz fenster)
     }
 
     @FXML
@@ -317,8 +317,8 @@ public class ControllerGame {
     	int thirtyone = 31;
     	zähler++;
 
-    	Auswahlarray.add(thirtyone);
-    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
+    	Auswahlarray.add(thirtyone);//Fügt der Arraylist den angegebenen Wert hinzu
+    	einsatzFenster(event);		//Funktion aufrufen (einsatz fenster)
     }
 
     @FXML
@@ -326,8 +326,8 @@ public class ControllerGame {
     	int thirtytwo = 32;
     	zähler++;
 
-    	Auswahlarray.add(thirtytwo);
-    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
+    	Auswahlarray.add(thirtytwo);//Fügt der Arraylist den angegebenen Wert hinzu
+    	einsatzFenster(event);		//Funktion aufrufen (einsatz fenster)
     }
 
     @FXML
@@ -335,8 +335,8 @@ public class ControllerGame {
     	int thirtythree = 33;
     	zähler++;
 
-    	Auswahlarray.add(thirtythree);
-    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
+    	Auswahlarray.add(thirtythree);//Fügt der Arraylist den angegebenen Wert hinzu
+    	einsatzFenster(event);		  //Funktion aufrufen (einsatz fenster)
     }
 
     @FXML
@@ -344,8 +344,8 @@ public class ControllerGame {
     	int thirtyfour = 34;
     	zähler++;
 
-    	Auswahlarray.add(thirtyfour);
-    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
+    	Auswahlarray.add(thirtyfour);//Fügt der Arraylist den angegebenen Wert hinzu
+    	einsatzFenster(event);	  	 //Funktion aufrufen (einsatz fenster)
     }
 
     @FXML
@@ -353,8 +353,8 @@ public class ControllerGame {
     	int thirtyfive = 35;
     	zähler++;
 
-    	Auswahlarray.add(thirtyfive);
-    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
+    	Auswahlarray.add(thirtyfive);//Fügt der Arraylist den angegebenen Wert hinzu
+    	einsatzFenster(event);		 //Funktion aufrufen (einsatz fenster)
     }
 
     @FXML
@@ -362,8 +362,8 @@ public class ControllerGame {
     	int thirtysix = 36;
     	zähler++;
 
-    	Auswahlarray.add(thirtysix);
-    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
+    	Auswahlarray.add(thirtysix);//Fügt der Arraylist den angegebenen Wert hinzu
+    	einsatzFenster(event);		//Funktion aufrufen (einsatz fenster)
     }
 
     @FXML
@@ -371,7 +371,7 @@ public class ControllerGame {
     	int first = 100;
     	zähler++;
 
-    	Auswahlarray.add(first);
+    	Auswahlarray.add(first);//Fügt der Arraylist den angegebenen Wert hinzu
     	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
     }
 
@@ -380,7 +380,7 @@ public class ControllerGame {
     	int second = 200;
     	zähler++;
 
-    	Auswahlarray.add(second);
+    	Auswahlarray.add(second);//Fügt der Arraylist den angegebenen Wert hinzu
     	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
     }
 
@@ -389,7 +389,7 @@ public class ControllerGame {
     	int third = 300;
     	zähler++;
 
-    	Auswahlarray.add(third);
+    	Auswahlarray.add(third);//Fügt der Arraylist den angegebenen Wert hinzu
     	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
     }
 
@@ -398,8 +398,8 @@ public class ControllerGame {
     	int onetotwelve = 112;
     	zähler++;
 
-    	Auswahlarray.add(onetotwelve);
-    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
+    	Auswahlarray.add(onetotwelve);//Fügt der Arraylist den angegebenen Wert hinzu
+    	einsatzFenster(event);		  //Funktion aufrufen (einsatz fenster)
     }
 
     @FXML
@@ -407,8 +407,8 @@ public class ControllerGame {
     	int thirteentotwentyfour  = 1324;
     	zähler++;
 
-    	Auswahlarray.add(thirteentotwentyfour);
-    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
+    	Auswahlarray.add(thirteentotwentyfour);//Fügt der Arraylist den angegebenen Wert hinzu
+    	einsatzFenster(event);				   //Funktion aufrufen (einsatz fenster)
     }
 
     @FXML
@@ -417,8 +417,8 @@ public class ControllerGame {
     	int twentyfivetothirtysix = 2536;
     	zähler++;
 
-    	Auswahlarray.add(twentyfivetothirtysix);
-    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
+    	Auswahlarray.add(twentyfivetothirtysix);//Fügt der Arraylist den angegebenen Wert hinzu
+    	einsatzFenster(event);					//Funktion aufrufen (einsatz fenster)
     }
 
     @FXML
@@ -426,8 +426,8 @@ public class ControllerGame {
     	int onetoeighteen = 118;
     	zähler++;
 
-    	Auswahlarray.add(onetoeighteen);
-    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
+    	Auswahlarray.add(onetoeighteen);//Fügt der Arraylist den angegebenen Wert hinzu
+    	einsatzFenster(event);			//Funktion aufrufen (einsatz fenster)
     }
 
     @FXML
@@ -435,8 +435,8 @@ public class ControllerGame {
     	int nineteentothirtysix = 1936;
     	zähler++;
 
-    	Auswahlarray.add(nineteentothirtysix);
-    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
+    	Auswahlarray.add(nineteentothirtysix);//Fügt der Arraylist den angegebenen Wert hinzu
+    	einsatzFenster(event);				  //Funktion aufrufen (einsatz fenster)
     }
 
     @FXML
@@ -444,8 +444,8 @@ public class ControllerGame {
     	int gerade = 1000;
     	zähler++;
 
-    	Auswahlarray.add(gerade);
-    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
+    	Auswahlarray.add(gerade);//Fügt der Arraylist den angegebenen Wert hinzu
+    	einsatzFenster(event);	 //Funktion aufrufen (einsatz fenster)
     }
 
     @FXML
@@ -453,8 +453,8 @@ public class ControllerGame {
     	int ungerade = 2000;
       	zähler++;
 
-      	Auswahlarray.add(ungerade);
-    	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
+      	Auswahlarray.add(ungerade);//Fügt der Arraylist den angegebenen Wert hinzu
+    	einsatzFenster(event);	   //Funktion aufrufen (einsatz fenster)
     }
 
     @FXML
@@ -463,7 +463,7 @@ public class ControllerGame {
       	int red = 998;
       	zähler++;
 
-      	Auswahlarray.add(red);
+      	Auswahlarray.add(red);	//Fügt der Arraylist den angegebenen Wert hinzu
     	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
     }
 
@@ -472,7 +472,7 @@ public class ControllerGame {
     	int black = 999;
       	zähler++;
 
-      	Auswahlarray.add(black);
+      	Auswahlarray.add(black);//Fügt der Arraylist den angegebenen Wert hinzu
     	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
     }
 
@@ -506,7 +506,7 @@ public class ControllerGame {
     	ParagraphToTextArea.create(historie);
     	System.out.println("\t\t---------------Algorithmus Startet----------------");
 
-    	algo.rechnungsVorgang();
+    	algo.rechnungsVorgang(); // Startet den Rechen und Überprüfungsvorgand in der Algorithmus Klasse
     }
 
 
