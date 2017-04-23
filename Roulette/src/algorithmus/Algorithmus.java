@@ -1,5 +1,5 @@
 /**
- *
+ *	In der Algorithmus Klasse befinden sich alle Rechen und Überprüfungsvorgänge
  */
 
 package algorithmus;
@@ -15,7 +15,7 @@ public class Algorithmus{
 	static ControllerGame game = new ControllerGame(); //Erlaubt es funktionen von Anderen Klassen zu benutzen
 	static ControllerMenu menu = new ControllerMenu(); //Erlaubt es funktionen von Anderen Klassen zu benutzen
 
-	public static final double guthaben = 3000;
+	public static final double guthaben = 3000; //Setzt das Startguthaben fest
 	public static double kontostand = guthaben;
 
 	/**
