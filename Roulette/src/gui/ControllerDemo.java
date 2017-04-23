@@ -42,7 +42,17 @@ public class ControllerDemo {
 
     	PrintToTextArea.create(zahlenAusgabenTextArea);
     	String zahlStr = anzahlZahlen.getText();
-    	zahl = Integer.parseInt(zahlStr);	//Umwandlung von String zu double
+
+    	if(zahlStr.matches("[A-Za-z]+") ||
+    			zahlStr.matches("[\\\\!\"#$%&()*+,/:;<=>?@\\[\\]^_{|}~]+") ||
+    			zahlStr.matches("[A-Za-z]+" + "[\\\\!\"#$%&()*+,/:;<=>?@\\[\\]^_{|}~]+") ||
+    			zahlStr.matches("[A-Za-z]+" + "[\\\\!\"#$%&()*+,/:;<=>?@\\[\\]^_{|}~]+" + "[0-9]+"))
+    	{
+    		System.out.println("Fehler");
+    	}
+    	else
+    		zahl = Integer.parseInt(zahlStr);	//Umwandlung von String zu double
+
 
     	if(zahl > 10000 || zahl <= 0){
     		refreshfalscheDemoEingabe();
@@ -79,7 +89,7 @@ public class ControllerDemo {
     *
     */
    void falscheDemoEingabe(){
-   		String fehlerEinsatz = "Bitte geben Sie keine Zahl ein, die kleiner oder gleich 0 ist und/oder größer als 10000 ein!";
+   		String fehlerEinsatz = "Fehler bei der Eingabe! (Keine Buchstaben, keine Zahl kleiner oder gleich 0 und keine Zahl größer als 10000)";
    		demoLabel = new Label(fehlerEinsatz);	//neues label
    		demoLabel.setTranslateY(188);	//label position y kordinate
    		demoLabel.setTranslateX(16);	//label position x kordinate

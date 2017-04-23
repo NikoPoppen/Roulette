@@ -39,8 +39,11 @@ public class ControllerEinsatz {
     	double einsatzZahl;
         String einsatzStr = einsatz.getText();	//get Text aus dem Eingabe Fenster
 
-        if(einsatzStr.matches("[A-Za-z]") || einsatzStr.matches("[\\\\!\"#$%&()*+,./:;<=>?@\\[\\]^_{|}~]+")){
-        	System.out.println("Fehler: keine Zahl!");
+        if(einsatzStr.matches("[A-Za-z]+") ||
+        		einsatzStr.matches("[\\\\!\"#$%&()*+,/:;<=>?@\\[\\]^_{|}~]+") ||
+        		einsatzStr.matches("[A-Za-z]+" + "[\\\\!\"#$%&()*+,/:;<=>?@\\[\\]^_{|}~]+") ||
+        		einsatzStr.matches("[A-Za-z]+" + "[\\\\!\"#$%&()*+,/:;<=>?@\\[\\]^_{|}~]+" + "[0-9]+"))
+        {
         	einsatzZahl = 0;
         }
         else
