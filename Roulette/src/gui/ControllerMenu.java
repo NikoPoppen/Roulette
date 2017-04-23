@@ -1,5 +1,5 @@
 /**
- * Sample Skeleton for 'menu.fxml' Controller Class
+ * ControllerMenu steurt alle Elemente des Menues ("menu.fxml")
  */
 
 package gui;
@@ -22,101 +22,112 @@ import javafx.stage.Stage;
 
 public class ControllerMenu {
 
-	public static String usernameVar;
-	public static String passwordVar;
+	public static String usernameVar;	//public String Variabel für den eingegebenen Benutzernamen
+	public static String passwordVar;	//public String Variabel für das eingegebene Passwort
 
 	static Algorithmus algo = new Algorithmus();
 
-	//
-	static AnchorPane ControllerMenuAnchorPane = new AnchorPane();
-	String kontostandStr;
+	//KontostandAusgabe
+	static AnchorPane ControllerMenuAnchorPane = new AnchorPane();	//neues Objket/AnchorPane wird angelegt
+	String kontostandStr;	//string
 	public static Label kontostandLabel = new Label();	//neues label
 
-	//
+	//FehlerDemoAusgabe
 	public static AnchorPane ControllerDemoAnchorPane = new AnchorPane();
 
-	@FXML // fx:id="username"
-    private TextField username; // Value injected by FXMLLoader
+	@FXML
+    private TextField username;	//TextField
 
-    @FXML // fx:id="password"
-    private PasswordField password; // Value injected by FXMLLoader
+    @FXML
+    private PasswordField password;	//TextField
 
+    //Button "Schliessen"
     @FXML
     void onSchließenClick(ActionEvent event) {
-    	Platform.exit();
+    	Platform.exit();	//Schliesst alle Threads
     }
 
+    //Button "Demo"
     @FXML
     void onDemoClick(ActionEvent event) throws IOException {
-    	ControllerDemoAnchorPane = FXMLLoader.load(getClass().getResource("demo.fxml"));
+    	ControllerDemoAnchorPane = FXMLLoader.load(getClass().getResource("demo.fxml"));	////"demo.fxml" datei laden (Demo-Fenster)
     	Stage stage = new Stage();	//new stage erstellen
-    	stage.setScene(new Scene(ControllerDemoAnchorPane));	//"ControllernAnchorPane" zur Scene hinzufügen
+    	stage.setScene(new Scene(ControllerDemoAnchorPane));	//"ControllerDemoAnchorPane" zur Scene hinzufuegen
 
     	stage.setTitle("Roulette Demo Modus");	//titel des Fensters
-    	stage.setResizable(false);			//feste fenstergröße (fenster kann nicht mehr mit der maus größer oder kleiner gezogen werden)
+    	stage.setResizable(false);			//feste fenstergroesse (fenster kann nicht mehr mit der maus groesser oder kleiner gezogen werden)
 
     	// hoehe und breite der Stage/Fenster festlegen
     	stage.setWidth(900);
     	stage.setHeight(600);
 
-    	stage.getIcons().add(new Image(getClass().getResourceAsStream("BBS_Logo_transparentKopie.png")));
+    	stage.getIcons().add(new Image(getClass().getResourceAsStream("BBS_Logo_transparentKopie.png")));	//Fenstericon
 
     	stage.show();	//fenster wird sichtbar gemacht
 
     	((Node)(event.getSource())).getScene().getWindow().hide();	//verbirgt das vorherige Fenster
     }
 
+    //Button "Simulator"
     @FXML
     public void onStartClick(ActionEvent event) throws IOException {
-    	ControllerMenuAnchorPane = FXMLLoader.load(getClass().getResource("gameMini.fxml"));	//"game.fxml" datei laden (befehle die das GUI erstellen)
+    	ControllerMenuAnchorPane = FXMLLoader.load(getClass().getResource("gameMini.fxml"));	//"gameMini.fxml" datei laden (Spielfeld-Fenster)
     	Stage stage = new Stage();	//new stage erstellen
     	stage.setScene(new Scene(ControllerMenuAnchorPane));	//"ControllernAnchorPane" zur Scene hinzufügen
 
     	stage.setTitle("Roulette Simulator");	//titel des Fensters
-		stage.setResizable(true);			//feste fenstergröße (fenster kann nicht mehr mit der maus größer oder kleiner gezogen werden)
+		stage.setResizable(true);			//feste fenstergroesse (fenster kann nicht mehr mit der maus groesser oder kleiner gezogen werden)
 
 		// hoehe und breite der Stage/Fenster festlegen
 		stage.setWidth(1200);
 		stage.setHeight(800);
+
 		stage.getIcons().add(new Image(getClass().getResourceAsStream("BBS_Logo_transparentKopie.png")));	//icon des fensters
 
 		if(usernameVar == null){
 			gastBenutzer();				//falls keine Zeichenkette in usernameVar vorhanden ist, wird man als Gast "angemeldet"
 		}
 		else
-			angemeldeterBenutzer();		//Ausgabe des angemeldeten benutzernamen
+			angemeldeterBenutzer();		//Methodenaufruf -> Ausgabe des angemeldeten benutzernamen
 
-		ausgabeKontostand(0);			//Ausgabe des Kontostandes
+		ausgabeKontostand(0);			//Methodenaufruf -> Ausgabe des Kontostandes
 
     	stage.show();	//fenster wird sichtbar gemacht
 
     	((Node)(event.getSource())).getScene().getWindow().hide();	//verbirgt das vorherige Fenster
     }
 
+    //Button "Ok"
 	@FXML
     void onLoginClick(ActionEvent event) {
-    	usernameVar = username.getText();
-    	passwordVar = password.getText();
-    	System.out.println("Login\n" + "Benutzername: " + usernameVar + "\nPasswort: " + passwordVar);	//eingegebener text im textfeld "username" und "password" wird durch das klicken auf den "ok" knopf ausgelesen
+    	usernameVar = username.getText();	//get Text und ist gleich der String Variabel (Benutzername)
+    	passwordVar = password.getText();	//get Text und ist gleich der String Variabel (Passwort)
 
+    	//Benutzername & Passwort wird in der Console ausgegeben
+    	System.out.println("Login\n" + "Benutzername: " + usernameVar + "\nPasswort: " + passwordVar);
     }
 
+	//Hyperlink "Registrieren"
     @FXML
     void onRegistrierenClick(ActionEvent event) throws IOException {
-    	AnchorPane ControllerMenuAnchorPane = FXMLLoader.load(ControllerMenu.class.getResource("registrierung.fxml"));	//"game.fxml" datei laden (befehle die das GUI erstellen)
+    	AnchorPane ControllerMenuAnchorPane = FXMLLoader.load(ControllerMenu.class.getResource("registrierung.fxml"));	//"registrierung.fxml" datei laden (Registrierungs-Fenster)
     	Stage stage = new Stage();	//new stage erstellen
-    	stage.setScene(new Scene(ControllerMenuAnchorPane));	//"ControllernAnchorPane" zur Scene hinzufügen
+    	stage.setScene(new Scene(ControllerMenuAnchorPane));	//"ControllerMenuAnchorPane" zur Scene hinzufuegen
     	stage.show();	//fenster wird sichtbar gemacht
 
-		stage.setResizable(false);			//feste fenstergröße (fenster kann nicht mehr mit der maus größer oder kleiner gezogen werden)
+		stage.setResizable(false);			//feste fenstergroesse (fenster kann nicht mehr mit der maus groesser oder kleiner gezogen werden)
+
 		// hoehe und breite der Stage festlegen
 		stage.setWidth(240);
 		stage.setHeight(260);
-		stage.getIcons().add(new Image(getClass().getResourceAsStream("BBS_Logo_transparentKopie.png")));
+
+		stage.getIcons().add(new Image(getClass().getResourceAsStream("BBS_Logo_transparentKopie.png")));	//Fenstericon
     }
 
     /**
-     *
+     * Erstellt ein neues Label, das ausgegeben wird
+     * Label= Ein Text bzw. Zeichenkette
+     * Wird benoetigt um den Benutzernamen im Spielfeld darzustellen
      */
     public void angemeldeterBenutzer(){
     	Label usernameLabel = new Label(usernameVar);	//neues label
@@ -131,24 +142,29 @@ public class ControllerMenu {
     }
 
     /**
-     *
+     * Erstellt ein neues Label, das ausgegeben wird
+     * Label= Ein Text bzw. Zeichenkette
+     * Wird benoetigt falls kein Benutzername eingegeben wurde, dass "Gast" grafisch im Spielfeld dargestellt wird
      */
     public void gastBenutzer(){
-    	String gastBenutzerStr = "Gast";
+    	String gastBenutzerStr = "Gast";	//String Variabel initialisieren
     	Label gastLabel = new Label(gastBenutzerStr);	//neues label
     	gastLabel.setTranslateY(52);	//label position y kordinate
     	gastLabel.setTranslateX(155);	//label position x kordinate
-    	gastLabel.setScaleX(1.3);	//label größe breite
-    	gastLabel.setScaleY(1.3); //label größe höhe
-    	gastLabel.setTextFill(Color.web("#FFFFFF"));	//label/text farbe
+    	gastLabel.setScaleX(1.3);	//label groesse breite
+    	gastLabel.setScaleY(1.3); //label groesse höhe
+    	gastLabel.setTextFill(Color.web("#FFFFFF"));	//label/text farbe: white
     	gastLabel.setPrefWidth(100);	//maximale breite des labels
-		gastLabel.setWrapText(false);	//wenn die maximale breite erreicht ist, bei false: text abhacken und "..." hinter setzen & bei true: text im nächsten absatz weiter führen
-		ControllerMenuAnchorPane.getChildren().add((gastLabel));	//ausgbae des labels im AnchorPane "ControllerMenuAnchorPane" -> (game.fxml/Spielfeld)
+		gastLabel.setWrapText(false);	//wenn die maximale breite erreicht ist, bei false: text abhacken und "..." hinter setzen & bei true: text im naechsten absatz weiter fuehren
+		ControllerMenuAnchorPane.getChildren().add((gastLabel));	//ausgabe des labels im AnchorPane "ControllerMenuAnchorPane" -> (game.fxml/Spielfeld)
     }
 
     /**
+     * Erstellt ein neues Label, das ausgegeben wird
+     * Label= Ein Text bzw. Zeichenkette
+     * Wird benoetigt um den aktuellen Kontostand/Guthaben im Spielfeld darzustellen
      *
-     * @param z
+     * @param z -> eingegebener Einsatz oder Gewinn, der vom Kontostand abgezogen oder draufgerechnet wird
      */
     public void ausgabeKontostand(double z){
     	algo.kontostand = algo.kontostand - z;
@@ -167,7 +183,8 @@ public class ControllerMenu {
     }
 
     /**
-     *
+     * loescht das Label "kontostandLabel"
+     * Wird benoetigt damit nach jedem neuen Kontostand der alte nicht mehr angezeigt wird und somit eine Ueberlappung vermeidet
      */
     public static void refreshKontostand(){
     	ControllerMenuAnchorPane.getChildren().remove(kontostandLabel);

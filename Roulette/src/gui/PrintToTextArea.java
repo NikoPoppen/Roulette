@@ -1,5 +1,6 @@
 /**
- *
+ * Gibt ab den Zeitpunkt wo die Methode "create" aufgerufen wird, alle System.out.print(ln) Befehle im TextArea aus
+ * Print: macht nach jedem System.out.print(ln) Befehl ein Leerzeichen
  */
 
 package gui;

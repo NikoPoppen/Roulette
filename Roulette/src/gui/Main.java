@@ -1,8 +1,14 @@
 /**
- * Roulette Programm
+ * Roulette Simulator
+ * Mit dem Roulette Simulator soll kostenlos und ohne echtes Geld Roulette gespielt werden können.
+ * Dazu gibt es 2 Modi:
+ * 1. Demo Modus: Im Demo Modus wird bewiesen, dass alle Zahlen rein zufällig gezogen sind & nicht manipulaiert wurden
+ * 2. Simulator: Im Simulator kann man sein Glück im Roulette versuchen
  *
- * @author
- * @version 0.0.3
+ * Die hier zu findene Klasse "Main" startet das Programm und öffnet dazu das Menu-Fenster.
+ *
+ * @author	Sebastian Koch (Datenbank), Niko Poppen(Algorithmus mit der Unterstützung von Patrick Duda) & Patrick Duda (GUI)
+ * @version 1.2.12 am 23.04.2017
  */
 
 package gui;
@@ -20,19 +26,17 @@ public class Main extends Application {
 	@Override
 	public void start(Stage primaryStage) throws IOException {
 		primaryStage.setTitle("Roulette Simulator");	//titel des Fensters
-		primaryStage.setResizable(false);			//feste fenstergrÃ¶ÃŸe (fenster kann nicht mehr mit der maus grÃ¶ÃŸer oder kleiner gezogen werden)
+		primaryStage.setResizable(false);			//feste fenstergoesse (fenster kann nicht mehr mit der maus groesser oder kleiner gezogen werden)
 		// hoehe und breite der Stage festlegen
 		primaryStage.setWidth(900);
 		primaryStage.setHeight(600);
-		primaryStage.getIcons().add(new Image(getClass().getResourceAsStream("BBS_Logo_transparentKopie.png")));
-
+		primaryStage.getIcons().add(new Image(getClass().getResourceAsStream("BBS_Logo_transparentKopie.png")));	//fesnter icon
 
 		//fxml datei einbinden
-		AnchorPane mainAnchorPane = (AnchorPane) FXMLLoader.load(Main.class.getResource("menu.fxml"));	//"menu.fxml" datei laden (befehle die das GUI erstellen)
-		primaryStage.setScene(new Scene(mainAnchorPane));	//"mainAnchorPane" zur Scene hinzufÃ¼gen
+		AnchorPane mainAnchorPane = (AnchorPane) FXMLLoader.load(Main.class.getResource("menu.fxml"));	//"menu.fxml" datei laden (Menu-Fenster)
+		primaryStage.setScene(new Scene(mainAnchorPane));	//"mainAnchorPane" zur Scene hinzufuegen
 		primaryStage.show();	//fenster wird sichtbar gemacht
 	}
-
 
 	public static void main(String[] args) {
 		launch(args);

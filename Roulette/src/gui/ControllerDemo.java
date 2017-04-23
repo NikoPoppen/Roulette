@@ -1,3 +1,7 @@
+/**
+ * ControllerDemo steurt alle Elemente des Demo-Fensters ("demo.fxml")
+ */
+
 package gui;
 
 import java.io.IOException;
@@ -25,82 +29,92 @@ public class ControllerDemo {
 
 	Label demoLabel = new Label();	//neues label
 
-	public static int zahl;
+	public static int zahl;	//int Variabel für die Haeufigkeit zu ziehenden Zahlen
 
 	@FXML
-    private TextField anzahlZahlen;
+    private TextField anzahlZahlen;	//TextField
 
 	@FXML
-    public TextArea zahlenAusgabenTextArea;
+    public TextArea zahlenAusgabenTextArea;	//TextArea
 
+	//Button "Ok"
     @FXML
     void onConfirmClick(ActionEvent event) {
     	Demo demo = new Demo();
 
-    	zahlenAusgabenTextArea.clear();
-    	zahlenAusgabenTextArea.setWrapText(true);
+    	zahlenAusgabenTextArea.clear();	//alles aus dem TextArea wird geloescht
+    	zahlenAusgabenTextArea.setWrapText(true);	//wenn die maximale Breite des TextArea erreicht wurde, wird automatisch ein Absatz gemacht
 
-    	PrintToTextArea.create(zahlenAusgabenTextArea);
-    	String zahlStr = anzahlZahlen.getText();
+    	PrintToTextArea.create(zahlenAusgabenTextArea);	//Klasse "PrintToTextArea" & die Funktion "create" wird aufgerufen, zuzaetzlich wird die TextArea "zahlenAusgabenTextArea" mit uebergeben
+    	String zahlStr = anzahlZahlen.getText();	//eingegebener Text wird einer String Variabel zugewiesen
 
+    	//wenn Buchstaben oder Sonderzeichen im eingegebenen Text
     	if(zahlStr.matches("[A-Za-z]+") ||
     			zahlStr.matches("[\\\\!\"#$%&()*+,/:;<=>?@\\[\\]^_{|}~]+") ||
     			zahlStr.matches("[A-Za-z]+" + "[\\\\!\"#$%&()*+,/:;<=>?@\\[\\]^_{|}~]+") ||
     			zahlStr.matches("[A-Za-z]+" + "[\\\\!\"#$%&()*+,/:;<=>?@\\[\\]^_{|}~]+" + "[0-9]+"))
     	{
-    		System.out.println("Fehler");
+//    		System.out.println("Fehler");
+    		zahl = 0;
     	}
     	else
     		zahl = Integer.parseInt(zahlStr);	//Umwandlung von String zu double
 
 
+    	//wenn eingegebene Zahl größer als 10000 oder kleiner oder gleich 0 ist
     	if(zahl > 10000 || zahl <= 0){
-    		refreshfalscheDemoEingabe();
-    		falscheDemoEingabe();
+    		refreshfalscheDemoEingabe();	//Methodenaufruf
+    		falscheDemoEingabe();	//Methodenaufruf
     	}
     	else
-    		demo.demoVorgang();
+    		demo.demoVorgang();	//Methodenaufruf aus der Klasse "Demo"
     }
 
+    //Button "Hauptmenu"
     @FXML
     void onHauptmenuClick(ActionEvent event) throws IOException {
-    	AnchorPane ControllerGameAnchorPane = FXMLLoader.load(getClass().getResource("menu.fxml"));	//"menu.fxml" datei laden (befehle die das GUI erstellen)
+    	AnchorPane ControllerGameAnchorPane = FXMLLoader.load(getClass().getResource("menu.fxml"));	//"menu.fxml" datei laden (Menu-Fenster)
     	Stage stage = new Stage();	//new stage erstellen
-    	stage.setScene(new Scene(ControllerGameAnchorPane));	//"ControllernAnchorPane" zur Scene hinzufügen
-    	stage.show();	//fenster wird sichtbar gemacht
+    	stage.setScene(new Scene(ControllerGameAnchorPane));	//"ControllernAnchorPane" zur Scene hinzufuegen
+    	stage.show();	//Fenster wird sichtbar gemacht
 
-    	stage.setTitle("Roulette Simulator");	//titel des Fensters
-		stage.setResizable(false);			//feste fenstergröße (fenster kann nicht mehr mit der maus größer oder kleiner gezogen werden)
+    	stage.setTitle("Roulette Simulator");	//Titel des Fensters
+		stage.setResizable(false);			//feste fenstergröße (fenster kann nicht mehr mit der maus groesser oder kleiner gezogen werden)
 
-		//hoehe und breite der Stage festlegen
+		//Hoehe und Breite der Stage festlegen
 		stage.setWidth(900);
 		stage.setHeight(600);
-		stage.getIcons().add(new Image(getClass().getResourceAsStream("BBS_Logo_transparentKopie.png")));
+
+		stage.getIcons().add(new Image(getClass().getResourceAsStream("BBS_Logo_transparentKopie.png")));	//Fenstericon
 
     	((Node)(event.getSource())).getScene().getWindow().hide();	//verbirgt das vorherige Fenster
     }
 
+    //Button "Schliessen"
     @FXML
     void onSchließenClick(ActionEvent event) {
-    	Platform.exit();
+    	Platform.exit();	//schließt alle Threads
     }
 
     /**
-    *
+    * Erstellt ein neues Label, das ausgegeben wird
+    * Label= Ein Text bzw. Zeichenkette
+    * Wird benoetigt wenn eine falsche Eingabe beim Demo Modus betaetigt wurde
     */
    void falscheDemoEingabe(){
-   		String fehlerEinsatz = "Fehler bei der Eingabe! (Keine Buchstaben, keine Zahl kleiner oder gleich 0 und keine Zahl größer als 10000)";
-   		demoLabel = new Label(fehlerEinsatz);	//neues label
+   		String fehlerDemo = "Fehler bei der Eingabe! (Keine Buchstaben, keine Zahl kleiner oder gleich 0 und keine Zahl größer als 10000)";	//String Variabel wird initialisiert
+   		demoLabel = new Label(fehlerDemo);	//Label wird die Zeichenkette "fehlerDemo" zugeordnet
    		demoLabel.setTranslateY(188);	//label position y kordinate
    		demoLabel.setTranslateX(16);	//label position x kordinate
-   		demoLabel.setScaleX(1);	//label größe breite
-   		demoLabel.setScaleY(1); //label größe höhe
-   		demoLabel.setTextFill(Color.web("FF0000"));	//label/text farbe
-   		menu.ControllerDemoAnchorPane.getChildren().add((demoLabel));	//ausgbae des labels im AnchorPane "ControllerMenuAnchorPane" -> (game.fxml/Spielfeld)
+   		demoLabel.setScaleX(1);	//label groesse breite
+   		demoLabel.setScaleY(1); //label groesse hoehe
+   		demoLabel.setTextFill(Color.web("FF0000"));	//label/text farbe: red
+   		menu.ControllerDemoAnchorPane.getChildren().add((demoLabel));	//ausgbae des labels im AnchorPane "ControllerDemoAnchorPane" -> (demo.fxml/Demo Modus)
    }
 
    /**
-    *
+    * loescht das Label "demoLabel"
+    * Wird benoetigt wenn mehrmals eine falsche Eingabe betaetigt wurde, damit sich die Texte nicht ueberlappen
     */
    void refreshfalscheDemoEingabe(){
    		menu.ControllerDemoAnchorPane.getChildren().remove(demoLabel);

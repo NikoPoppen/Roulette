@@ -5,8 +5,6 @@
 package algorithmus;
 
 import gui.*;
-import javafx.fxml.FXML;
-import javafx.scene.control.TextArea;
 
 import java.util.*;
 
@@ -15,8 +13,8 @@ public class Algorithmus{
 	static ControllerGame game = new ControllerGame(); //Erlaubt es funktionen von Anderen Klassen zu benutzen
 	static ControllerMenu menu = new ControllerMenu(); //Erlaubt es funktionen von Anderen Klassen zu benutzen
 
-	public static final double guthaben = 3000; //Setzt das Startguthaben fest
-	public static double kontostand = guthaben;
+	public static final double guthaben = 3000; //Setzt das Startguthaben fest	(final (kann nicht im laufe des Quellcodes geaendert werden))
+	public static double kontostand = guthaben;	//weisst "guthaben" "kontostand" zu
 
 	/**
 	 * Dies ist die Funktion die alle Abfragen beeinhaltet und gestartet wird wenn man
@@ -414,12 +412,13 @@ public class Algorithmus{
 	    			} //end switch
 	    		} //end if
 
+	    		//oder wenn die Auswahl vom Button groesser als 36 ist. Alle Buttons haben einen Integer Wert & bei allen Felder ausserhalb von 1-36 ist der Wert groesser als 36
 	    		else if(Auswahllist.previous() > 36){
 
-	    			switch(Auswahllist.next()){
+	    			switch(Auswahllist.next()){			//sprint 1 Index vor, da vorher previous()
 	    				case(100): //Case für First
 	        			{
-	    					if(firstAuswahl.contains(zufallsZahl)){
+	    					if(firstAuswahl.contains(zufallsZahl)){		//wenn die zufällige gezogene ZAhl in der ArrayList vorhanden ist
 	    						double gewinn = Einsatzlist.next()*2;
 		        				System.out.println("Ihr gewinn durch 1st beträgt: " + gewinn);
 		        				kontostand = gewinn + Einsatzlist.previous() +  kontostand;
@@ -453,7 +452,6 @@ public class Algorithmus{
 	        			case(112): //Case für 1 bis 12
 	        			{
 	        				if(oneToTwelveAuswahl.contains(zufallsZahl)){
-	    	    				System.out.println("1 bis 12");
 	    	    				double gewinn = Einsatzlist.next()*2;
 		        				System.out.println("Ihr gewinn durch 1 bis 12 beträgt: " + gewinn);
 		        				kontostand = gewinn + Einsatzlist.previous() +  kontostand;
@@ -465,7 +463,6 @@ public class Algorithmus{
 	        			case(1324):	//Case für 13 bis 24
 	        			{
 	        				if(thirteenToTwentyfourAuswahl.contains(zufallsZahl)){
-	    	    				System.out.println("13 bis 24");
 	    	    				double gewinn = Einsatzlist.next()*2;
 		        				System.out.println("Ihr gewinn durch 13 bis 24 beträgt: " + gewinn);
 		        				kontostand = gewinn + Einsatzlist.previous() +  kontostand;
@@ -554,6 +551,7 @@ public class Algorithmus{
     				}//end switch
 	    		}//end else if
 
+	    		//Wenn man nicht durch die normalen Zahlen (1-36) gewonnen hat
     			else{
     				System.out.println("Sie haben leider nicht durch " + Auswahllist.next() +" gewonnen!");
 
@@ -566,17 +564,17 @@ public class Algorithmus{
     		game.Einsatzarray.clear();	//Löscht die ArrayListe um neues Spiel beginnen zu können
 
     		//aktualisiert die grafische Ausgabe des Guthabens
-    		menu.refreshKontostand();
-    		menu.ausgabeKontostand(0);
+    		menu.refreshKontostand();	//Methodenaufruf
+    		menu.ausgabeKontostand(0);	//Methodenaufruf (uebergibt 0, da sich der Kontostand nicht veraendern soll, sondern nur Aufgrund des Gewinns bzw. Niederlage aktualisieren soll)
 
     		System.out.println("\t\t---------------Algorithmus Ende-------------------");
 
 	}//end method
 
-
 	/**
+	 * Zieht eine zufaellige Zahl zwischen 0 und 36
 	 *
-	 * @return
+	 * @return zufallZahl -> zufaellig gezogene Zahl wird zurückgegeben
 	 */
 	public static int zahlenGenerator(){
 
