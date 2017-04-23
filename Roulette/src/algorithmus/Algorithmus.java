@@ -121,7 +121,7 @@ public class Algorithmus{
 		    			case(0):
 		    			{
 		    				double gewinn = Einsatzlist.next()*35;	//Einsatz wird Multipliziert
-		    				System.out.println("Ihr gewinn beträgt: " + gewinn); // Ausgabe des gewinns
+		    				System.out.println("Ihr gewinn durch 0 beträgt: " + gewinn); // Ausgabe des gewinns
 		    				Auswahllist.next();					//Springt 1 Index weiter in der ArrayListe
 		    				kontostand = gewinn +  Einsatzlist.previous() +  kontostand; //Neuer Kontostand wird berechnet
 		    				break;								//Beendet die Switch
@@ -130,7 +130,7 @@ public class Algorithmus{
 		    			case(1):
 		    			{
 		    				double gewinn = Einsatzlist.next()*35;
-		    				System.out.println("Ihr gewinn beträgt: " + gewinn);
+		    				System.out.println("Ihr gewinn durch 1 beträgt: " + gewinn);
 		    				Auswahllist.next();
 		    				kontostand = gewinn + Einsatzlist.previous() +  kontostand;
 		    				break;
@@ -138,7 +138,7 @@ public class Algorithmus{
 		    			case(2):
 		    			{
 		    				double gewinn = Einsatzlist.next()*35;
-		    				System.out.println("Ihr gewinn beträgt: " + gewinn);
+		    				System.out.println("Ihr gewinn durch 2 beträgt: " + gewinn);
 		    				Auswahllist.next();
 		    				kontostand = gewinn + Einsatzlist.previous() +  kontostand;
 		    				break;
@@ -146,7 +146,7 @@ public class Algorithmus{
 		    			case(3):
 		    			{
 		    				double gewinn = Einsatzlist.next()*35;
-		    				System.out.println("Ihr gewinn beträgt: " + gewinn);
+		    				System.out.println("Ihr gewinn durch 3 beträgt: " + gewinn);
 		    				Auswahllist.next();
 		    				kontostand = gewinn + Einsatzlist.previous() +  kontostand;
 		    				break;
@@ -154,7 +154,7 @@ public class Algorithmus{
 		    			case(4):
 		    			{
 		    				double gewinn = Einsatzlist.next()*35;
-		    				System.out.println("Ihr gewinn beträgt: " + gewinn);
+		    				System.out.println("Ihr gewinn durch 4 beträgt: " + gewinn);
 		    				Auswahllist.next();
 		    				kontostand = gewinn + Einsatzlist.previous() +  kontostand;
 		    				break;
@@ -162,7 +162,7 @@ public class Algorithmus{
 		    			case(5):
 		    			{
 		    				double gewinn = Einsatzlist.next()*35;
-		    				System.out.println("Ihr gewinn beträgt: " + gewinn);
+		    				System.out.println("Ihr gewinn durch 5 beträgt: " + gewinn);
 		    				Auswahllist.next();
 		    				kontostand = gewinn + Einsatzlist.previous() +  kontostand;
 		    				break;
@@ -170,7 +170,7 @@ public class Algorithmus{
 		    			case(6):
 		    			{
 		    				double gewinn = Einsatzlist.next()*35;
-		    				System.out.println("Ihr gewinn beträgt: " + gewinn);
+		    				System.out.println("Ihr gewinn durch 6 beträgt: " + gewinn);
 		    				Auswahllist.next();
 		    				kontostand = gewinn + Einsatzlist.previous() +  kontostand;
 		    				break;
@@ -178,7 +178,7 @@ public class Algorithmus{
 		    			case(7):
 		    			{
 		    				double gewinn = Einsatzlist.next()*35;
-		    				System.out.println("Ihr gewinn beträgt: " + gewinn);
+		    				System.out.println("Ihr gewinn durch 7 beträgt: " + gewinn);
 		    				Auswahllist.next();
 		    				kontostand = gewinn + Einsatzlist.previous() +  kontostand;
 		    				break;
@@ -186,7 +186,7 @@ public class Algorithmus{
 		    			case(8):
 		    			{
 		    				double gewinn = Einsatzlist.next()*35;
-		    				System.out.println("Ihr gewinn beträgt: " + gewinn);
+		    				System.out.println("Ihr gewinn durch 8 beträgt: " + gewinn);
 		    				Auswahllist.next();
 		    				kontostand = gewinn + Einsatzlist.previous() +  kontostand;
 		    				break;
@@ -194,7 +194,7 @@ public class Algorithmus{
 		    			case(9):
 		    			{
 		    				double gewinn = Einsatzlist.next()*35;
-		    				System.out.println("Ihr gewinn beträgt: " + gewinn);
+		    				System.out.println("Ihr gewinn durch 9 beträgt: " + gewinn);
 		    				Auswahllist.next();
 		    				kontostand = gewinn + Einsatzlist.previous() +  kontostand;
 		    				break;
@@ -202,7 +202,7 @@ public class Algorithmus{
 		    			case(10):
 		    			{
 		    				double gewinn = Einsatzlist.next()*35;
-		    				System.out.println("Ihr gewinn beträgt: " + gewinn);
+		    				System.out.println("Ihr gewinn durch 10 beträgt: " + gewinn);
 		    				Auswahllist.next();
 		    				kontostand = gewinn + Einsatzlist.previous() +  kontostand;
 		    				break;
@@ -210,7 +210,7 @@ public class Algorithmus{
 		    			case(11):
 		    			{
 		    				double gewinn = Einsatzlist.next()*35;
-		    				System.out.println("Ihr gewinn beträgt: " + gewinn);
+		    				System.out.println("Ihr gewinn durch 11 beträgt: " + gewinn);
 		    				Auswahllist.next();
 		    				kontostand = gewinn + Einsatzlist.previous() +  kontostand;
 		    				break;
@@ -218,7 +218,7 @@ public class Algorithmus{
 		    			case(12):
 		    			{
 		    				double gewinn = Einsatzlist.next()*35;
-		    				System.out.println("Ihr gewinn beträgt: " + gewinn);
+		    				System.out.println("Ihr gewinn durch 12 beträgt: " + gewinn);
 		    				Auswahllist.next();
 		    				kontostand = gewinn + Einsatzlist.previous() +  kontostand;
 		    				break;
@@ -226,7 +226,7 @@ public class Algorithmus{
 		    			case(13):
 		    			{
 		    				double gewinn = Einsatzlist.next()*35;
-		    				System.out.println("Ihr gewinn beträgt: " + gewinn);
+		    				System.out.println("Ihr gewinn durch 13 beträgt: " + gewinn);
 		    				Auswahllist.next();
 		    				kontostand = gewinn + Einsatzlist.previous() +  kontostand;
 		    				break;
@@ -234,7 +234,7 @@ public class Algorithmus{
 		    			case(14):
 		    			{
 		    				double gewinn = Einsatzlist.next()*35;
-		    				System.out.println("Ihr gewinn beträgt: " + gewinn);
+		    				System.out.println("Ihr gewinn durch 14 beträgt: " + gewinn);
 		    				Auswahllist.next();
 		    				kontostand = gewinn + Einsatzlist.previous() +  kontostand;
 		    				break;
@@ -242,7 +242,7 @@ public class Algorithmus{
 		    			case(15):
 		    			{
 		    				double gewinn = Einsatzlist.next()*35;
-		    				System.out.println("Ihr gewinn beträgt: " + gewinn);
+		    				System.out.println("Ihr gewinn durch 15 beträgt: " + gewinn);
 		    				Auswahllist.next();
 		    				kontostand = gewinn + Einsatzlist.previous() +  kontostand;
 		    				break;
@@ -250,7 +250,7 @@ public class Algorithmus{
 		    			case(16):
 		    			{
 		    				double gewinn = Einsatzlist.next()*35;
-		    				System.out.println("Ihr gewinn beträgt: " + gewinn);
+		    				System.out.println("Ihr gewinn durch 16 beträgt: " + gewinn);
 		    				Auswahllist.next();
 		    				kontostand = gewinn + Einsatzlist.previous() +  kontostand;
 		    				break;
@@ -258,7 +258,7 @@ public class Algorithmus{
 		    			case(17):
 		    			{
 		    				double gewinn = Einsatzlist.next()*35;
-		    				System.out.println("Ihr gewinn beträgt: " + gewinn);
+		    				System.out.println("Ihr gewinn durch 17 beträgt: " + gewinn);
 		    				Auswahllist.next();
 		    				kontostand = gewinn + Einsatzlist.previous() +  kontostand;
 		    				break;
@@ -266,7 +266,7 @@ public class Algorithmus{
 		    			case(18):
 		    			{
 		    				double gewinn = Einsatzlist.next()*35;
-		    				System.out.println("Ihr gewinn beträgt: " + gewinn);
+		    				System.out.println("Ihr gewinn durch 18 beträgt: " + gewinn);
 		    				Auswahllist.next();
 		    				kontostand = gewinn + Einsatzlist.previous() +  kontostand;
 		    				break;
@@ -274,7 +274,7 @@ public class Algorithmus{
 		    			case(19):
 		    			{
 		    				double gewinn = Einsatzlist.next()*35;
-		    				System.out.println("Ihr gewinn beträgt: " + gewinn);
+		    				System.out.println("Ihr gewinn durch 19 beträgt: " + gewinn);
 		    				Auswahllist.next();
 		    				kontostand = gewinn + Einsatzlist.previous() +  kontostand;
 		    				break;
@@ -282,7 +282,7 @@ public class Algorithmus{
 		    			case(20):
 		    			{
 		    				double gewinn = Einsatzlist.next()*35;
-		    				System.out.println("Ihr gewinn beträgt: " + gewinn);
+		    				System.out.println("Ihr gewinn durch 20 beträgt: " + gewinn);
 		    				Auswahllist.next();
 		    				kontostand = gewinn + Einsatzlist.previous() +  kontostand;
 		    				break;
@@ -290,7 +290,7 @@ public class Algorithmus{
 		    			case(21):
 		    			{
 		    				double gewinn = Einsatzlist.next()*35;
-		    				System.out.println("Ihr gewinn beträgt: " + gewinn);
+		    				System.out.println("Ihr gewinn durch 21 beträgt: " + gewinn);
 		    				Auswahllist.next();
 		    				kontostand = gewinn + Einsatzlist.previous() +  kontostand;
 		    				break;
@@ -298,7 +298,7 @@ public class Algorithmus{
 		    			case(22):
 		    			{
 		    				double gewinn = Einsatzlist.next()*35;
-		    				System.out.println("Ihr gewinn beträgt: " + gewinn);
+		    				System.out.println("Ihr gewinn durch 22 beträgt: " + gewinn);
 		    				Auswahllist.next();
 		    				kontostand = gewinn + Einsatzlist.previous() +  kontostand;
 		    				break;
@@ -306,7 +306,7 @@ public class Algorithmus{
 		    			case(23):
 		    			{
 		    				double gewinn = Einsatzlist.next()*35;
-		    				System.out.println("Ihr gewinn beträgt: " + gewinn);
+		    				System.out.println("Ihr gewinn durch 23 beträgt: " + gewinn);
 		    				Auswahllist.next();
 		    				kontostand = gewinn + Einsatzlist.previous() +  kontostand;
 		    				break;
@@ -314,7 +314,7 @@ public class Algorithmus{
 		    			case(24):
 		    			{
 		    				double gewinn = Einsatzlist.next()*35;
-		    				System.out.println("Ihr gewinn beträgt: " + gewinn);
+		    				System.out.println("Ihr gewinn durch 24 beträgt: " + gewinn);
 		    				Auswahllist.next();
 		    				kontostand = gewinn + Einsatzlist.previous() +  kontostand;
 		    				break;
@@ -322,7 +322,7 @@ public class Algorithmus{
 		    			case(25):
 		    			{
 		    				double gewinn = Einsatzlist.next()*35;
-		    				System.out.println("Ihr gewinn beträgt: " + gewinn);
+		    				System.out.println("Ihr gewinn durch 25 beträgt: " + gewinn);
 		    				Auswahllist.next();
 		    				kontostand = gewinn + Einsatzlist.previous() +  kontostand;
 		    				break;
@@ -330,7 +330,7 @@ public class Algorithmus{
 		    			case(26):
 		    			{
 		    				double gewinn = Einsatzlist.next()*35;
-		    				System.out.println("Ihr gewinn beträgt: " + gewinn);
+		    				System.out.println("Ihr gewinn durch 26 beträgt: " + gewinn);
 		    				Auswahllist.next();
 		    				kontostand = gewinn + Einsatzlist.previous() +  kontostand;
 		    				break;
@@ -338,7 +338,7 @@ public class Algorithmus{
 		    			case(27):
 		    			{
 		    				double gewinn = Einsatzlist.next()*35;
-		    				System.out.println("Ihr gewinn beträgt: " + gewinn);
+		    				System.out.println("Ihr gewinn durch 27 beträgt: " + gewinn);
 		    				Auswahllist.next();
 		    				kontostand = gewinn + Einsatzlist.previous() +  kontostand;
 		    				break;
@@ -346,7 +346,7 @@ public class Algorithmus{
 		    			case(28):
 		    			{
 		    				double gewinn = Einsatzlist.next()*35;
-		    				System.out.println("Ihr gewinn beträgt: " + gewinn);
+		    				System.out.println("Ihr gewinn durch 28 beträgt: " + gewinn);
 		    				Auswahllist.next();
 		    				kontostand = gewinn + Einsatzlist.previous() +  kontostand;
 		    				break;
@@ -354,7 +354,7 @@ public class Algorithmus{
 		    			case(29):
 		    			{
 		    				double gewinn = Einsatzlist.next()*35;
-		    				System.out.println("Ihr gewinn beträgt: " + gewinn);
+		    				System.out.println("Ihr gewinn durch 29 beträgt: " + gewinn);
 		    				Auswahllist.next();
 		    				kontostand = gewinn + Einsatzlist.previous() +  kontostand;
 		    				break;
@@ -362,7 +362,7 @@ public class Algorithmus{
 		    			case(30):
 		    			{
 		    				double gewinn = Einsatzlist.next()*35;
-		    				System.out.println("Ihr gewinn beträgt: " + gewinn);
+		    				System.out.println("Ihr gewinn durch 30 beträgt: " + gewinn);
 		    				Auswahllist.next();
 		    				kontostand = gewinn + Einsatzlist.previous() +  kontostand;
 		    				break;
@@ -370,7 +370,7 @@ public class Algorithmus{
 		    			case(31):
 		    			{
 		    				double gewinn = Einsatzlist.next()*35;
-		    				System.out.println("Ihr gewinn beträgt: " + gewinn);
+		    				System.out.println("Ihr gewinn durch 31 beträgt: " + gewinn);
 		    				Auswahllist.next();
 		    				kontostand = gewinn + Einsatzlist.previous() +  kontostand;
 		    				break;
@@ -378,7 +378,7 @@ public class Algorithmus{
 		    			case(32):
 		    			{
 		    				double gewinn = Einsatzlist.next()*35;
-		    				System.out.println("Ihr gewinn beträgt: " + gewinn);
+		    				System.out.println("Ihr gewinn durch 32 beträgt: " + gewinn);
 		    				Auswahllist.next();
 		    				kontostand = gewinn + Einsatzlist.previous() +  kontostand;
 		    				break;
@@ -386,7 +386,7 @@ public class Algorithmus{
 		    			case(33):
 		    			{
 		    				double gewinn = Einsatzlist.next()*35;
-		    				System.out.println("Ihr gewinn beträgt: " + gewinn);
+		    				System.out.println("Ihr gewinn durch 33 beträgt: " + gewinn);
 		    				Auswahllist.next();
 		    				kontostand = gewinn + Einsatzlist.previous() +  kontostand;
 		    				break;
@@ -394,7 +394,7 @@ public class Algorithmus{
 		    			case(34):
 		    			{
 		    				double gewinn = Einsatzlist.next()*35;
-		    				System.out.println("Ihr gewinn beträgt: " + gewinn);
+		    				System.out.println("Ihr gewinn durch 34 beträgt: " + gewinn);
 		    				Auswahllist.next();
 		    				kontostand = gewinn + Einsatzlist.previous() +  kontostand;
 		    				break;
@@ -402,7 +402,7 @@ public class Algorithmus{
 		    			case(35):
 		    			{
 		    				double gewinn = Einsatzlist.next()*35;
-		    				System.out.println("Ihr gewinn beträgt: " + gewinn);
+		    				System.out.println("Ihr gewinn durch 35 beträgt: " + gewinn);
 		    				Auswahllist.next();
 		    				kontostand = gewinn + Einsatzlist.previous() +  kontostand;
 		    				break;
@@ -410,7 +410,7 @@ public class Algorithmus{
 		    			case(36):
 		    			{
 		    				double gewinn = Einsatzlist.next()*35;
-		    				System.out.println("Ihr gewinn beträgt: " + gewinn);
+		    				System.out.println("Ihr gewinn durch 36 beträgt: " + gewinn);
 		    				Auswahllist.next();
 		    				kontostand = gewinn + Einsatzlist.previous() +  kontostand;
 		    				break;
@@ -419,40 +419,39 @@ public class Algorithmus{
 	    		} //end if
 
 	    		else if(Auswahllist.previous() > 36){
-	    			System.out.println("Ungleich von Zahl 1 bis 36");
 
 	    			switch(Auswahllist.next()){
 	    				case(100): //Case für First
 	        			{
 	    					if(firstAuswahl.contains(zufallsZahl)){
 	    						double gewinn = Einsatzlist.next()*2;
-		        				System.out.println("Ihr gewinn durch Mehrfache beträgt: " + gewinn);
+		        				System.out.println("Ihr gewinn durch 1st beträgt: " + gewinn);
 		        				kontostand = gewinn + Einsatzlist.previous() +  kontostand;
 	    					}
 	    					else
-	        					System.out.println("Sie haben leider nicht durch Mehrfache gewonnen!");
+	        					System.out.println("Sie haben leider nicht durch 1st gewonnen!");
 	        				break;
 	        			}
 	        			case(200): //Case für Second
 	        			{
 	        				if(secondAuswahl.contains(zufallsZahl)){
 	        					double gewinn = Einsatzlist.next()*2;
-		        				System.out.println("Ihr gewinn durch Mehrfache beträgt: " + gewinn);
+		        				System.out.println("Ihr gewinn durch 2nd beträgt: " + gewinn);
 		        				kontostand = gewinn + Einsatzlist.previous() +  kontostand;
 	        				}
 	        				else
-	        					System.out.println("Sie haben leider nicht durch Mehrfache gewonnen!");
+	        					System.out.println("Sie haben leider nicht durch 2nd gewonnen!");
 	        				break;
 	        			}
 	        			case(300): //Case für Third
 	        			{
 	        				if(thridAuswahl.contains(zufallsZahl)){
 	        					double gewinn = Einsatzlist.next()*2;
-		        				System.out.println("Ihr gewinn durch Mehrfache beträgt: " + gewinn);
+		        				System.out.println("Ihr gewinn durch 3rd beträgt: " + gewinn);
 		        				kontostand = gewinn + Einsatzlist.previous() +  kontostand;
 	        				}
 	        				else
-	        					System.out.println("Sie haben leider nicht durch Mehrfache gewonnen!");
+	        					System.out.println("Sie haben leider nicht durch 3rd gewonnen!");
 	        				break;
 	        			}
 	        			case(112): //Case für 1 bis 12
@@ -460,11 +459,11 @@ public class Algorithmus{
 	        				if(oneToTwelveAuswahl.contains(zufallsZahl)){
 	    	    				System.out.println("1 bis 12");
 	    	    				double gewinn = Einsatzlist.next()*2;
-		        				System.out.println("Ihr gewinn durch Mehrfache beträgt: " + gewinn);
+		        				System.out.println("Ihr gewinn durch 1 bis 12 beträgt: " + gewinn);
 		        				kontostand = gewinn + Einsatzlist.previous() +  kontostand;
 	    	    			}
 	        				else
-	        					System.out.println("Sie haben leider nicht durch Mehrfache gewonnen!");
+	        					System.out.println("Sie haben leider nicht durch 1 bis 12 gewonnen!");
 	        				break;
 	        			}
 	        			case(1324):	//Case für 13 bis 24
@@ -472,96 +471,96 @@ public class Algorithmus{
 	        				if(thirteenToTwentyfourAuswahl.contains(zufallsZahl)){
 	    	    				System.out.println("13 bis 24");
 	    	    				double gewinn = Einsatzlist.next()*2;
-		        				System.out.println("Ihr gewinn durch Mehrfache beträgt: " + gewinn);
+		        				System.out.println("Ihr gewinn durch 13 bis 24 beträgt: " + gewinn);
 		        				kontostand = gewinn + Einsatzlist.previous() +  kontostand;
 	    	    			}
 	        				else
-	        					System.out.println("Sie haben leider nicht durch Mehrfache gewonnen!");
+	        					System.out.println("Sie haben leider nicht 13 bis 24 gewonnen!");
 	        				break;
 	        			}
 	        			case(2536):	//Case für 25 bis 36
 	        			{
 	        				if(TwentyfiveToThirtysixAuswahl.contains(zufallsZahl)){
 	        					double gewinn = Einsatzlist.next()*2;
-		        				System.out.println("Ihr gewinn durch Mehrfache beträgt: " + gewinn);
+		        				System.out.println("Ihr gewinn durch 25 bis 36 beträgt: " + gewinn);
 		        				kontostand = gewinn + Einsatzlist.previous() +  kontostand;
 	        				}
 	        				else
-	        					System.out.println("Sie haben leider nicht durch Mehrfache gewonnen!");
+	        					System.out.println("Sie haben leider nicht 25 bis 36 gewonnen!");
 	        				break;
 	        			}
 	        			case(118):	//Case für 1 bis 18
 	        			{
 	        				if(oneToEighteenAuswahl.contains(zufallsZahl)){
 	        					double gewinn = Einsatzlist.next() + Einsatzlist.previous();
-		        				System.out.println("Ihr gewinn durch Mehrfache beträgt: " + gewinn);
+		        				System.out.println("Ihr gewinn durch 1 bis 18 beträgt: " + gewinn);
 		        				kontostand = gewinn + kontostand;
 	        				}
 	        				else
-	        					System.out.println("Sie haben leider nicht durch Mehrfache gewonnen!");
+	        					System.out.println("Sie haben leider nicht durch 1 bis 18 gewonnen!");
 	        				break;
 	        			}
 	        			case(1936):	//Case für 19 bis 36
 	        			{
 	        				if(nineteenToThirtysixAuswahl.contains(zufallsZahl)){
 	        					double gewinn = Einsatzlist.next() + Einsatzlist.previous();
-		        				System.out.println("Ihr gewinn durch Mehrfache beträgt: " + gewinn);
+		        				System.out.println("Ihr gewinn durch 19 bis 36 beträgt: " + gewinn);
 		        				kontostand = gewinn + kontostand;
 	        				}
 	        				else
-	        					System.out.println("Sie haben leider nicht durch Mehrfache gewonnen!");
+	        					System.out.println("Sie haben leider nicht durch 19 bis 36 gewonnen!");
 	        				break;
 	        			}
 	        			case(1000):	//Case für gerade Zahlen
 	        			{
 	        				if(geradeAuswahl.contains(zufallsZahl)){
 	        					double gewinn = Einsatzlist.next() + Einsatzlist.previous();
-		        				System.out.println("Ihr gewinn durch Mehrfache beträgt: " + gewinn);
+		        				System.out.println("Ihr gewinn durch eine Gerade Zahl beträgt: " + gewinn);
 		        				kontostand = gewinn + kontostand;
 	        				}
 	        				else
-	        					System.out.println("Sie haben leider nicht durch Mehrfache gewonnen!");
+	        					System.out.println("Sie haben leider nicht durch eine Gerade Zahl gewonnen!");
 	        				break;
 	        			}
 	        			case(2000):	//Case für ungerade Zahlen
 	        			{
 	        				if(ungeradeAuswahl.contains(zufallsZahl)){
 	        					double gewinn = Einsatzlist.next() + Einsatzlist.previous();
-		        				System.out.println("Ihr gewinn durch Mehrfache beträgt: " + gewinn);
+		        				System.out.println("Ihr gewinn durch eine ungerade Zahl beträgt: " + gewinn);
 		        				kontostand = gewinn + kontostand;
 	        				}
 	        				else
-	        					System.out.println("Sie haben leider nicht durch Mehrfache gewonnen!");
+	        					System.out.println("Sie haben leider nicht durch eine ungerade Zahl gewonnen!");
 	        				break;
 	        			}
 	        			case(998):	//Case für alle rote Zahlen
 	        			{
 	        				if(rotAuswahl.contains(zufallsZahl)){
 	        					double gewinn = Einsatzlist.next() + Einsatzlist.previous();
-		        				System.out.println("Ihr gewinn durch Mehrfache beträgt: " + gewinn);
+		        				System.out.println("Ihr gewinn durch eine rote Zahl beträgt: " + gewinn);
 		        				kontostand = gewinn + kontostand;
 	        				}
 	        				else
-	        					System.out.println("Sie haben leider nicht durch Mehrfache gewonnen!");
+	        					System.out.println("Sie haben leider nicht durch eine rote Zahl gewonnen!");
 	        				break;
 	        			}
 	        			case(999):	//Case für alle schwarzen Zahlen
 	        			{
 	        				if(schwarzAuswahl.contains(zufallsZahl)){
 	        					double gewinn = Einsatzlist.next() + Einsatzlist.previous();
-		        				System.out.println("Ihr gewinn durch Mehrfache beträgt: " + gewinn);
+		        				System.out.println("Ihr gewinn durch eine schwarze Zahl beträgt: " + gewinn);
 		        				kontostand = gewinn + kontostand;
 	        				}
 	        				else
-	        					System.out.println("Sie haben leider nicht durch Mehrfache gewonnen!");
+	        					System.out.println("Sie haben leider nicht durch eine schwarze Zahl gewonnen!");
 	        				break;
 	        			}
     				}//end switch
 	    		}//end else if
 
     			else{
-    				System.out.println("Sie haben leider nicht gewonnen!");
-    				Auswahllist.next();
+    				System.out.println("Sie haben leider nicht durch " + Auswahllist.next() + " gewonnen!");
+
     			}//end if else
 
     		}//end while
@@ -578,14 +577,13 @@ public class Algorithmus{
 
 	}//end method
 
-
 	/**
 	 *
 	 * @return
 	 */
 	public static int zahlenGenerator(){
 
-		double zahl = Math.random()*36;	//zufällige Zahl zwischen 0 und 36
+		double zahl = Math.random()+11;	//zufällige Zahl zwischen 0 und 36
 		int zufallZahl = (int) zahl;	//double zu int umwandeln
 
 		return zufallZahl;
