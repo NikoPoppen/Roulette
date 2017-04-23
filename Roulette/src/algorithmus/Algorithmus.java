@@ -471,7 +471,7 @@ public class Algorithmus{
 		        				kontostand = gewinn + Einsatzlist.previous() +  kontostand;
 	    	    			}
 	        				else
-	        					System.out.println("Sie haben leider nicht 13 bis 24 gewonnen!");
+	        					System.out.println("Sie haben leider nicht durch 13 bis 24 gewonnen!");
 	        				break;
 	        			}
 	        			case(2536):	//Case für 25 bis 36
@@ -482,7 +482,7 @@ public class Algorithmus{
 		        				kontostand = gewinn + Einsatzlist.previous() +  kontostand;
 	        				}
 	        				else
-	        					System.out.println("Sie haben leider nicht 25 bis 36 gewonnen!");
+	        					System.out.println("Sie haben leider nicht durch 25 bis 36 gewonnen!");
 	        				break;
 	        			}
 	        			case(118):	//Case für 1 bis 18
@@ -511,11 +511,11 @@ public class Algorithmus{
 	        			{
 	        				if(geradeAuswahl.contains(zufallsZahl)){
 	        					double gewinn = Einsatzlist.next() + Einsatzlist.previous();
-		        				System.out.println("Ihr gewinn durch eine Gerade Zahl beträgt: " + gewinn);
+		        				System.out.println("Ihr gewinn durch eine gerade Zahl beträgt: " + gewinn);
 		        				kontostand = gewinn + kontostand;
 	        				}
 	        				else
-	        					System.out.println("Sie haben leider nicht durch eine Gerade Zahl gewonnen!");
+	        					System.out.println("Sie haben leider nicht durch eine gerade Zahl gewonnen!");
 	        				break;
 	        			}
 	        			case(2000):	//Case für ungerade Zahlen
@@ -555,7 +555,7 @@ public class Algorithmus{
 	    		}//end else if
 
     			else{
-    				System.out.println("Sie haben leider nicht durch " + Auswahllist.next() + " gewonnen!");
+    				System.out.println("Sie haben leider nicht durch " + Auswahllist.next() +" gewonnen!");
 
     			}//end if else
 
@@ -573,13 +573,14 @@ public class Algorithmus{
 
 	}//end method
 
+
 	/**
 	 *
 	 * @return
 	 */
 	public static int zahlenGenerator(){
 
-		double zahl = Math.random()+11;	//zufällige Zahl zwischen 0 und 36
+		double zahl = Math.random()*36;	//zufällige Zahl zwischen 0 und 36
 		int zufallZahl = (int) zahl;	//double zu int umwandeln
 
 		return zufallZahl;

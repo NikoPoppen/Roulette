@@ -26,10 +26,14 @@ public class ControllerMenu {
 	public static String passwordVar;
 
 	static Algorithmus algo = new Algorithmus();
-	static AnchorPane ControllerMenuAnchorPane = new AnchorPane();
 
+	//
+	static AnchorPane ControllerMenuAnchorPane = new AnchorPane();
 	String kontostandStr;
 	public static Label kontostandLabel = new Label();	//neues label
+
+	//
+	public static AnchorPane ControllerDemoAnchorPane = new AnchorPane();
 
 	@FXML // fx:id="username"
     private TextField username; // Value injected by FXMLLoader
@@ -44,7 +48,7 @@ public class ControllerMenu {
 
     @FXML
     void onDemoClick(ActionEvent event) throws IOException {
-    	AnchorPane ControllerDemoAnchorPane = FXMLLoader.load(getClass().getResource("demo.fxml"));
+    	ControllerDemoAnchorPane = FXMLLoader.load(getClass().getResource("demo.fxml"));
     	Stage stage = new Stage();	//new stage erstellen
     	stage.setScene(new Scene(ControllerDemoAnchorPane));	//"ControllernAnchorPane" zur Scene hinzufügen
 

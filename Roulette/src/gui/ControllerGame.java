@@ -28,6 +28,8 @@ public class ControllerGame {
 	ControllerMenu menu = new ControllerMenu();
 	public static int zähler = 0;
 
+	static AnchorPane ControllerGameAnchorPane = new AnchorPane();
+
 	@FXML
 	public TextArea historie;
 
@@ -514,7 +516,7 @@ public class ControllerGame {
      * @throws IOException
      */
     public void einsatzFenster(ActionEvent event) throws IOException{
-    	AnchorPane ControllerGameAnchorPane = FXMLLoader.load(ControllerGame.class.getResource("einsatz.fxml"));	//"einsatz.fxml" datei laden (befehle die das GUI erstellen)
+    	ControllerGameAnchorPane = FXMLLoader.load(ControllerGame.class.getResource("einsatz.fxml"));	//"einsatz.fxml" datei laden (befehle die das GUI erstellen)
     	Stage stage = new Stage();	//new stage erstellen
     	stage.setScene(new Scene(ControllerGameAnchorPane));	//"ControllernAnchorPane" zur Scene hinzufügen
     	stage.show();	//fenster wird sichtbar gemacht
