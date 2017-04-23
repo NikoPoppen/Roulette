@@ -10,15 +10,20 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
 public class ControllerDemo {
 
 	Algorithmus algo = new Algorithmus();
+	ControllerMenu menu = new ControllerMenu();
+
+	Label demoLabel = new Label();	//neues label
 
 	public static int zahl;
 
@@ -39,7 +44,12 @@ public class ControllerDemo {
     	String zahlStr = anzahlZahlen.getText();
     	zahl = Integer.parseInt(zahlStr);	//Umwandlung von String zu double
 
-    	demo.demoVorgang();
+    	if(zahl > 10000 || zahl <= 0){
+    		refreshfalscheDemoEingabe();
+    		falscheDemoEingabe();
+    	}
+    	else
+    		demo.demoVorgang();
     }
 
     @FXML
@@ -64,4 +74,25 @@ public class ControllerDemo {
     void onSchließenClick(ActionEvent event) {
     	Platform.exit();
     }
+
+    /**
+    *
+    */
+   void falscheDemoEingabe(){
+   		String fehlerEinsatz = "Bitte geben Sie keine Zahl ein, die kleiner oder gleich 0 ist und/oder größer als 10000 ein!";
+   		demoLabel = new Label(fehlerEinsatz);	//neues label
+   		demoLabel.setTranslateY(188);	//label position y kordinate
+   		demoLabel.setTranslateX(16);	//label position x kordinate
+   		demoLabel.setScaleX(1);	//label größe breite
+   		demoLabel.setScaleY(1); //label größe höhe
+   		demoLabel.setTextFill(Color.web("FF0000"));	//label/text farbe
+   		menu.ControllerDemoAnchorPane.getChildren().add((demoLabel));	//ausgbae des labels im AnchorPane "ControllerMenuAnchorPane" -> (game.fxml/Spielfeld)
+   }
+
+   /**
+    *
+    */
+   void refreshfalscheDemoEingabe(){
+   		menu.ControllerDemoAnchorPane.getChildren().remove(demoLabel);
+   }
 }
