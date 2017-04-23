@@ -12,14 +12,15 @@ import java.util.*;
 
 public class Algorithmus{
 
-	static ControllerGame game = new ControllerGame();
-	static ControllerMenu menu = new ControllerMenu();
+	static ControllerGame game = new ControllerGame(); //Erlaubt es funktionen von Anderen Klassen zu benutzen
+	static ControllerMenu menu = new ControllerMenu(); //Erlaubt es funktionen von Anderen Klassen zu benutzen
 
 	public static final double guthaben = 3000;
 	public static double kontostand = guthaben;
 
 	/**
-	 *
+	 * Dies ist die Funktion die alle Abfragen beeinhaltet und gestartet wird wenn man
+	 * "Start" drückt.
 	 */
 	public static void rechnungsVorgang(){
 
@@ -101,17 +102,12 @@ public class Algorithmus{
     	ListIterator<Integer> Auswahllist = game.Auswahlarray.listIterator();
     	ListIterator<Double> Einsatzlist = game.Einsatzarray.listIterator();
 
-
-
-
-		System.out.println("Es wird gerollt...");
-
 		//Zufällige Zahl wird geholt
     	int zufallsZahl = zahlenGenerator();
 		System.out.println("zufällige Zahl: " + zufallsZahl);	//Text Ausgabe zur Überprüfung (zufallZahl)
 
 
-    	for(int i = 0;i<game.zähler;i++){
+    	for(int i = 0;i<game.zähler;i++){					// for Schleife die solange durchläuft bis alle Werte überprüft wurden
 
     		while(Auswahllist.hasNext()){					//Solange ArrayListe noch einen nächsten Wert hat
 
