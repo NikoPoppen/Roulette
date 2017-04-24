@@ -5,6 +5,8 @@
 package gui;
 
 import java.io.IOException;
+import java.sql.ResultSet;
+
 import algorithmus.Algorithmus;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
@@ -19,9 +21,11 @@ import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
+import datenbank.*;
 
 public class ControllerMenu {
 
+	
 	public static String usernameVar;	//public String Variabel für den eingegebenen Benutzernamen
 	public static String passwordVar;	//public String Variabel für das eingegebene Passwort
 
@@ -100,11 +104,23 @@ public class ControllerMenu {
     //Button "Ok"
 	@FXML
     void onLoginClick(ActionEvent event) {
-    	usernameVar = username.getText();	//get Text und ist gleich der String Variabel (Benutzername)
-    	passwordVar = password.getText();	//get Text und ist gleich der String Variabel (Passwort)
+		
 
+	
+		usernameVar = username.getText();	//get Text und ist gleich der String Variabel (Benutzername)
+		
+    	passwordVar = password.getText();	//get Text und ist gleich der String Variabel (Passwort)
     	//Benutzername & Passwort wird in der Console ausgegeben
-    	System.out.println("Login\n" + "Benutzername: " + usernameVar + "\nPasswort: " + passwordVar);
+		
+    	//Werte an Klasse Datenbank weitergeben
+    	DatenbankVerbindung internetObjekt = new DatenbankVerbindung();
+		internetObjekt.verbinden(usernameVar, passwordVar);
+    	
+		//Benutzername & Passwort wird in der Console ausgegeben
+		System.out.println("Login\n" + "Benutzername: " + usernameVar + "\nPasswort: " + passwordVar);
+    	
+    	
+    	
     }
 
 	//Hyperlink "Registrieren"
