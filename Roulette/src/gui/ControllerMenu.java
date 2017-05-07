@@ -110,15 +110,24 @@ public class ControllerMenu {
 		usernameVar = username.getText();	//get Text und ist gleich der String Variabel (Benutzername)
 		
     	passwordVar = password.getText();	//get Text und ist gleich der String Variabel (Passwort)
-    	//Benutzername & Passwort wird in der Console ausgegeben
+
 		
     	//Werte an Klasse Datenbank weitergeben
-    	DatenbankVerbindung internetObjekt = new DatenbankVerbindung();
-		internetObjekt.verbinden(usernameVar, passwordVar);
+    	DatenbankVerbindung loginObjekt = new DatenbankVerbindung();
+    	int login = Integer.parseInt(loginObjekt.verbinden(usernameVar, passwordVar)); 
     	
-		//Benutzername & Passwort wird in der Console ausgegeben
-		System.out.println("Login\n" + "Benutzername: " + usernameVar + "\nPasswort: " + passwordVar);
+    	if(login==0){
     	
+    	System.out.println("Login fehlgeschlagen");
+    	usernameVar = null;
+    	passwordVar = null;
+    	
+    	} else{
+    	
+    	//Benutzername & Passwort wird in der Console ausgegeben
+		System.out.println("Login erfolgreich \n" + "Benutzername: " + usernameVar + "\nPasswort: " + passwordVar);
+    	
+    	}
     	
     	
     }

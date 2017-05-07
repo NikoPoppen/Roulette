@@ -7,6 +7,8 @@ package algorithmus;
 import gui.*;
 
 import java.util.*;
+import datenbank.*;
+
 
 public class Algorithmus{
 
@@ -567,6 +569,10 @@ public class Algorithmus{
     		menu.refreshKontostand();	//Methodenaufruf
     		menu.ausgabeKontostand(0);	//Methodenaufruf (uebergibt 0, da sich der Kontostand nicht veraendern soll, sondern nur Aufgrund des Gewinns bzw. Niederlage aktualisieren soll)
 
+    		//Kontostand uebergabe an Datenbank
+    		DatenbankVerbindung dbkontostandobjkt = new DatenbankVerbindung();
+    		dbkontostandobjkt.dbkontostand(menu.usernameVar, kontostand);
+    		
     		System.out.println("\t\t---------------Algorithmus Ende-------------------");
 
 	}//end method
