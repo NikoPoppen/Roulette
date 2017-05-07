@@ -216,3 +216,8 @@ Start: 20:15Uhr Ende 00:25Uhr
 -alles (was ich programmiert hab (außer die fxml dateien)) kommentiert
 
 ---
+
+07.05.2017
+
+Zeit: 2h
+-in der TextArea im Spielfeld wird jetzt angezeigt auf welches Feld man gesetzt hat, nachdem man den Einsatz bestädigt hat
