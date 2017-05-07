@@ -30,6 +30,10 @@ public class ControllerGame {
 
 	static AnchorPane ControllerGameAnchorPane = new AnchorPane();	//neues Objket/AnchorPane wird angelegt
 
+	//public Variabeln für die klassenübergreifende Kontrollausgabe im TextArea
+	public static int feldAusgabe_zahl = -1;	//-1 für die if Abfrage in der "ControllerEinsatz" Klasse
+	public static String feldAusgabe_feld;
+
 	@FXML
 	public TextArea historie;	//TextArea
 
@@ -41,6 +45,7 @@ public class ControllerGame {
 
     	Auswahlarray.add(zero); //Fügt der Arraylist den angegebenen Wert hinzu
 		einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
+		zahlenÜbergabe(zero);	//uebergibt den Feldwert in eine Funtion
     }
 
 	//Button "1 Rot"
@@ -51,6 +56,7 @@ public class ControllerGame {
 
     	Auswahlarray.add(one); 	//Fügt der Arraylist den angegebenen Wert hinzu
     	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
+    	zahlenÜbergabe(one);	//uebergibt den Feldwert in eine Funtion
     }
 
 	//Button "2 Schwarz"
@@ -61,6 +67,7 @@ public class ControllerGame {
 
     	Auswahlarray.add(two); 	//Fügt der Arraylist den angegebenen Wert hinzu
     	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
+    	zahlenÜbergabe(two);	//uebergibt den Feldwert in eine Funtion
     }
 
 	//Button "3 Rot"
@@ -71,6 +78,7 @@ public class ControllerGame {
 
     	Auswahlarray.add(three); //Fügt der Arraylist den angegebenen Wert hinzu
     	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
+    	zahlenÜbergabe(three);	//uebergibt den Feldwert in eine Funtion
     }
 
 	//Button "4 Schwarz"
@@ -81,6 +89,7 @@ public class ControllerGame {
 
     	Auswahlarray.add(four); //Fügt der Arraylist den angegebenen Wert hinzu
     	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
+    	zahlenÜbergabe(four);	//uebergibt den Feldwert in eine Funtion
     }
 
 	//Button "5 Rot"
@@ -91,6 +100,7 @@ public class ControllerGame {
 
     	Auswahlarray.add(five); //Fügt der Arraylist den angegebenen Wert hinzu
     	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
+    	zahlenÜbergabe(five);	//uebergibt den Feldwert in eine Funtion
     }
 
 	//Button "6 Schwarz"
@@ -101,6 +111,7 @@ public class ControllerGame {
 
     	Auswahlarray.add(six);	//Fügt der Arraylist den angegebenen Wert hinzu
     	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
+    	zahlenÜbergabe(six);	//uebergibt den Feldwert in eine Funtion
     }
 
 	//Button "7 Rot"
@@ -111,6 +122,7 @@ public class ControllerGame {
 
     	Auswahlarray.add(seven);//Fügt der Arraylist den angegebenen Wert hinzu
     	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
+    	zahlenÜbergabe(seven);	//uebergibt den Feldwert in eine Funtion
     }
 
 	//Button "8 Schwarz"
@@ -121,6 +133,7 @@ public class ControllerGame {
 
     	Auswahlarray.add(eight);//Fügt der Arraylist den angegebenen Wert hinzu
     	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
+    	zahlenÜbergabe(eight);	//uebergibt den Feldwert in eine Funtion
     }
 
     //Button "9 Rot"
@@ -131,6 +144,7 @@ public class ControllerGame {
 
     	Auswahlarray.add(nine); //Fügt der Arraylist den angegebenen Wert hinzu
     	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
+    	zahlenÜbergabe(nine);	//uebergibt den Feldwert in eine Funtion
     }
 
     //Button "10 Schwarz"
@@ -141,6 +155,7 @@ public class ControllerGame {
 
     	Auswahlarray.add(ten);	//Fügt der Arraylist den angegebenen Wert hinzu
     	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
+    	zahlenÜbergabe(ten);	//uebergibt den Feldwert in eine Funtion
     }
 
 	//Button "11 Schwarz"
@@ -151,6 +166,7 @@ public class ControllerGame {
 
     	Auswahlarray.add(eleven);//Fügt der Arraylist den angegebenen Wert hinzu
     	einsatzFenster(event);	 //Funktion aufrufen (einsatz fenster)
+    	zahlenÜbergabe(eleven);	//uebergibt den Feldwert in eine Funtion
     }
 
     //Button "12 Rot"
@@ -161,6 +177,7 @@ public class ControllerGame {
 
     	Auswahlarray.add(twelve);//Fügt der Arraylist den angegebenen Wert hinzu
     	einsatzFenster(event);	 //Funktion aufrufen (einsatz fenster)
+    	zahlenÜbergabe(twelve);	//uebergibt den Feldwert in eine Funtion
     }
 
     //Button "13 Schwarz"
@@ -171,6 +188,7 @@ public class ControllerGame {
 
     	Auswahlarray.add(thirteen);//Fügt der Arraylist den angegebenen Wert hinzu
     	einsatzFenster(event);	   //Funktion aufrufen (einsatz fenster)
+    	zahlenÜbergabe(thirteen);	//uebergibt den Feldwert in eine Funtion
     }
 
     //Button "14 Rot"
@@ -181,6 +199,7 @@ public class ControllerGame {
 
     	Auswahlarray.add(fourteen);//Fügt der Arraylist den angegebenen Wert hinzu
     	einsatzFenster(event);	   //Funktion aufrufen (einsatz fenster)
+    	zahlenÜbergabe(fourteen);	//uebergibt den Feldwert in eine Funtion
     }
 
     //Button "15 Schwarz"
@@ -191,6 +210,7 @@ public class ControllerGame {
 
     	Auswahlarray.add(fifteen);//Fügt der Arraylist den angegebenen Wert hinzu
     	einsatzFenster(event);	  //Funktion aufrufen (einsatz fenster)
+    	zahlenÜbergabe(fifteen);	//uebergibt den Feldwert in eine Funtion
     }
 
     //Button "16 Rot"
@@ -201,6 +221,7 @@ public class ControllerGame {
 
     	Auswahlarray.add(sixteen);//Fügt der Arraylist den angegebenen Wert hinzu
     	einsatzFenster(event);	  //Funktion aufrufen (einsatz fenster)
+    	zahlenÜbergabe(sixteen);	//uebergibt den Feldwert in eine Funtion
     }
 
     //Button "17 Schwarz"
@@ -211,6 +232,7 @@ public class ControllerGame {
 
     	Auswahlarray.add(seventeen);//Fügt der Arraylist den angegebenen Wert hinzu
     	einsatzFenster(event);	    //Funktion aufrufen (einsatz fenster)
+    	zahlenÜbergabe(seventeen);	//uebergibt den Feldwert in eine Funtion
     }
 
     //Button "18 Rot"
@@ -221,6 +243,7 @@ public class ControllerGame {
 
     	Auswahlarray.add(eighteen);//Fügt der Arraylist den angegebenen Wert hinzu
     	einsatzFenster(event);	   //Funktion aufrufen (einsatz fenster)
+    	zahlenÜbergabe(eighteen);	//uebergibt den Feldwert in eine Funtion
     }
 
     //Button "19 Rot"
@@ -231,6 +254,7 @@ public class ControllerGame {
 
     	Auswahlarray.add(nineteen);//Fügt der Arraylist den angegebenen Wert hinzu
     	einsatzFenster(event);	   //Funktion aufrufen (einsatz fenster)
+    	zahlenÜbergabe(nineteen);	//uebergibt den Feldwert in eine Funtion
     }
 
     //Button "20 Schwarz"
@@ -241,6 +265,7 @@ public class ControllerGame {
 
     	Auswahlarray.add(twenty);//Fügt der Arraylist den angegebenen Wert hinzu
     	einsatzFenster(event);	 //Funktion aufrufen (einsatz fenster)
+    	zahlenÜbergabe(twenty);	//uebergibt den Feldwert in eine Funtion
     }
 
     //Button "21 Rot"
@@ -251,6 +276,7 @@ public class ControllerGame {
 
     	Auswahlarray.add(twentyone);//Fügt der Arraylist den angegebenen Wert hinzu
     	einsatzFenster(event);	    //Funktion aufrufen (einsatz fenster)
+    	zahlenÜbergabe(twentyone);	//uebergibt den Feldwert in eine Funtion
     }
 
     //Button "22 Schwarz"
@@ -261,6 +287,7 @@ public class ControllerGame {
 
     	Auswahlarray.add(twentytwo);//Fügt der Arraylist den angegebenen Wert hinzu
     	einsatzFenster(event);	    //Funktion aufrufen (einsatz fenster)
+    	zahlenÜbergabe(twentytwo);	//uebergibt den Feldwert in eine Funtion
     }
 
     //Button "23 Rot"
@@ -271,6 +298,7 @@ public class ControllerGame {
 
     	Auswahlarray.add(twentythree);//Fügt der Arraylist den angegebenen Wert hinzu
     	einsatzFenster(event);	      //Funktion aufrufen (einsatz fenster)
+    	zahlenÜbergabe(twentythree);	//uebergibt den Feldwert in eine Funtion
     }
 
     //Button "24 Schwarz"
@@ -281,6 +309,7 @@ public class ControllerGame {
 
     	Auswahlarray.add(twentyfour);//Fügt der Arraylist den angegebenen Wert hinzu
     	einsatzFenster(event);	     //Funktion aufrufen (einsatz fenster)
+    	zahlenÜbergabe(twentyfour);	//uebergibt den Feldwert in eine Funtion
     }
 
     //Button "25 Rot"
@@ -291,6 +320,7 @@ public class ControllerGame {
 
     	Auswahlarray.add(twentyfive);//Fügt der Arraylist den angegebenen Wert hinzu
     	einsatzFenster(event);		 //Funktion aufrufen (einsatz fenster)
+    	zahlenÜbergabe(twentyfive);	//uebergibt den Feldwert in eine Funtion
     }
 
     //Button "26 Schwarz"
@@ -301,6 +331,7 @@ public class ControllerGame {
 
     	Auswahlarray.add(twentysix);//Fügt der Arraylist den angegebenen Wert hinzu
     	einsatzFenster(event);		//Funktion aufrufen (einsatz fenster)
+    	zahlenÜbergabe(twentysix);	//uebergibt den Feldwert in eine Funtion
     }
 
     //Button "27 Rot"
@@ -311,6 +342,7 @@ public class ControllerGame {
 
     	Auswahlarray.add(twentyseven);//Fügt der Arraylist den angegebenen Wert hinzu
     	einsatzFenster(event);		  //Funktion aufrufen (einsatz fenster)
+    	zahlenÜbergabe(twentyseven);	//uebergibt den Feldwert in eine Funtion
     }
 
     //Button "28 Schwarz"
@@ -321,6 +353,7 @@ public class ControllerGame {
 
     	Auswahlarray.add(twentyeight);//Fügt der Arraylist den angegebenen Wert hinzu
     	einsatzFenster(event);	      //Funktion aufrufen (einsatz fenster)
+    	zahlenÜbergabe(twentyeight);	//uebergibt den Feldwert in eine Funtion
     }
 
     //Button "29 Schwarz"
@@ -331,6 +364,7 @@ public class ControllerGame {
 
     	Auswahlarray.add(twentynine);//Fügt der Arraylist den angegebenen Wert hinzu
     	einsatzFenster(event);		 //Funktion aufrufen (einsatz fenster)
+    	zahlenÜbergabe(twentynine);	//uebergibt den Feldwert in eine Funtion
     }
 
     //Button "30 Rot"
@@ -341,6 +375,7 @@ public class ControllerGame {
 
     	Auswahlarray.add(thirty);//Fügt der Arraylist den angegebenen Wert hinzu
     	einsatzFenster(event);	 //Funktion aufrufen (einsatz fenster)
+    	zahlenÜbergabe(thirty);	//uebergibt den Feldwert in eine Funtion
     }
 
     //Button "31 Schwarz"
@@ -351,6 +386,7 @@ public class ControllerGame {
 
     	Auswahlarray.add(thirtyone);//Fügt der Arraylist den angegebenen Wert hinzu
     	einsatzFenster(event);		//Funktion aufrufen (einsatz fenster)
+    	zahlenÜbergabe(thirtyone);	//uebergibt den Feldwert in eine Funtion
     }
 
     //Button "32 Rot"
@@ -361,6 +397,7 @@ public class ControllerGame {
 
     	Auswahlarray.add(thirtytwo);//Fügt der Arraylist den angegebenen Wert hinzu
     	einsatzFenster(event);		//Funktion aufrufen (einsatz fenster)
+    	zahlenÜbergabe(thirtytwo);	//uebergibt den Feldwert in eine Funtion
     }
 
     //Button "33 Schwarz"
@@ -371,6 +408,7 @@ public class ControllerGame {
 
     	Auswahlarray.add(thirtythree);//Fügt der Arraylist den angegebenen Wert hinzu
     	einsatzFenster(event);		  //Funktion aufrufen (einsatz fenster)
+    	zahlenÜbergabe(thirtythree);	//uebergibt den Feldwert in eine Funtion
     }
 
     //Button "34 Rot"
@@ -381,6 +419,7 @@ public class ControllerGame {
 
     	Auswahlarray.add(thirtyfour);//Fügt der Arraylist den angegebenen Wert hinzu
     	einsatzFenster(event);	  	 //Funktion aufrufen (einsatz fenster)
+    	zahlenÜbergabe(thirtyfour);	//uebergibt den Feldwert in eine Funtion
     }
 
     //Button "35 Schwarz"
@@ -391,6 +430,7 @@ public class ControllerGame {
 
     	Auswahlarray.add(thirtyfive);//Fügt der Arraylist den angegebenen Wert hinzu
     	einsatzFenster(event);		 //Funktion aufrufen (einsatz fenster)
+    	zahlenÜbergabe(thirtyfive);	//uebergibt den Feldwert in eine Funtion
     }
 
     //Button "36 Rot"
@@ -401,6 +441,7 @@ public class ControllerGame {
 
     	Auswahlarray.add(thirtysix);//Fügt der Arraylist den angegebenen Wert hinzu
     	einsatzFenster(event);		//Funktion aufrufen (einsatz fenster)
+    	zahlenÜbergabe(thirtysix);	//uebergibt den Feldwert in eine Funtion
     }
 
     //Button "1st"
@@ -411,6 +452,9 @@ public class ControllerGame {
 
     	Auswahlarray.add(first);//Fügt der Arraylist den angegebenen Wert hinzu
     	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
+
+    	String feldStr = "1st";
+    	feldÜbergabe(feldStr);	//uebergibt die Zeichenkette dieses Feldes in die Funktion "feldÜbergabe"
     }
 
     //Button "2nd"
@@ -421,6 +465,9 @@ public class ControllerGame {
 
     	Auswahlarray.add(second);//Fügt der Arraylist den angegebenen Wert hinzu
     	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
+
+    	String feldStr = "2nd";
+    	feldÜbergabe(feldStr);	//uebergibt die Zeichenkette dieses Feldes in die Funktion "feldÜbergabe"
     }
 
     //Button "3rd"
@@ -431,6 +478,9 @@ public class ControllerGame {
 
     	Auswahlarray.add(third);//Fügt der Arraylist den angegebenen Wert hinzu
     	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
+
+    	String feldStr = "1st";
+    	feldÜbergabe(feldStr);	//uebergibt die Zeichenkette dieses Feldes in die Funktion "feldÜbergabe"
     }
 
     //Button "1-12"
@@ -441,6 +491,9 @@ public class ControllerGame {
 
     	Auswahlarray.add(onetotwelve);//Fügt der Arraylist den angegebenen Wert hinzu
     	einsatzFenster(event);		  //Funktion aufrufen (einsatz fenster)
+
+    	String feldStr = "1 - 12";
+    	feldÜbergabe(feldStr);	//uebergibt die Zeichenkette dieses Feldes in die Funktion "feldÜbergabe"
     }
 
     //Button "13-24
@@ -451,6 +504,9 @@ public class ControllerGame {
 
     	Auswahlarray.add(thirteentotwentyfour);//Fügt der Arraylist den angegebenen Wert hinzu
     	einsatzFenster(event);				   //Funktion aufrufen (einsatz fenster)
+
+    	String feldStr = "13 - 24";
+    	feldÜbergabe(feldStr);	//uebergibt die Zeichenkette dieses Feldes in die Funktion "feldÜbergabe"
     }
 
     //Button "25-36
@@ -461,6 +517,9 @@ public class ControllerGame {
 
     	Auswahlarray.add(twentyfivetothirtysix);//Fügt der Arraylist den angegebenen Wert hinzu
     	einsatzFenster(event);					//Funktion aufrufen (einsatz fenster)
+
+    	String feldStr = "25-36";
+    	feldÜbergabe(feldStr);	//uebergibt die Zeichenkette dieses Feldes in die Funktion "feldÜbergabe"
     }
 
     //Button 1-18
@@ -471,6 +530,9 @@ public class ControllerGame {
 
     	Auswahlarray.add(onetoeighteen);//Fügt der Arraylist den angegebenen Wert hinzu
     	einsatzFenster(event);			//Funktion aufrufen (einsatz fenster)
+
+    	String feldStr = "1 - 18";
+    	feldÜbergabe(feldStr);	//uebergibt die Zeichenkette dieses Feldes in die Funktion "feldÜbergabe"
     }
 
     //Button "19-36"
@@ -481,6 +543,9 @@ public class ControllerGame {
 
     	Auswahlarray.add(nineteentothirtysix);//Fügt der Arraylist den angegebenen Wert hinzu
     	einsatzFenster(event);				  //Funktion aufrufen (einsatz fenster)
+
+    	String feldStr = "19 - 36";
+    	feldÜbergabe(feldStr);	//uebergibt die Zeichenkette dieses Feldes in die Funktion "feldÜbergabe"
     }
 
     //Button "Gerade"
@@ -491,6 +556,9 @@ public class ControllerGame {
 
     	Auswahlarray.add(gerade);//Fügt der Arraylist den angegebenen Wert hinzu
     	einsatzFenster(event);	 //Funktion aufrufen (einsatz fenster)
+
+    	String feldStr = "alle GERADEN Zahlen";
+    	feldÜbergabe(feldStr);	//uebergibt die Zeichenkette dieses Feldes in die Funktion "feldÜbergabe"
     }
 
     //Button "Ungerade"
@@ -501,6 +569,9 @@ public class ControllerGame {
 
       	Auswahlarray.add(ungerade);//Fügt der Arraylist den angegebenen Wert hinzu
     	einsatzFenster(event);	   //Funktion aufrufen (einsatz fenster)
+
+    	String feldStr = "alle UNGERADEN Zahlen";
+    	feldÜbergabe(feldStr);	//uebergibt die Zeichenkette dieses Feldes in die Funktion "feldÜbergabe"
     }
 
     //Button "Rot"
@@ -511,6 +582,9 @@ public class ControllerGame {
 
       	Auswahlarray.add(red);	//Fügt der Arraylist den angegebenen Wert hinzu
     	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
+
+    	String feldStr = "alle ROTEN Zahlen";
+    	feldÜbergabe(feldStr);	//uebergibt die Zeichenkette dieses Feldes in die Funktion "feldÜbergabe"
     }
 
     //Button "Schwarz"
@@ -521,6 +595,9 @@ public class ControllerGame {
 
       	Auswahlarray.add(black);//Fügt der Arraylist den angegebenen Wert hinzu
     	einsatzFenster(event);	//Funktion aufrufen (einsatz fenster)
+
+    	String feldStr = "alle SCHWARZEN Zahlen";
+    	feldÜbergabe(feldStr);	//uebergibt die Zeichenkette dieses Feldes in die Funktion "feldÜbergabe"
     }
 
     //Button "Schliessen"
@@ -579,6 +656,33 @@ public class ControllerGame {
 
 		stage.getIcons().add(new Image(getClass().getResourceAsStream("BBS_Logo_transparentKopie.png")));	//Fenstericon
     }//end method einsatzFenster
+
+
+    /**
+     * aktiviert, dass alle System.out.print(ln) Befehle in der TextArea ausgegeben werden
+     * übergibt den Wert vom Parameter "zahl" einer public static Integer Variabel
+     * (damit nach dem Setzen in der TextArea angezeigt wird worauf man gesetzt hat)
+     *
+     * @param zahl
+     */
+    public void zahlenÜbergabe(int zahl){
+    	ParagraphToTextArea.create(historie);	//Klasse "ParagraphToTextArea" & die Funktion "create" wird aufgerufen, zuzaetzlich wird die TextArea "historie" mit uebergeben
+
+    	feldAusgabe_zahl = zahl;
+    }
+
+    /**
+     * aktiviert, dass alle System.out.print(ln) Befehle in der TextArea ausgegeben werden
+     * übergibt den Wert vom Parameter "str" einer public static String Variabel
+     * (damit nach dem Setzen in der TextArea angezeigt wird worauf man gesetzt hat)
+     *
+     * @param str
+     */
+    public void feldÜbergabe(String str){
+    	ParagraphToTextArea.create(historie);	//Klasse "ParagraphToTextArea" & die Funktion "create" wird aufgerufen, zuzaetzlich wird die TextArea "historie" mit uebergeben
+
+    	feldAusgabe_feld = str;
+    }
 
 }
 

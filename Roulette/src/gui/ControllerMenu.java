@@ -25,7 +25,7 @@ import datenbank.*;
 
 public class ControllerMenu {
 
-	
+
 	public static String usernameVar;	//public String Variabel für den eingegebenen Benutzernamen
 	public static String passwordVar;	//public String Variabel für das eingegebene Passwort
 
@@ -104,32 +104,23 @@ public class ControllerMenu {
     //Button "Ok"
 	@FXML
     void onLoginClick(ActionEvent event) {
-		
-
-	
 		usernameVar = username.getText();	//get Text und ist gleich der String Variabel (Benutzername)
-		
     	passwordVar = password.getText();	//get Text und ist gleich der String Variabel (Passwort)
 
-		
     	//Werte an Klasse Datenbank weitergeben
     	DatenbankVerbindung loginObjekt = new DatenbankVerbindung();
-    	int login = Integer.parseInt(loginObjekt.verbinden(usernameVar, passwordVar)); 
-    	
+    	int login = Integer.parseInt(loginObjekt.verbinden(usernameVar, passwordVar));
+
     	if(login==0){
-    	
     	System.out.println("Login fehlgeschlagen");
     	usernameVar = null;
     	passwordVar = null;
-    	
-    	} else{
-    	
+    	}
+    	else{
     	//Benutzername & Passwort wird in der Console ausgegeben
 		System.out.println("Login erfolgreich \n" + "Benutzername: " + usernameVar + "\nPasswort: " + passwordVar);
-    	
     	}
-    	
-    	
+
     }
 
 	//Hyperlink "Registrieren"
@@ -203,8 +194,6 @@ public class ControllerMenu {
 		kontostandLabel.setPrefWidth(100);	//maximale breite des labels
 		kontostandLabel.setWrapText(false);	//wenn die maximale breite erreicht ist, bei false: text abhacken und "..." hinter setzen & bei true: text im nächsten absatz weiter führen
 		ControllerMenuAnchorPane.getChildren().add(kontostandLabel);	//ausgbae des labels im AnchorPane "ControllerMenuAnchorPane" -> (game.fxml/Spielfeld)
-
-		System.out.println("Kontostand: " + algo.kontostand);
     }
 
     /**

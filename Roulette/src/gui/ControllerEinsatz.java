@@ -67,7 +67,17 @@ public class ControllerEinsatz {
             menu.ausgabeKontostand(einsatzZahl);	//Methodenaufruf aus der Klasse "ControllerMenu" und "einsatzZahl" wird mit übergeben
         }
 
-        return einsatzZahl;	//return Wert. einsatzZAhl ist der eingegebene Einsatz und wird zurückgegeben
+
+       if(game.feldAusgabe_zahl != -1){	//wenn "feldAusgabe_zahl" nicht -1 ist
+    	   System.out.println("Gesetzte Zahl: " + game.feldAusgabe_zahl + " mit dem Einsatz von " + einsatzZahl + " €");	//gibt aus auf welche Zahl man gesetzt hat, nachdem man den Einsatz bestädigt hat
+    	   game.feldAusgabe_zahl = -1;	//setzt "feldAusgabe_zahl" nach der Ausgabe wieder auf -1, damit wenn auf ein Feld gesetzt wird nicht nocheinmal die Ausgabe für die Zahl ausgeführt wird
+       }
+       else if(game.feldAusgabe_feld != null){	//wenn die Zeichenkette von "feldAusgabe_feld" nicht leer ist
+    	   System.out.println("Gesetztes Feld: " + game.feldAusgabe_feld + " mit dem Einsatz von " + einsatzZahl + " €");	//gibt aus auf welches Feld man gesetzt hat, nachdem man den Einsatz bestädigt hat
+    	   game.feldAusgabe_feld = null; //leert die Zeichenkette "feldAusgabe_feld" wieder, damit wenn hiernach wieder auf eine Zahl gesetzt wird, nicht nocheinmal diese Ausgabe durchgeführt wird
+       }
+
+       return einsatzZahl;	//return Wert. einsatzZAhl ist der eingegebene Einsatz und wird zurückgegeben
     }
 
     /**

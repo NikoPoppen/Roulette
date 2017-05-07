@@ -572,7 +572,7 @@ public class Algorithmus{
     		//Kontostand uebergabe an Datenbank
     		DatenbankVerbindung dbkontostandobjkt = new DatenbankVerbindung();
     		dbkontostandobjkt.dbkontostand(menu.usernameVar, kontostand);
-    		
+
     		System.out.println("\t\t---------------Algorithmus Ende-------------------");
 
 	}//end method
