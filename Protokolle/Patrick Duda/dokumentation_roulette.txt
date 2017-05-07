@@ -221,3 +221,5 @@ Start: 20:15Uhr Ende 00:25Uhr
 
 Zeit: 2h
 -in der TextArea im Spielfeld wird jetzt angezeigt auf welches Feld man gesetzt hat, nachdem man den Einsatz bestädigt hat
+
+---
