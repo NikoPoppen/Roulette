@@ -49,25 +49,28 @@ public class ControllerDemo {
     	String zahlStr = anzahlZahlen.getText();	//eingegebener Text wird einer String Variabel zugewiesen
 
     	//wenn Buchstaben oder Sonderzeichen im eingegebenen Text
-    	if(zahlStr.matches("[A-Za-z]+") ||
-    			zahlStr.matches("[\\\\!\"#$%&()*+,/:;<=>?@\\[\\]^_{|}~]+") ||
-    			zahlStr.matches("[A-Za-z]+" + "[\\\\!\"#$%&()*+,/:;<=>?@\\[\\]^_{|}~]+") ||
-    			zahlStr.matches("[A-Za-z]+" + "[\\\\!\"#$%&()*+,/:;<=>?@\\[\\]^_{|}~]+" + "[0-9]+"))
-    	{
-//    		System.out.println("Fehler");
-    		zahl = 0;
+    	if(zahlStr.matches("[0-9]+")){
+    		try{
+    			zahl = Integer.parseInt(zahlStr);	//Umwandlung von String zu double
+    		}
+    		catch(Exception e){
+    			refreshfalscheDemoEingabe();	//Methodenaufruf
+    			falscheDemoEingabe();	//Methodenaufruf
+    		}
+
+    		//wenn eingegebene Zahl größer als 10000 oder kleiner oder gleich 0 ist
+        	if(zahl > 10000 || zahl <= 0){
+        		refreshfalscheDemoEingabe();	//Methodenaufruf
+        		falscheDemoEingabe();	//Methodenaufruf
+        	}
+        	else
+        		demo.demoVorgang();	//Methodenaufruf aus der Klasse "Demo"
     	}
-    	else
-    		zahl = Integer.parseInt(zahlStr);	//Umwandlung von String zu double
-
-
-    	//wenn eingegebene Zahl größer als 10000 oder kleiner oder gleich 0 ist
-    	if(zahl > 10000 || zahl <= 0){
+    	else{
     		refreshfalscheDemoEingabe();	//Methodenaufruf
-    		falscheDemoEingabe();	//Methodenaufruf
+			falscheDemoEingabe();	//Methodenaufruf
     	}
-    	else
-    		demo.demoVorgang();	//Methodenaufruf aus der Klasse "Demo"
+
     }
 
     //Button "Hauptmenu"

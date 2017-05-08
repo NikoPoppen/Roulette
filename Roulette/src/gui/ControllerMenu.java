@@ -30,6 +30,7 @@ public class ControllerMenu {
 	public static String passwordVar;	//public String Variabel für das eingegebene Passwort
 
 	static Algorithmus algo = new Algorithmus();
+	static Main main = new Main();
 
 	//KontostandAusgabe
 	static AnchorPane ControllerMenuAnchorPane = new AnchorPane();	//neues Objket/AnchorPane wird angelegt
@@ -38,6 +39,9 @@ public class ControllerMenu {
 
 	//FehlerDemoAusgabe
 	public static AnchorPane ControllerDemoAnchorPane = new AnchorPane();
+
+	//Registreirungsüberprüfungsasugaben
+	public static Label registrierungsLabel = new Label();
 
 	@FXML
     private TextField username;	//TextField
@@ -112,13 +116,19 @@ public class ControllerMenu {
     	int login = Integer.parseInt(loginObjekt.verbinden(usernameVar, passwordVar));
 
     	if(login==0){
-    	System.out.println("Login fehlgeschlagen");
-    	usernameVar = null;
-    	passwordVar = null;
+	    	System.out.println("Login fehlgeschlagen");
+	    	usernameVar = null;
+	    	passwordVar = null;
+
+//    		main.refreshAnmeldeLabel();	//löscht das Label zuerst, damit es nicht zu Überschneidungen kommt, falls das Label schon angezeigt wird
+//			main.anmeldungFehlgeschlagen();	//Methodenaufruf aus der "Main" Klasse für die fehlgeschlagende Anmeldung
     	}
     	else{
-    	//Benutzername & Passwort wird in der Console ausgegeben
-		System.out.println("Login erfolgreich \n" + "Benutzername: " + usernameVar + "\nPasswort: " + passwordVar);
+	    	//Benutzername & Passwort wird in der Console ausgegeben
+			System.out.println("Login erfolgreich \n" + "Benutzername: " + usernameVar + "\nPasswort: " + passwordVar);
+
+//			main.refreshAnmeldeLabel();	//löscht das Label zuerst, damit es nicht zu Überschneidungen kommt, falls das Label schon angezeigt wird
+//			main.anmeldungErfolgreich();	//Methodenaufruf aus der "Main" Klasse für die erfolgreiche Anmeldung
     	}
 
     }
@@ -126,7 +136,7 @@ public class ControllerMenu {
 	//Hyperlink "Registrieren"
     @FXML
     void onRegistrierenClick(ActionEvent event) throws IOException {
-    	AnchorPane ControllerMenuAnchorPane = FXMLLoader.load(ControllerMenu.class.getResource("registrierung.fxml"));	//"registrierung.fxml" datei laden (Registrierungs-Fenster)
+    	ControllerMenuAnchorPane = FXMLLoader.load(ControllerMenu.class.getResource("registrierung.fxml"));	//"registrierung.fxml" datei laden (Registrierungs-Fenster)
     	Stage stage = new Stage();	//new stage erstellen
     	stage.setScene(new Scene(ControllerMenuAnchorPane));	//"ControllerMenuAnchorPane" zur Scene hinzufuegen
     	stage.show();	//fenster wird sichtbar gemacht
@@ -135,7 +145,7 @@ public class ControllerMenu {
 
 		// hoehe und breite der Stage festlegen
 		stage.setWidth(240);
-		stage.setHeight(260);
+		stage.setHeight(285);
 
 		stage.getIcons().add(new Image(getClass().getResourceAsStream("BBS_Logo_transparentKopie.png")));	//Fenstericon
     }
@@ -202,6 +212,46 @@ public class ControllerMenu {
      */
     public static void refreshKontostand(){
     	ControllerMenuAnchorPane.getChildren().remove(kontostandLabel);
+    }
+
+    /**
+	 * Weißt einem Label eine initialisierte String Variabel zu
+     * Label= Ein Text bzw. Zeichenkette
+     * Gibt bei einer erfolgreichen Registrierung aus, dass die Registrierung erfolgreich war
+	 */
+	public static void registrierungErfolgreich(){
+		String str = "Die Registrierung war erfolgreich!";	//String Variabel initialisieren
+		registrierungsLabel = new Label(str);	//label wird der String zugewiesen
+		registrierungsLabel.setTranslateY(230);	//label position y kordinate
+		registrierungsLabel.setTranslateX(25);	//label position x kordinate
+		registrierungsLabel.setScaleX(1);	//label groesse breite
+		registrierungsLabel.setScaleY(1); //label groesse höhe
+		registrierungsLabel.setTextFill(Color.web("#008B00"));	//label/text farbe: dunkles grün (green4)
+		ControllerMenuAnchorPane.getChildren().add((registrierungsLabel));	//ausgabe des labels im AnchorPane "mainAnchorPane" -> (menu.fxml/Menü)
+	}
+
+	/**
+	 * Weißt einem Label eine initialisierte String Variabel zu
+     * Label= Ein Text bzw. Zeichenkette
+     * Gibt bei einer fehlgeschlagenden Registrierung aus, dass die Registrierung nicht erfolgen konnte
+	 */
+	public static void registrierungFehlgeschlagen(){
+		String str = "Die Registrierung ist fehlgeschlagen!";	//String Variabel initialisieren
+		registrierungsLabel = new Label(str);	//label wird der String zugewiesen
+		registrierungsLabel.setTranslateY(230);	//label position y kordinate
+		registrierungsLabel.setTranslateX(20);	//label position x kordinate
+		registrierungsLabel.setScaleX(1);	//label groesse breite
+		registrierungsLabel.setScaleY(1); //label groesse höhe
+		registrierungsLabel.setTextFill(Color.web("#FF0000"));	//label/text farbe: rot
+		ControllerMenuAnchorPane.getChildren().add((registrierungsLabel));	//ausgabe des labels im AnchorPane "mainAnchorPane" -> (menu.fxml/Menü)
+	}
+
+	/**
+     * loescht das Label "registrierungsLabel"
+     * Wird benoetigt falls die Registrierung erst fehlerhaft war aber danach korrekt, damit sich die Label nicht überschneiden und nur das richtige angezeigt wird
+     */
+    public static void refreshRegistrierungsLabel(){
+    	ControllerMenuAnchorPane.getChildren().remove(registrierungsLabel);
     }
 
 }

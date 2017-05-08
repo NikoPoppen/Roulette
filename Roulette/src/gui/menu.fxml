@@ -49,8 +49,8 @@
                      </font>
                   </Label>
                   <Label layoutX="28.0" layoutY="100.0" text="Passwort:" />
-                  <Button layoutX="145.0" layoutY="158.0" mnemonicParsing="false" onAction="#onLoginClick" text="Ok" />
-                  <Hyperlink layoutX="28.0" layoutY="159.0" onAction="#onRegistrierenClick" text="Registrieren" />
+                  <Button layoutX="145.0" layoutY="153.0" mnemonicParsing="false" onAction="#onLoginClick" text="Ok" />
+                  <Hyperlink layoutX="28.0" layoutY="154.0" onAction="#onRegistrierenClick" text="Registrieren" />
                </children>
             </AnchorPane>
         </items>

@@ -42,42 +42,40 @@ public class ControllerEinsatz {
     	double einsatzZahl;	//double Variabel deklariert
         String einsatzStr = einsatz.getText();	//get Text aus dem Eingabe Fenster
 
-       //wenn Buchstaben oder Sonderzeichen im eingegebenen Text
-       if(einsatzStr.matches("[A-Za-z]+") ||
-    		   einsatzStr.matches("[\\\\!\"#$%&()*+,/:;<=>?@\\[\\]^_{|}~]+") ||
-    		   einsatzStr.matches("[A-Za-z]+" + "[\\\\!\"#$%&()*+,/:;<=>?@\\[\\]^_{|}~]+") ||
-    		   einsatzStr.matches("[A-Za-z]+" + "[\\\\!\"#$%&()*+,/:;<=>?@\\[\\]^_{|}~]+" + "[0-9]+"))
-        {
-        	einsatzZahl = 0;
-        }
-        else
-        	einsatzZahl = Double.parseDouble(einsatzStr);	//Umwandlung von String zu double
+        //wenn Buchstaben oder Sonderzeichen im eingegebenen Text
+        if(einsatzStr.matches("[0-9]+") || einsatzStr.matches("[0-9]+" + "[.]" + "[0-9]+")){
+         	einsatzZahl = Double.parseDouble(einsatzStr);	//Umwandlung von String zu double
 
+         	//wenn die Eingabe groesser als der Kontostand oder kleiner oder gleich 0 ist
+            if(einsatzZahl > algo.kontostand || einsatzZahl <= 0){
+         	   refreshfalscheWetteinsatzEingabe();	//Methodenaufruf
+         	   falscheWetteinsatzEingabe();	//Methodenaufruf
+            }
+            else{
+            	((Node)(event.getSource())).getScene().getWindow().hide();	//verbirgt das vorherige Fenster
 
-       //wenn die Eingabe groesser als der Kontostand oder kleiner oder gleich 0 ist
-       if(einsatzZahl > algo.kontostand || einsatzZahl <= 0){
-    	   refreshfalscheWetteinsatzEingabe();	//Methodenaufruf
-    	   falscheWetteinsatzEingabe();	//Methodenaufruf
-       }
-       else{
-    	   ((Node)(event.getSource())).getScene().getWindow().hide();	//verbirgt das vorherige Fenster
+         	   	game.Einsatzarray.add(einsatzZahl);	//Methodenaufruf aus der Klasse "ControllerGame" und "einsatzZahl" wird mit übergeben
+                menu.refreshKontostand();	//Methodenaufruf aus der Klasse "ControllerMenu"
+                menu.ausgabeKontostand(einsatzZahl);	//Methodenaufruf aus der Klasse "ControllerMenu" und "einsatzZahl" wird mit übergeben
 
-            game.Einsatzarray.add(einsatzZahl);	//Methodenaufruf aus der Klasse "ControllerGame" und "einsatzZahl" wird mit übergeben
-            menu.refreshKontostand();	//Methodenaufruf aus der Klasse "ControllerMenu"
-            menu.ausgabeKontostand(einsatzZahl);	//Methodenaufruf aus der Klasse "ControllerMenu" und "einsatzZahl" wird mit übergeben
-        }
+                if(game.feldAusgabe_zahl != -1){	//wenn "feldAusgabe_zahl" nicht -1 ist
+                	System.out.println("Gesetzte Zahl: " + game.feldAusgabe_zahl + " mit dem Einsatz von " + einsatzZahl + " €");	//gibt aus auf welche Zahl man gesetzt hat, nachdem man den Einsatz bestädigt hat
+                	game.feldAusgabe_zahl = -1;	//setzt "feldAusgabe_zahl" nach der Ausgabe wieder auf -1, damit wenn auf ein Feld gesetzt wird nicht nocheinmal die Ausgabe für die Zahl ausgeführt wird
+                }
+                else if(game.feldAusgabe_feld != null){	//wenn die Zeichenkette von "feldAusgabe_feld" nicht leer ist
+                	System.out.println("Gesetztes Feld: " + game.feldAusgabe_feld + " mit dem Einsatz von " + einsatzZahl + " €");	//gibt aus auf welches Feld man gesetzt hat, nachdem man den Einsatz bestädigt hat
+                	game.feldAusgabe_feld = null; //leert die Zeichenkette "feldAusgabe_feld" wieder, damit wenn hiernach wieder auf eine Zahl gesetzt wird, nicht nocheinmal diese Ausgabe durchgeführt wird
+                }
+            }//end else
+         }//end if einsatzStr.matches
+         else{
+        	 refreshfalscheWetteinsatzEingabe();	//Methodenaufruf
+        	 falscheWetteinsatzEingabe();	//Methodenaufruf
 
+        	 einsatzZahl = 0;
+         }
 
-       if(game.feldAusgabe_zahl != -1){	//wenn "feldAusgabe_zahl" nicht -1 ist
-    	   System.out.println("Gesetzte Zahl: " + game.feldAusgabe_zahl + " mit dem Einsatz von " + einsatzZahl + " €");	//gibt aus auf welche Zahl man gesetzt hat, nachdem man den Einsatz bestädigt hat
-    	   game.feldAusgabe_zahl = -1;	//setzt "feldAusgabe_zahl" nach der Ausgabe wieder auf -1, damit wenn auf ein Feld gesetzt wird nicht nocheinmal die Ausgabe für die Zahl ausgeführt wird
-       }
-       else if(game.feldAusgabe_feld != null){	//wenn die Zeichenkette von "feldAusgabe_feld" nicht leer ist
-    	   System.out.println("Gesetztes Feld: " + game.feldAusgabe_feld + " mit dem Einsatz von " + einsatzZahl + " €");	//gibt aus auf welches Feld man gesetzt hat, nachdem man den Einsatz bestädigt hat
-    	   game.feldAusgabe_feld = null; //leert die Zeichenkette "feldAusgabe_feld" wieder, damit wenn hiernach wieder auf eine Zahl gesetzt wird, nicht nocheinmal diese Ausgabe durchgeführt wird
-       }
-
-       return einsatzZahl;	//return Wert. einsatzZAhl ist der eingegebene Einsatz und wird zurückgegeben
+        return einsatzZahl;	//return Wert. einsatzZAhl ist der eingegebene Einsatz und wird zurückgegeben
     }
 
     /**
