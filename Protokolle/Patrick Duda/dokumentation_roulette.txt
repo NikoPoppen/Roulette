@@ -223,3 +223,13 @@ Zeit: 2h
 -in der TextArea im Spielfeld wird jetzt angezeigt auf welches Feld man gesetzt hat, nachdem man den Einsatz bestädigt hat
 
 ---
+
+08.05.2017
+Start: 20:00Uhr Ende:22:25Uhr
+-wenn bei dem Einsatz keine Zahl eingegeben wird erscheint eine Meldung. Die Eingabe muss solange wiederholt werden bis eine korrekte Zahl eingegeben wurde
+-Anzahlabfrage für den Demo-Modus verbessert (jetzt können nur noch Zahlen eingegeben werden und nichts anderes mehr (Auch unbekannte Sonderzeichen). Und falls man eine Zahl eingibt die größer als der maximale Integer Wert entspricht, wird das auch abgefangen)
+-Funktion erstellt, die ein Label erstellt, die ausgibt ob die Anmeldung erfolgreich war & eine Funktion, die ausgibt ob die Anmeldung fehlgeschlagen ist
+-Funktionen für Registrierungslabel erstellt, die anzeigen ob die Registrierung erfolgreich war oder nicht
+
+---
+
