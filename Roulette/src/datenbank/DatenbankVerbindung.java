@@ -121,7 +121,7 @@ import java.sql.*;
 		    } // Ende: Aktuallisieren des Guthabens
 
 
-
+		// Login
 		 public String verbinden(String benutzerEingabe, String passwortEingabe){
 
 		 final String hostname = "localhost";
@@ -133,20 +133,19 @@ import java.sql.*;
 		 Connection conn = null;
 		 Statement query;
 		 String sql;
-
+		 
+		 // Laden der Treiber
 		 try {
-			  System.out.println("* Treiber laden");
 			  Class.forName("org.gjt.mm.mysql.Driver").newInstance();
 			  }
 
 		  catch (Exception e) {
 			  System.err.println("Unable to load driver.");
 			  e.printStackTrace();
-			  }
+			  } // Ende: Laden der Treiber
 
-	         //DB-Verbindung aufbauen
+	         // Aufbau zur Datenbank
 		  try {
-			  System.out.println("* Verbindung aufbauen");
 			  String url = "jdbc:mysql://"+hostname+":"+port+"/"+dbname;
 			  conn = DriverManager.getConnection(url, user, password);
 			  }
@@ -157,36 +156,27 @@ import java.sql.*;
 			  sqle.printStackTrace();
 		  }
 
-	 String logincheck = null;
-
+		  String logincheck = null;
+		  PreparedStatement ps;
+		  
 	      try {
 	    	  // SQL-Abfrage generieren
-	    	  query = conn.createStatement();
-	    	  sql = "SELECT * FROM konto WHERE benutzer='" + benutzerEingabe + "'";
-	    	  ResultSet result = query.executeQuery(sql);
-
-
-	    // Ergebnisstabelle durchsuchen
-	    	  while (result.next()) {
-	    		  String passwortinfo = result.getString("passwort");
-
-	    		  if(passwortEingabe.equals(passwortinfo)){
-	    			  logincheck = "1";
-
-	    		  }else
-	    		  	{
-	    			  logincheck = "0";
-
-	    		  	}
+	    	  ps = conn.prepareStatement("SELECT `benutzer`,`passwort` FROM `konto` WHERE `benutzer` = ? AND `passwort` = ?");
+	    	  ps.setString(1, benutzerEingabe);
+	    	  ps.setString(2, String.valueOf(passwortEingabe));
+	    	  ResultSet result = ps.executeQuery();
+	    	  
+	    	  if(result.next()){
+	    		  logincheck = "1";
+	    	  }	else {
+	    		  logincheck = "0";
 	    	  }
+	    	  
 	      }
-
-
 	      catch (SQLException e) {
-	    	  System.out.println("Fehlge");
+	    	  System.out.println("Fehlgeschlagen");
 	    }
-
-		String login = logincheck;
+	      String login = logincheck;
 	      return login;
 		}
 }
