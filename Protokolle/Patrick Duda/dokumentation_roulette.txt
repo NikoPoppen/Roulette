@@ -233,3 +233,9 @@ Start: 20:00Uhr Ende:22:25Uhr
 
 ---
 
+09.05.2017
+Start: 17:30Uhr	Ende: 19:55Uhr
+-Pflichtenheft überarbeitet und fertiggestellt
+-Softwaredokumentation fertiggestellt
+
+---
