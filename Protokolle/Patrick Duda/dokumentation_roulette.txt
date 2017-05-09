@@ -1,24 +1,12 @@
 24.02.2017
 
-Start: 16:00Uhr	Ende:18:30
+Start: 16:00Uhr	Ende:19:15
 -Entwicklung des Menus
--Entwicklung des Spielfelds (grafisch)
-
-Start: 18:30Uhr	Ende:19:15Uhr
--Spielfeld GUI angepasst
+-Entwicklung des Spielfelds
 -Speilfeld GUI in Java eingebunden
 -Menu GUI und Spielfeld GUI miteinadner verbunden
 -Gui für den Wetteinsatz erstellt
--Bug fix (öffnen des einsatz fensters)
 -Wetteinsatzfenster mit dem Spielfeld verbuden
-
----
-
-03.03.2017
-
-Zeit: 90min
--GUI Verbesserungsvorschläge gesammelt
--mit Niko Poppen unterhalten, wie wir beim Programmieren des Algorithmus vorgehen wollen 
 
 ---
 
@@ -34,7 +22,6 @@ Zeit: 1h
 
 Zeit: 1,5h
 -PowerPoint zu unserem Projektthema ersttelt (Niko Poppen hat dabei geholfen)
--Informationen für die PowerPoint wurde aus dem Lastenheft entnommen, dass Sebastion Koch erstellt hat
 
 ---
 
@@ -64,7 +51,7 @@ Zeit:90min
 17.03.2017
 
 Zeit:60min
--Klassen- und Packageübergreifend funktion aufrufen
+-Klassen- und Packageübergreifend Funktionen aufrufen
 
 Zeit: 90min
 -model view controller
@@ -88,8 +75,6 @@ Zeit:170min
 -allen buttons in der game.fxml/GameController die zähler variabel hinzugefügt
 -allen buttons in der game.fxml/GameController einen wert gegeben
 -array erstellt in dem alle gesetzen werte abgespeichert werden -> als eigene Funtion
--arrayausgabe zur überprüfung
--im menü "start" button zu "Simulator" umbenannt
 -spielfeld buttons mit einem weißen rahmen versehen
 
 Zeit: 60min
@@ -101,7 +86,6 @@ Zeit: 60min
 27.03.2017
 
 Start: 20:00Uhr End: 21:10Uhr
--game.fxml -> start button der den Algorithmus startet von der Größe angepasst
 -variabel "usernameVar" als public static gesetzt, damit der eingegebener Benutzername immer und überall ausgegeben werden kann
 -usernameVar wird oben links in der ecke des Spielfeldes angezeigt (muss noch verschoben werden)
 
@@ -111,7 +95,7 @@ Start: 20:00Uhr End: 21:10Uhr
 
 Zeit:90min
 -versucht github in der schule in der portabel einzurichten
--informiert über java swing befehle, um dynamische textausgaben im fenster auszugeben
+-informiert über JavaFX, um dynamische textausgaben im fenster auszugeben
 
 Zeit:60min
 -über github einstellungen informeirt
@@ -238,4 +222,8 @@ Start: 17:30Uhr	Ende: 19:55Uhr
 -Pflichtenheft überarbeitet und fertiggestellt
 -Softwaredokumentation fertiggestellt
 
+Start: 21:30Uhr	Ende:22:30Uhr
+-Protokolle
+
 ---
+
