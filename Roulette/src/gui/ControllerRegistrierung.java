@@ -37,21 +37,8 @@ public class ControllerRegistrierung {
 
     	registrierungobjkt.registrierung(registrierungsNameVar, registrierungsPasswordVar);
 
-
     	//Benutzername & Passwort wird in der Console ausgegeben
     	System.out.println("Registrierung\n" + "Benutzername: " + registrierungsNameVar + "\nPasswort: " + registrierungsPasswordVar);
-
-//    	int regis = 2;
-//    	if(regis == 1){
-//    		menu.refreshRegistrierungsLabel();
-//        	menu.registrierungErfolgreich();
-//    	}
-//    	else{
-//    		menu.refreshRegistrierungsLabel();
-//        	menu.registrierungFehlgeschlagen();
-//    	}
-
-
     }
 
 }

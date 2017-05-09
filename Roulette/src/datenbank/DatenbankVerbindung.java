@@ -6,14 +6,17 @@
 package datenbank;
 import java.sql.*;
 
+import gui.ControllerMenu;
+
 	public class DatenbankVerbindung{
 
+		static ControllerMenu menu = new ControllerMenu();
 
 		public static void Main(String[] args) throws SQLException {
 
 		}
 
-		
+
 		// Registrierung
 		public static void registrierung(String name, String passwd){
 			 final String hostname = "localhost";
@@ -26,7 +29,7 @@ import java.sql.*;
 			 Statement query;
 			 String sql1;
 			 String sql2;
-			 
+
 			 // Laden der Treiber
 			 try {
 				  Class.forName("org.gjt.mm.mysql.Driver").newInstance();
@@ -36,8 +39,8 @@ import java.sql.*;
 				  System.err.println("Unable to load driver.");
 				  e.printStackTrace();
 				  } // Ende: Laden Treiber
-		         
-			 // Aufbau zur Datenbank 
+
+			 // Aufbau zur Datenbank
 			 try {
 				  String url = "jdbc:mysql://"+hostname+":"+port+"/"+dbname;
 				  conn = DriverManager.getConnection(url, user, password);
@@ -52,16 +55,22 @@ import java.sql.*;
 			  } // Ende: Aufbau zur Datenbank
 
 			 PreparedStatement ps;
-			 
+
 			 try {
 				 ps = conn.prepareStatement("SELECT `benutzer` FROM `konto` WHERE `benutzer` = ?");
 				 ps.setString(1, name);
 				 ResultSet result = ps.executeQuery();
-				 
+
 				 	if(result.next()){
 				 		System.out.println("Fehlgeschlagen");
-				 	} else {	 		
+			    		menu.refreshRegistrierungsLabel();
+			        	menu.registrierungFehlgeschlagen();
+
+				 	} else {
 				 		System.out.println("Erfolgreich");
+			    		menu.refreshRegistrierungsLabel();
+			        	menu.registrierungErfolgreich();
+
 				 		Statement stmt = conn.createStatement();
 				 		String sqlCommand = "INSERT INTO `konto` (`benutzer`, `passwort`, `guthaben`) VALUES ('" + name + "', '" + passwd + "', '3000')";
 				 		stmt.executeUpdate(sqlCommand);
@@ -121,7 +130,7 @@ import java.sql.*;
 		 final String password = "";
 
 		 Connection conn = null;
-		 
+
 		 // Laden der Treiber
 		 try {
 			  Class.forName("org.gjt.mm.mysql.Driver").newInstance();
@@ -146,22 +155,22 @@ import java.sql.*;
 
 		  String logincheck = null;
 		  PreparedStatement ps;
-		  
+
 	      try {
 	    	  // SQL-Abfrage generieren
 	    	  ps = conn.prepareStatement("SELECT `benutzer`,`passwort` FROM `konto` WHERE `benutzer` = ? AND `passwort` = ?");
 	    	  ps.setString(1, benutzerEingabe);
 	    	  ps.setString(2, String.valueOf(passwortEingabe));
 	    	  ResultSet result = ps.executeQuery();
-	    	  
+
 	    	  if(result.next()){
 	    		  logincheck = "1";
 	    	  }	else {
 	    		  logincheck = "0";
 	    	  }
-	    	  
+
 	      }
-	      catch (SQLException e){ 
+	      catch (SQLException e){
 	    	  System.out.println("Abfrage Fehlgeschlagen");
 	      }
 	      String login = logincheck;
