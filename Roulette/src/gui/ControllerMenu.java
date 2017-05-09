@@ -120,15 +120,15 @@ public class ControllerMenu {
 	    	usernameVar = null;
 	    	passwordVar = null;
 
-//    		main.refreshAnmeldeLabel();	//löscht das Label zuerst, damit es nicht zu Überschneidungen kommt, falls das Label schon angezeigt wird
-//			main.anmeldungFehlgeschlagen();	//Methodenaufruf aus der "Main" Klasse für die fehlgeschlagende Anmeldung
+    		main.refreshAnmeldeLabel();	//löscht das Label zuerst, damit es nicht zu Überschneidungen kommt, falls das Label schon angezeigt wird
+			main.anmeldungFehlgeschlagen();	//Methodenaufruf aus der "Main" Klasse für die fehlgeschlagende Anmeldung
     	}
     	else{
 	    	//Benutzername & Passwort wird in der Console ausgegeben
 			System.out.println("Login erfolgreich \n" + "Benutzername: " + usernameVar + "\nPasswort: " + passwordVar);
 
-//			main.refreshAnmeldeLabel();	//löscht das Label zuerst, damit es nicht zu Überschneidungen kommt, falls das Label schon angezeigt wird
-//			main.anmeldungErfolgreich();	//Methodenaufruf aus der "Main" Klasse für die erfolgreiche Anmeldung
+			main.refreshAnmeldeLabel();	//löscht das Label zuerst, damit es nicht zu Überschneidungen kommt, falls das Label schon angezeigt wird
+			main.anmeldungErfolgreich();	//Methodenaufruf aus der "Main" Klasse für die erfolgreiche Anmeldung
     	}
 
     }

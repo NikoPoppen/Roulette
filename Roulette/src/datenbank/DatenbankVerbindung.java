@@ -58,24 +58,24 @@ import java.sql.*;
 		    // Ergebnisstabelle durchsuchen
 		    	  while (resultname.next()) {
 		    		  String namedb = resultname.getString("benutzer");
-		    	  
 
-		    		  if(! name.equals(namedb)){
+		    		  System.out.println(namedb);
+		    		  
+		    		  
+		    		  if(name.equals(namedb)){
+		    			  System.out.println("Benutzername bereits vergeben!");
+
+		    		  }	else{
 
 		    			  System.out.println("Registrierung erfolgreich!");
 			    		  Statement stmt = conn.createStatement();
 			    		  String sqlCommand = "INSERT INTO `konto` (`id`, `benutzer`, `passwort`, `guthaben`) VALUES ('5', '" + name + "', '" + passwd + "', '3000')";
 			    		  stmt.executeUpdate(sqlCommand);
 			    		  stmt.close();
-
-
-		    		  }	else{
-				    	 
-		    			  System.out.println("Benutzername bereits vergeben!");
 		    	  	}
 		    	  }
 			  }
-			  
+
 		      catch (SQLException e) {
 		    	  e.printStackTrace();
 		    }
@@ -183,7 +183,7 @@ import java.sql.*;
 
 
 	      catch (SQLException e) {
-	    	  e.printStackTrace();
+	    	  System.out.println("Fehlge");
 	    }
 
 		String login = logincheck;
