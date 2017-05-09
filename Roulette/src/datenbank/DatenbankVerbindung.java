@@ -13,6 +13,8 @@ import java.sql.*;
 
 		}
 
+		
+		// Registrierung
 		public static void registrierung(String name, String passwd){
 			 final String hostname = "localhost";
 			 final String port = "3306";
@@ -24,63 +26,51 @@ import java.sql.*;
 			 Statement query;
 			 String sql1;
 			 String sql2;
-
+			 
+			 // Laden der Treiber
 			 try {
 				  Class.forName("org.gjt.mm.mysql.Driver").newInstance();
 				  }
 
-			  catch (Exception e) {
+			 catch (Exception e) {
 				  System.err.println("Unable to load driver.");
 				  e.printStackTrace();
-				  }
-		         //DB-Verbindung aufbauen
-
-			  try {
+				  } // Ende: Laden Treiber
+		         
+			 // Aufbau zur Datenbank 
+			 try {
 				  String url = "jdbc:mysql://"+hostname+":"+port+"/"+dbname;
 				  conn = DriverManager.getConnection(url, user, password);
 
 
 			  }
-			  catch (SQLException sqle) {
+			 catch (SQLException sqle) {
 				  System.out.println("SQLException: " + sqle.getMessage());
 				  System.out.println("SQLState: " + sqle.getSQLState());
 				  System.out.println("VendorError: " + sqle.getErrorCode());
 				  sqle.printStackTrace();
+			  } // Ende: Aufbau zur Datenbank
+
+			 PreparedStatement ps;
+			 
+			 try {
+				 ps = conn.prepareStatement("SELECT `benutzer` FROM `konto` WHERE `benutzer` = ?");
+				 ps.setString(1, name);
+				 ResultSet result = ps.executeQuery();
+				 
+				 	if(result.next()){
+				 		System.out.println("Fehlgeschlagen");
+				 	} else {	 		
+				 		System.out.println("Erfolgreich");
+				 		Statement stmt = conn.createStatement();
+				 		String sqlCommand = "INSERT INTO `konto` (`benutzer`, `passwort`, `guthaben`) VALUES ('" + name + "', '" + passwd + "', '3000')";
+				 		stmt.executeUpdate(sqlCommand);
+				 		stmt.close();
+				 	}
 			  }
-
-			  try {
-		    	  // SQL-Abfrage generieren
-		    	  query = conn.createStatement();
-		    	  sql1 = "SELECT * FROM konto WHERE benutzer='" + name + "'";
-		    	  ResultSet resultname = query.executeQuery(sql1);
-
-
-		    // Ergebnisstabelle durchsuchen
-		    	  while (resultname.next()) {
-		    		  String namedb = resultname.getString("benutzer");
-
-		    		  System.out.println(namedb);
-		    		  
-		    		  
-		    		  if(name.equals(namedb)){
-		    			  System.out.println("Benutzername bereits vergeben!");
-
-		    		  }	else{
-
-		    			  System.out.println("Registrierung erfolgreich!");
-			    		  Statement stmt = conn.createStatement();
-			    		  String sqlCommand = "INSERT INTO `konto` (`id`, `benutzer`, `passwort`, `guthaben`) VALUES ('5', '" + name + "', '" + passwd + "', '3000')";
-			    		  stmt.executeUpdate(sqlCommand);
-			    		  stmt.close();
-		    	  	}
-		    	  }
-			  }
-
 		      catch (SQLException e) {
 		    	  e.printStackTrace();
 		    }
-
-
 		}
 
 
@@ -131,8 +121,6 @@ import java.sql.*;
 		 final String password = "";
 
 		 Connection conn = null;
-		 Statement query;
-		 String sql;
 		 
 		 // Laden der Treiber
 		 try {
@@ -173,11 +161,11 @@ import java.sql.*;
 	    	  }
 	    	  
 	      }
-	      catch (SQLException e) {
-	    	  System.out.println("Fehlgeschlagen");
-	    }
+	      catch (SQLException e){ 
+	    	  System.out.println("Abfrage Fehlgeschlagen");
+	      }
 	      String login = logincheck;
 	      return login;
-		}
+		} // Ende: Login
 }
 
