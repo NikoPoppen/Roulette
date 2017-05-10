@@ -39,12 +39,9 @@ CREATE TABLE `konto` (
 --
 
 INSERT INTO `konto` (`benutzer`, `passwort`, `guthaben`) VALUES
-('duda', '321', 6000),
-('koch', '123', 3000),
-('poppen', '432', 4000),
-('test123', '123456', 3000),
-('sebastian', '12345', 3000),
-('testeet', 'teste', 3000);
+('duda', 'duda321', 6000),
+('koch', 'koch123', 4000),
+('poppen', 'poppen432', 5000);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
