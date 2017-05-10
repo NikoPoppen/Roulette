@@ -131,8 +131,6 @@ public class ControllerMenu {
 
 			DatenbankVerbindung kontodownObjekt = new DatenbankVerbindung();
 			algo.kontostand = kontodownObjekt.kontodown(usernameVar);
-
-
     	}
 
     }

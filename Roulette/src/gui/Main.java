@@ -63,13 +63,14 @@ public class Main extends Application {
 		anmeldeLabel.setScaleX(1);	//label groesse breite
     	anmeldeLabel.setScaleY(1); //label groesse höhe
     	anmeldeLabel.setTextFill(Color.web("#008B00"));	//label/text farbe: dunkles grün (green4)
-    	
+
     	//wenn boolean ist gleich true
     	if(game.checkLabel == true){
     		game.ControllerGameAnchorPane.getChildren().add(anmeldeLabel);
     	}
     	else
     		mainAnchorPane.getChildren().add(anmeldeLabel);	//ausgabe des labels im AnchorPane "mainAnchorPane" -> (menu.fxml/Menü)
+
 	}
 
 	/**
@@ -85,7 +86,7 @@ public class Main extends Application {
 		anmeldeLabel.setScaleX(1);	//label groesse breite
 		anmeldeLabel.setScaleY(1); //label groesse höhe
 		anmeldeLabel.setTextFill(Color.web("#FF0000"));	//label/text farbe: rot
-		
+
 		//wenn boolean ist gleich true
     	if(game.checkLabel == true){
     		game.ControllerGameAnchorPane.getChildren().add(anmeldeLabel);

@@ -627,7 +627,7 @@ public class ControllerGame {
 		menu.usernameVar = null;	//leert die Zeichenkette von usernameVar
 		algo.kontostand = algo.guthaben;			//variabel "kontostand" aus der Klasse "Algorithmus" ist gleich der final variabel "guthaben" asu der Klasse "Algorithmus"
 
-		//boolean für anmelde label, damit das label auch nach neuem öffnen des fensters angezeigt wird
+		//boolean für anmelde label, damit das Label auch nach neuem öffnen des Fensters angezeigt wird
 		checkLabel = true;
 
     	((Node)(event.getSource())).getScene().getWindow().hide();	//verbirgt das vorherige Fenster

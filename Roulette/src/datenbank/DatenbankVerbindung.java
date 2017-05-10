@@ -12,10 +12,7 @@ import gui.ControllerMenu;
 
 		static ControllerMenu menu = new ControllerMenu();
 
-		public static void Main(String[] args) throws SQLException {
-
-		}
-
+		//holt sich den Kontostand vom Benutzer aus der Datenbank
 		public double kontodown(String name){
 			final String hostname = "localhost";
 			final String port = "3306";
@@ -67,10 +64,6 @@ import gui.ControllerMenu;
 			 double guthaben = guthaben1;
 			 return guthaben;
 		}
-
-
-
-
 
 
 		// Registrierung
@@ -139,7 +132,6 @@ import gui.ControllerMenu;
 		}
 
 
-
 		// Aktuallisieren des Guthabens
 		public static void dbkontostand(String username, double kontostand){
 
@@ -176,7 +168,7 @@ import gui.ControllerMenu;
 		    } // Ende: Aktuallisieren des Guthabens
 
 
-		// Login
+		 // Login
 		 public String verbinden(String benutzerEingabe, String passwortEingabe){
 
 		 final String hostname = "localhost";
@@ -232,5 +224,8 @@ import gui.ControllerMenu;
 	      String login = logincheck;
 	      return login;
 		} // Ende: Login
+
+
+
 }
 
