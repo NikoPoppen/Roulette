@@ -565,23 +565,21 @@ public class Algorithmus{
     		game.Auswahlarray.clear();	//Löscht die ArrayListe um neues Spiel beginnen zu können
     		game.Einsatzarray.clear();	//Löscht die ArrayListe um neues Spiel beginnen zu können
 
-
     		if(kontostand==0){
     			kontostand = 3000;
     			System.out.println("Kontostand wurde zurückgesetzt!");
     		}
+    		
     		//aktualisiert die grafische Ausgabe des Guthabens
     		menu.refreshKontostand();	//Methodenaufruf
     		menu.ausgabeKontostand(0);	//Methodenaufruf (uebergibt 0, da sich der Kontostand nicht veraendern soll, sondern nur Aufgrund des Gewinns bzw. Niederlage aktualisieren soll)
 
+    		System.out.println("\t\t---------------Algorithmus Ende-------------------");
+    		
     		//Kontostand uebergabe an Datenbank
-
-
     		DatenbankVerbindung dbkontostandobjkt = new DatenbankVerbindung();
     		dbkontostandobjkt.dbkontostand(menu.usernameVar, kontostand);
-
-    		System.out.println("\t\t---------------Algorithmus Ende-------------------");
-
+    		
 	}//end method
 
 	/**

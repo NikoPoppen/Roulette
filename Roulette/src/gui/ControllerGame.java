@@ -28,11 +28,14 @@ public class ControllerGame {
 	ControllerMenu menu = new ControllerMenu();	//Erlaubt es funktionen von Anderen Klassen zu benutzen
 	public static int zähler = 0; //Globaler Zähler der hochzählt bei Klick auf einen Button
 
-	static AnchorPane ControllerGameAnchorPane = new AnchorPane();	//neues Objket/AnchorPane wird angelegt
+	public static AnchorPane ControllerGameAnchorPane = new AnchorPane();	//neues Objket/AnchorPane wird angelegt
 
 	//public Variabeln für die klassenübergreifende Kontrollausgabe im TextArea
 	public static int feldAusgabe_zahl = -1;	//-1 für die if Abfrage in der "ControllerEinsatz" Klasse
 	public static String feldAusgabe_feld;
+
+	//boolean für anmelde label, damit das label auch nach neuem öffnen des fensters angezeigt wird
+	public static boolean checkLabel = false;
 
 	@FXML
 	public TextArea historie;	//TextArea
@@ -609,7 +612,7 @@ public class ControllerGame {
     //Button "Hauptmenu"
     @FXML
     void onHauptmenuClick(ActionEvent event) throws IOException {
-    	AnchorPane ControllerGameAnchorPane = FXMLLoader.load(ControllerGame.class.getResource("menu.fxml"));	//"menu.fxml" datei laden (Menu-Fenster)
+    	ControllerGameAnchorPane = FXMLLoader.load(ControllerGame.class.getResource("menu.fxml"));	//"menu.fxml" datei laden (Menu-Fenster)
     	Stage stage = new Stage();	//new stage erstellen
     	stage.setScene(new Scene(ControllerGameAnchorPane));	//"ControllerGameAnchorPane" zur Scene hinzufuegen
     	stage.show();	//fenster wird sichtbar gemacht
@@ -623,6 +626,9 @@ public class ControllerGame {
 
 		menu.usernameVar = null;	//leert die Zeichenkette von usernameVar
 		algo.kontostand = algo.guthaben;			//variabel "kontostand" aus der Klasse "Algorithmus" ist gleich der final variabel "guthaben" asu der Klasse "Algorithmus"
+
+		//boolean für anmelde label, damit das label auch nach neuem öffnen des fensters angezeigt wird
+		checkLabel = true;
 
     	((Node)(event.getSource())).getScene().getWindow().hide();	//verbirgt das vorherige Fenster
     }

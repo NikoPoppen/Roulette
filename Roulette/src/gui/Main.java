@@ -27,8 +27,9 @@ import javafx.scene.paint.Color;
 public class Main extends Application {
 
 	//Public AnchorPane & Label, damit ich Funktionübergreifend eine Label erstellen kann
-	public static AnchorPane mainAnchorPane = new AnchorPane();
-	public static Label anmeldeLabel = new Label();
+	static ControllerGame game = new ControllerGame();
+	static AnchorPane mainAnchorPane = new AnchorPane();
+	static Label anmeldeLabel = new Label();
 
 	@Override
 	public void start(Stage primaryStage) throws IOException {
@@ -62,7 +63,13 @@ public class Main extends Application {
 		anmeldeLabel.setScaleX(1);	//label groesse breite
     	anmeldeLabel.setScaleY(1); //label groesse höhe
     	anmeldeLabel.setTextFill(Color.web("#008B00"));	//label/text farbe: dunkles grün (green4)
-    	mainAnchorPane.getChildren().add((anmeldeLabel));	//ausgabe des labels im AnchorPane "mainAnchorPane" -> (menu.fxml/Menü)
+    	
+    	//wenn boolean ist gleich true
+    	if(game.checkLabel == true){
+    		game.ControllerGameAnchorPane.getChildren().add(anmeldeLabel);
+    	}
+    	else
+    		mainAnchorPane.getChildren().add(anmeldeLabel);	//ausgabe des labels im AnchorPane "mainAnchorPane" -> (menu.fxml/Menü)
 	}
 
 	/**
@@ -76,9 +83,16 @@ public class Main extends Application {
 		anmeldeLabel.setTranslateY(230);	//label position y kordinate
 		anmeldeLabel.setTranslateX(695);	//label position x kordinate
 		anmeldeLabel.setScaleX(1);	//label groesse breite
-    	anmeldeLabel.setScaleY(1); //label groesse höhe
-    	anmeldeLabel.setTextFill(Color.web("#FF0000"));	//label/text farbe: rot
-    	mainAnchorPane.getChildren().add((anmeldeLabel));	//ausgabe des labels im AnchorPane "mainAnchorPane" -> (menu.fxml/Menü)
+		anmeldeLabel.setScaleY(1); //label groesse höhe
+		anmeldeLabel.setTextFill(Color.web("#FF0000"));	//label/text farbe: rot
+		
+		//wenn boolean ist gleich true
+    	if(game.checkLabel == true){
+    		game.ControllerGameAnchorPane.getChildren().add(anmeldeLabel);
+    	}
+    	else
+    		mainAnchorPane.getChildren().add(anmeldeLabel);	//ausgabe des labels im AnchorPane "mainAnchorPane" -> (menu.fxml/Menü)
+
 	}
 
 	/**
