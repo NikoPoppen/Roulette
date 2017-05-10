@@ -227,3 +227,8 @@ Start: 21:30Uhr	Ende:22:30Uhr
 
 ---
 
+10.05.2017
+Zeit: 3h
+-Anmeldelabel bug behoben
+
+---
