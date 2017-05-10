@@ -127,8 +127,11 @@ public class ControllerMenu {
 	    	//Benutzername & Passwort wird in der Console ausgegeben
 			System.out.println("Login erfolgreich \n" + "Benutzername: " + usernameVar + "\nPasswort: " + passwordVar);
 
+			DatenbankVerbindung kontodownObjekt = new DatenbankVerbindung();
+			algo.kontostand = kontodownObjekt.kontodown(usernameVar);
+
 			main.refreshAnmeldeLabel();	//löscht das Label zuerst, damit es nicht zu Überschneidungen kommt, falls das Label schon angezeigt wird
-			main.anmeldungErfolgreich();	//Methodenaufruf aus der "Main" Klasse für die erfolgreiche Anmeldung
+			main.anmeldungErfolgreich();	//Methodenaufruf aus der "Main" Klasse für die erfolgreiche Anmeldun
     	}
 
     }

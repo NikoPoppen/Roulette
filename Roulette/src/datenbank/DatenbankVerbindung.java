@@ -16,6 +16,62 @@ import gui.ControllerMenu;
 
 		}
 
+		public double kontodown(String name){
+			final String hostname = "localhost";
+			final String port = "3306";
+			final String dbname = "roulette";
+			final String user = "root";
+			final String password = "";
+
+	        Connection conn = null;
+	        Statement query;
+	        String sql;
+
+			try {
+				 Class.forName("org.gjt.mm.mysql.Driver").newInstance();
+				 }
+
+			catch (Exception e) {
+				 System.err.println("Unable to load driver.");
+				 e.printStackTrace();
+				 } // Ende: Laden Treiber
+
+			 // Aufbau zur Datenbank
+			 try {
+				  String url = "jdbc:mysql://"+hostname+":"+port+"/"+dbname;
+				  conn = DriverManager.getConnection(url, user, password);
+
+
+			  }
+			 catch (SQLException sqle) {
+				  System.out.println("SQLException: " + sqle.getMessage());
+				  System.out.println("SQLState: " + sqle.getSQLState());
+				  System.out.println("VendorError: " + sqle.getErrorCode());
+				  sqle.printStackTrace();
+			  } // Ende: Aufbau zur Datenbank
+
+			 double guthaben1 = 0;
+
+			 try {
+				 query = conn.createStatement();
+				 sql = "SELECT * FROM konto WHERE benutzer='" + name + "'";
+				 ResultSet result = query.executeQuery(sql);
+				 while (result.next()) {
+					 guthaben1 = result.getDouble("guthaben");
+				 }
+			 }
+			 catch (SQLException e) {
+				 e.printStackTrace();
+				 }
+
+			 double guthaben = guthaben1;
+			 return guthaben;
+		}
+
+
+
+
+
 
 		// Registrierung
 		public static void registrierung(String name, String passwd){
