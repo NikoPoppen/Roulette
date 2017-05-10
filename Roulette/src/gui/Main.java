@@ -8,7 +8,7 @@
  * Die hier zu findene Klasse "Main" startet das Programm und öffnet dazu das Menu-Fenster.
  *
  * @author	Sebastian Koch (Datenbank), Niko Poppen(Algorithmus mit der Unterstützung von Patrick Duda) & Patrick Duda (GUI)
- * @version 0.2.207
+ * @version 1.3.218
  */
 
 package gui;
